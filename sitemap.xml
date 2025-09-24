@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://exemplo.com/</loc>
+         <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/</loc>
          <lastmod>2025-09-24</lastmod>
     </url>
     <url>
-         <loc>https://exemplo.com/metodologia/ferramentas/</loc>
+         <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/escopo/brainstorm-5w2h/</loc>
          <lastmod>2025-09-24</lastmod>
     </url>
     <url>
-         <loc>https://exemplo.com/metodologia/processo/</loc>
+         <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/metodologia/ferramentas/</loc>
+         <lastmod>2025-09-24</lastmod>
+    </url>
+    <url>
+         <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/metodologia/processo/</loc>
          <lastmod>2025-09-24</lastmod>
     </url>
 </urlset>
