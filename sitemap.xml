@@ -2,26 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/</loc>
-         <lastmod>2025-09-24</lastmod>
+         <lastmod>2025-09-25</lastmod>
+    </url>
+    <url>
+         <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/concepcao/5w2h/</loc>
+         <lastmod>2025-09-25</lastmod>
+    </url>
+    <url>
+         <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/concepcao/brainstorming/</loc>
+         <lastmod>2025-09-25</lastmod>
     </url>
     <url>
          <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/concepcao/fluxos-de-tarefa/</loc>
-         <lastmod>2025-09-24</lastmod>
+         <lastmod>2025-09-25</lastmod>
+    </url>
+    <url>
+         <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/concepcao/mapa-mental/</loc>
+         <lastmod>2025-09-25</lastmod>
     </url>
     <url>
          <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/concepcao/prototipacao/</loc>
-         <lastmod>2025-09-24</lastmod>
+         <lastmod>2025-09-25</lastmod>
     </url>
     <url>
          <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/concepcao/termo-de-abertura/</loc>
-         <lastmod>2025-09-24</lastmod>
+         <lastmod>2025-09-25</lastmod>
     </url>
     <url>
          <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/metodologia/ferramentas/</loc>
-         <lastmod>2025-09-24</lastmod>
+         <lastmod>2025-09-25</lastmod>
     </url>
     <url>
          <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/metodologia/processo/</loc>
-         <lastmod>2025-09-24</lastmod>
+         <lastmod>2025-09-25</lastmod>
+    </url>
+    <url>
+         <loc>https://projetos-de-extensao.github.io/PFE_25.2_8002_V/sprint-planning/sprint-planning/</loc>
+         <lastmod>2025-09-25</lastmod>
     </url>
 </urlset>
