@@ -1,0 +1,817 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação do projeto de desenvolvimento frontend para a plataforma de monitores da faculdade IBMEC.">
+      
+      
+        <meta name="author" content="PFE_25.2_8002_V">
+      
+      
+        <link rel="canonical" href="https://projetos-de-extensao.github.io/PFE_25.2_8002_V/escopo/fluxos-de-tarefa/">
+      
+      
+        <link rel="prev" href="../mapa-mental/">
+      
+      
+        <link rel="next" href="../prototipacao/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+    
+    
+      
+        <title>Fluxos de Tarefa - Projeto Monitores IBMEC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hta-analise-hierarquica-de-tarefas" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Projeto Monitores IBMEC" class="md-header__button md-logo" aria-label="Projeto Monitores IBMEC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projeto Monitores IBMEC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fluxos de Tarefa
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Projetos-de-Extensao/PFE_25.2_8002_V.git" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PFE_25.2_8002_V
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Introdução
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../5w2h/" class="md-tabs__link">
+          
+  
+  
+  Design Thinking
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../metodologia/processo/" class="md-tabs__link">
+          
+  
+  
+  Metodologia
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../sprint-planning/sprint-planning/" class="md-tabs__link">
+          
+  
+  
+  Sprint Planning
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Projeto Monitores IBMEC" class="md-nav__button md-logo" aria-label="Projeto Monitores IBMEC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Projeto Monitores IBMEC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Projetos-de-Extensao/PFE_25.2_8002_V.git" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PFE_25.2_8002_V
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design Thinking
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Design Thinking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5w2h/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5W2H
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../brainstorming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brainstormig
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapa-mental/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mapa Mental
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fluxos de Tarefa
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prototipacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prototipação de Baixa Fidadelidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Metodologia
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Metodologia
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/processo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nosso Processo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metodologia/ferramentas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ferramentas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sprint Planning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Sprint Planning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sprint-planning/sprint-planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint planning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="hta-analise-hierarquica-de-tarefas">HTA – Análise Hierárquica de tarefas</h1>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="ACTIVITY" height="1063px" preserveAspectRatio="xMidYMid meet" style="width:1209px;height:1063px;background:#FFFFFF;" version="1.1" viewBox="0 0 1209 1063" width="1209px" zoomAndPan="magnify" class="diagram"><title>Fluxo de Uso do Site de Monitoria</title><defs/><g><g class="title" data-source-line="2"><text fill="#222831" font-family="sans-serif" font-size="20" font-weight="bold" lengthAdjust="spacing" textLength="381.5137" x="412.541" y="38.5645">Fluxo de Uso do Site de Monitoria</text></g><rect fill="none" height="287.2031" style="stroke:#000000;stroke-width:1.5;" width="387.7832" x="363.7788" y="55.2813"/><path d="M586.4927,55.2813 L586.4927,64.5781 L576.4927,74.5781 L363.7788,74.5781" fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="212.7139" x="366.7788" y="69.2764">Fluxos Gerais de Autenticação</text><ellipse cx="520.3594" cy="94.5781" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:0.5;"/><polygon fill="#F1F1F1" points="460.0393,124.5781,580.6794,124.5781,592.6794,136.5781,580.6794,148.5781,460.0393,148.5781,448.0393,136.5781,460.0393,124.5781" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120.6401" x="460.0393" y="140.3862">Usuário possui conta?</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19.5024" x="428.5369" y="133.9839">sim</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="20.4424" x="592.6794" y="133.9839">não</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="89.2695" x="383.7788" y="158.5781"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69.2695" x="393.7788" y="179.7168">Fazer Login</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="170.1348" x="527.2378" y="158.5781"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="150.1348" x="537.2378" y="179.7168">Acessar tela de Cadastro</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="238.5137" x="493.0483" y="212.5469"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="218.5137" x="503.0483" y="233.6855">Preencher informações e criar conta</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="89.2695" x="567.6704" y="266.5156"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69.2695" x="577.6704" y="287.6543">Fazer Login</text><polygon fill="#F1F1F1" points="520.3594,306.4844,532.3594,318.4844,520.3594,330.4844,508.3594,318.4844,520.3594,306.4844" style="stroke:#181818;stroke-width:0.5;"/><polygon fill="#F1F1F1" points="453.022,362.4844,587.6968,362.4844,599.6968,374.4844,587.6968,386.4844,453.022,386.4844,441.022,374.4844,453.022,362.4844" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="134.6748" x="453.022" y="378.2925">Qual o perfil do usuário?</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="31.2544" x="409.7676" y="371.8901">Aluno</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="51.2402" x="599.6968" y="371.8901">Professor</text><rect fill="none" height="445.0078" style="stroke:#000000;stroke-width:1.5;" width="426.8223" x="11" y="396.4844"/><path d="M211.6953,396.4844 L211.6953,405.7813 L201.6953,415.7813 L11,415.7813" fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190.6953" x="14" y="410.4795">Fluxo do Aluno (Candidato)</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="263.252" x="107.6626" y="432.7813"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="243.252" x="117.6626" y="453.9199">Acessar a Página Inicial (Feed de Vagas)</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="228.8574" x="124.8599" y="486.75"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="208.8574" x="134.8599" y="507.8887">Visualizar e rolar as oportunidades</text><polygon fill="#F1F1F1" points="160.825,555.7188,317.7522,555.7188,329.7522,567.7188,317.7522,579.7188,160.825,579.7188,148.825,567.7188,160.825,555.7188" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="156.9272" x="160.825" y="571.5269">Encontra vaga de interesse?</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19.5024" x="129.3225" y="565.1245">sim</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="20.4424" x="329.7522" y="565.1245">não</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="215.6973" x="27.7344" y="589.7188"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="195.6973" x="37.7344" y="610.8574">Clicar na vaga para ver detalhes</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="225.166" x="23" y="658.6875"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="205.166" x="33" y="679.8262">Ler requisitos e responsabilidades</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="224.3633" x="23.4014" y="726.0898"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="204.3633" x="33.4014" y="747.2285">Clicar em "Quero me candidatar!"</text><ellipse cx="135.583" cy="804.4922" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:0.5;"/><ellipse cx="135.583" cy="804.4922" fill="#222222" rx="6" ry="6" style="stroke:#222222;stroke-width:1;"/><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="149.6563" x="268.166" y="589.7188"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="129.6563" x="278.166" y="610.8574">Continuar navegando</text><ellipse cx="342.9941" cy="669.6875" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:0.5;"/><ellipse cx="342.9941" cy="669.6875" fill="#222222" rx="6" ry="6" style="stroke:#222222;stroke-width:1;"/><rect fill="none" height="656.3789" style="stroke:#000000;stroke-width:1.5;" width="740.7734" x="457.8223" y="396.4844"/><path d="M703.252,396.4844 L703.252,405.7813 L693.252,415.7813 L457.8223,415.7813" fill="none" style="stroke:#000000;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="235.4297" x="460.8223" y="410.4795">Fluxo do Professor (Coordenador)</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="243.5996" x="679.6304" y="432.7813"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="223.5996" x="689.6304" y="453.9199">Acessar o dashboard "Minhas Vagas"</text><polygon fill="#F1F1F1" points="721.1296,486.75,881.7307,486.75,893.7307,498.75,881.7307,510.75,721.1296,510.75,709.1296,498.75,721.1296,486.75" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="160.6011" x="721.1296" y="502.5581">Deseja criar uma nova vaga?</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19.5024" x="689.6272" y="496.1558">sim</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="20.4424" x="893.7307" y="496.1558">não</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="189.002" x="511.6045" y="520.75"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="169.002" x="521.6045" y="541.8887">Clicar no botão "Criar Vaga"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="210.1484" x="501.0313" y="589.7188"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="190.1484" x="511.0313" y="610.8574">Preencher o formulário da vaga</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="112.4199" x="549.8955" y="658.6875"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="92.4199" x="559.8955" y="679.8262">Publicar a vaga</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="256.5664" x="477.8223" y="726.0898"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="236.5664" x="487.8223" y="747.2285">Retornar ao dashboard "Minhas Vagas"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="163.6895" x="914.9102" y="569.1523"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="143.6895" x="924.9102" y="590.291">Selecionar vaga na lista</text><polygon fill="#F1F1F1" points="957.1511,638.1211,1036.3586,638.1211,1048.3586,650.1211,1036.3586,662.1211,957.1511,662.1211,945.1511,650.1211,957.1511,638.1211" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="79.2075" x="957.1511" y="653.9292">Ação é Editar?</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19.5024" x="925.6487" y="647.5269">sim</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74.814" x="1048.3586" y="647.5269">não, é Excluir</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="127.1973" x="829.6045" y="672.1211"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="107.1973" x="839.6045" y="693.2598">Clicar em "Editar"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="237.6289" x="774.3887" y="739.5234"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="217.6289" x="784.3887" y="760.6621">Modificar informações no formulário</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="124.1445" x="831.1309" y="806.9258"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="104.1445" x="841.1309" y="828.0645">Salvar alterações</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="132.1602" x="1034.2266" y="672.1211"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="112.1602" x="1044.2266" y="693.2598">Clicar em "Excluir"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="136.5781" x="1032.0176" y="739.5234"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="116.5781" x="1042.0176" y="760.6621">Confirmar exclusão</text><polygon fill="#F1F1F1" points="996.7549,846.8945,1008.7549,858.8945,996.7549,870.8945,984.7549,858.8945,996.7549,846.8945" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="256.5664" x="868.4717" y="890.8945"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="236.5664" x="878.4717" y="912.0332">Retornar ao dashboard "Minhas Vagas"</text><polygon fill="#F1F1F1" points="904.5493,520.75,1088.9604,520.75,1100.9604,532.75,1088.9604,544.75,904.5493,544.75,892.5493,532.75,904.5493,520.75" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19.5024" x="1000.7549" y="554.9604">sim</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="184.4111" x="904.5493" y="536.5581">Deseja gerenciar vaga existente?</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="20.4424" x="1100.9604" y="530.1558">não</text><polygon fill="#F1F1F1" points="996.7549,944.8633,1008.7549,956.8633,996.7549,968.8633,984.7549,956.8633,996.7549,944.8633" style="stroke:#181818;stroke-width:0.5;"/><polygon fill="#F1F1F1" points="801.4302,974.8633,813.4302,986.8633,801.4302,998.8633,789.4302,986.8633,801.4302,974.8633" style="stroke:#181818;stroke-width:0.5;"/><ellipse cx="801.4302" cy="1029.8633" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:0.5;"/><ellipse cx="801.4302" cy="1029.8633" fill="#222222" rx="6" ry="6" style="stroke:#222222;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="612.3052" x2="612.3052" y1="192.5469" y2="212.5469"/><polygon fill="#181818" points="608.3052,202.5469,612.3052,212.5469,616.3052,202.5469,612.3052,206.5469" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="612.3052" x2="612.3052" y1="246.5156" y2="266.5156"/><polygon fill="#181818" points="608.3052,256.5156,612.3052,266.5156,616.3052,256.5156,612.3052,260.5156" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="448.0393" x2="428.4136" y1="136.5781" y2="136.5781"/><line style="stroke:#181818;stroke-width:1;" x1="428.4136" x2="428.4136" y1="136.5781" y2="158.5781"/><polygon fill="#181818" points="424.4136,148.5781,428.4136,158.5781,432.4136,148.5781,428.4136,152.5781" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="592.6794" x2="612.3052" y1="136.5781" y2="136.5781"/><line style="stroke:#181818;stroke-width:1;" x1="612.3052" x2="612.3052" y1="136.5781" y2="158.5781"/><polygon fill="#181818" points="608.3052,148.5781,612.3052,158.5781,616.3052,148.5781,612.3052,152.5781" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="428.4136" x2="428.4136" y1="192.5469" y2="318.4844"/><line style="stroke:#181818;stroke-width:1;" x1="428.4136" x2="508.3594" y1="318.4844" y2="318.4844"/><polygon fill="#181818" points="498.3594,314.4844,508.3594,318.4844,498.3594,322.4844,502.3594,318.4844" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="612.3052" x2="612.3052" y1="300.4844" y2="318.4844"/><line style="stroke:#181818;stroke-width:1;" x1="612.3052" x2="532.3594" y1="318.4844" y2="318.4844"/><polygon fill="#181818" points="542.3594,314.4844,532.3594,318.4844,542.3594,322.4844,538.3594,318.4844" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="520.3594" x2="520.3594" y1="104.5781" y2="124.5781"/><polygon fill="#181818" points="516.3594,114.5781,520.3594,124.5781,524.3594,114.5781,520.3594,118.5781" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="239.2886" x2="239.2886" y1="466.75" y2="486.75"/><polygon fill="#181818" points="235.2886,476.75,239.2886,486.75,243.2886,476.75,239.2886,480.75" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="135.583" x2="135.583" y1="623.6875" y2="658.6875"/><polygon fill="#181818" points="131.583,648.6875,135.583,658.6875,139.583,648.6875,135.583,652.6875" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="135.583" x2="135.583" y1="692.6563" y2="726.0898"/><polygon fill="#181818" points="131.583,716.0898,135.583,726.0898,139.583,716.0898,135.583,720.0898" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="135.583" x2="135.583" y1="760.0586" y2="793.4922"/><polygon fill="#181818" points="131.583,783.4922,135.583,793.4922,139.583,783.4922,135.583,787.4922" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="342.9941" x2="342.9941" y1="623.6875" y2="658.6875"/><polygon fill="#181818" points="338.9941,648.6875,342.9941,658.6875,346.9941,648.6875,342.9941,652.6875" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="148.825" x2="135.583" y1="567.7188" y2="567.7188"/><line style="stroke:#181818;stroke-width:1;" x1="135.583" x2="135.583" y1="567.7188" y2="589.7188"/><polygon fill="#181818" points="131.583,579.7188,135.583,589.7188,139.583,579.7188,135.583,583.7188" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="329.7522" x2="342.9941" y1="567.7188" y2="567.7188"/><line style="stroke:#181818;stroke-width:1;" x1="342.9941" x2="342.9941" y1="567.7188" y2="589.7188"/><polygon fill="#181818" points="338.9941,579.7188,342.9941,589.7188,346.9941,579.7188,342.9941,583.7188" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="239.2886" x2="239.2886" y1="520.7188" y2="555.7188"/><polygon fill="#181818" points="235.2886,545.7188,239.2886,555.7188,243.2886,545.7188,239.2886,549.7188" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="606.1055" x2="606.1055" y1="554.7188" y2="589.7188"/><polygon fill="#181818" points="602.1055,579.7188,606.1055,589.7188,610.1055,579.7188,606.1055,583.7188" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="606.1055" x2="606.1055" y1="623.6875" y2="658.6875"/><polygon fill="#181818" points="602.1055,648.6875,606.1055,658.6875,610.1055,648.6875,606.1055,652.6875" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="606.1055" x2="606.1055" y1="692.6563" y2="726.0898"/><polygon fill="#181818" points="602.1055,716.0898,606.1055,726.0898,610.1055,716.0898,606.1055,720.0898" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="893.2031" x2="893.2031" y1="706.0898" y2="739.5234"/><polygon fill="#181818" points="889.2031,729.5234,893.2031,739.5234,897.2031,729.5234,893.2031,733.5234" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="893.2031" x2="893.2031" y1="773.4922" y2="806.9258"/><polygon fill="#181818" points="889.2031,796.9258,893.2031,806.9258,897.2031,796.9258,893.2031,800.9258" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="1100.3066" x2="1100.3066" y1="706.0898" y2="739.5234"/><polygon fill="#181818" points="1096.3066,729.5234,1100.3066,739.5234,1104.3066,729.5234,1100.3066,733.5234" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="945.1511" x2="893.2031" y1="650.1211" y2="650.1211"/><line style="stroke:#181818;stroke-width:1;" x1="893.2031" x2="893.2031" y1="650.1211" y2="672.1211"/><polygon fill="#181818" points="889.2031,662.1211,893.2031,672.1211,897.2031,662.1211,893.2031,666.1211" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="1048.3586" x2="1100.3066" y1="650.1211" y2="650.1211"/><line style="stroke:#181818;stroke-width:1;" x1="1100.3066" x2="1100.3066" y1="650.1211" y2="672.1211"/><polygon fill="#181818" points="1096.3066,662.1211,1100.3066,672.1211,1104.3066,662.1211,1100.3066,666.1211" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="893.2031" x2="893.2031" y1="840.8945" y2="858.8945"/><line style="stroke:#181818;stroke-width:1;" x1="893.2031" x2="984.7549" y1="858.8945" y2="858.8945"/><polygon fill="#181818" points="974.7549,854.8945,984.7549,858.8945,974.7549,862.8945,978.7549,858.8945" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="1100.3066" x2="1100.3066" y1="773.4922" y2="858.8945"/><line style="stroke:#181818;stroke-width:1;" x1="1100.3066" x2="1008.7549" y1="858.8945" y2="858.8945"/><polygon fill="#181818" points="1018.7549,854.8945,1008.7549,858.8945,1018.7549,862.8945,1014.7549,858.8945" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="996.7549" x2="996.7549" y1="603.1211" y2="638.1211"/><polygon fill="#181818" points="992.7549,628.1211,996.7549,638.1211,1000.7549,628.1211,996.7549,632.1211" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="996.7549" x2="996.7549" y1="870.8945" y2="890.8945"/><polygon fill="#181818" points="992.7549,880.8945,996.7549,890.8945,1000.7549,880.8945,996.7549,884.8945" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="996.7549" x2="996.7549" y1="544.75" y2="569.1523"/><polygon fill="#181818" points="992.7549,559.1523,996.7549,569.1523,1000.7549,559.1523,996.7549,563.1523" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="1100.9604" x2="1182.5957" y1="532.75" y2="532.75"/><polygon fill="#181818" points="1178.5957,744.5078,1182.5957,754.5078,1186.5957,744.5078,1182.5957,748.5078" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="1182.5957" x2="1182.5957" y1="532.75" y2="956.8633"/><line style="stroke:#181818;stroke-width:1;" x1="1182.5957" x2="1008.7549" y1="956.8633" y2="956.8633"/><polygon fill="#181818" points="1018.7549,952.8633,1008.7549,956.8633,1018.7549,960.8633,1014.7549,956.8633" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="996.7549" x2="996.7549" y1="924.8633" y2="944.8633"/><polygon fill="#181818" points="992.7549,934.8633,996.7549,944.8633,1000.7549,934.8633,996.7549,938.8633" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="709.1296" x2="606.1055" y1="498.75" y2="498.75"/><line style="stroke:#181818;stroke-width:1;" x1="606.1055" x2="606.1055" y1="498.75" y2="520.75"/><polygon fill="#181818" points="602.1055,510.75,606.1055,520.75,610.1055,510.75,606.1055,514.75" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="893.7307" x2="996.7549" y1="498.75" y2="498.75"/><line style="stroke:#181818;stroke-width:1;" x1="996.7549" x2="996.7549" y1="498.75" y2="520.75"/><polygon fill="#181818" points="992.7549,510.75,996.7549,520.75,1000.7549,510.75,996.7549,514.75" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="606.1055" x2="606.1055" y1="760.0586" y2="986.8633"/><line style="stroke:#181818;stroke-width:1;" x1="606.1055" x2="789.4302" y1="986.8633" y2="986.8633"/><polygon fill="#181818" points="779.4302,982.8633,789.4302,986.8633,779.4302,990.8633,783.4302,986.8633" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="996.7549" x2="996.7549" y1="968.8633" y2="986.8633"/><line style="stroke:#181818;stroke-width:1;" x1="996.7549" x2="813.4302" y1="986.8633" y2="986.8633"/><polygon fill="#181818" points="823.4302,982.8633,813.4302,986.8633,823.4302,990.8633,819.4302,986.8633" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="801.4302" x2="801.4302" y1="466.75" y2="486.75"/><polygon fill="#181818" points="797.4302,476.75,801.4302,486.75,805.4302,476.75,801.4302,480.75" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="801.4302" x2="801.4302" y1="998.8633" y2="1018.8633"/><polygon fill="#181818" points="797.4302,1008.8633,801.4302,1018.8633,805.4302,1008.8633,801.4302,1012.8633" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="441.022" x2="239.2886" y1="374.4844" y2="374.4844"/><line style="stroke:#181818;stroke-width:1;" x1="239.2886" x2="239.2886" y1="374.4844" y2="432.7813"/><polygon fill="#181818" points="235.2886,422.7813,239.2886,432.7813,243.2886,422.7813,239.2886,426.7813" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="599.6968" x2="801.4302" y1="374.4844" y2="374.4844"/><line style="stroke:#181818;stroke-width:1;" x1="801.4302" x2="801.4302" y1="374.4844" y2="432.7813"/><polygon fill="#181818" points="797.4302,422.7813,801.4302,432.7813,805.4302,422.7813,801.4302,426.7813" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="520.3594" x2="520.3594" y1="330.4844" y2="362.4844"/><polygon fill="#181818" points="516.3594,352.4844,520.3594,362.4844,524.3594,352.4844,520.3594,356.4844" style="stroke:#181818;stroke-width:1;"/></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="ACTIVITY" height="1063px" preserveAspectRatio="xMidYMid meet" style="width:1209px;height:1063px;background:#1B1B1B;" version="1.1" viewBox="0 0 1209 1063" width="1209px" zoomAndPan="magnify" class="diagram"><title>Fluxo de Uso do Site de Monitoria</title><defs/><g><rect fill="#1B1B1B" height="1063" style="stroke:none;stroke-width:1;" width="1209" x="0" y="0"/><g class="title" data-source-line="2"><text fill="#222831" font-family="sans-serif" font-size="20" font-weight="bold" lengthAdjust="spacing" textLength="381.5137" x="412.541" y="38.5645">Fluxo de Uso do Site de Monitoria</text></g><rect fill="none" height="287.2031" style="stroke:#FFFFFF;stroke-width:1.5;" width="387.7832" x="363.7788" y="55.2813"/><path d="M586.4927,55.2813 L586.4927,64.5781 L576.4927,74.5781 L363.7788,74.5781" fill="none" style="stroke:#FFFFFF;stroke-width:1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="212.7139" x="366.7788" y="69.2764">Fluxos Gerais de Autenticação</text><ellipse cx="520.3594" cy="94.5781" fill="#DDDDDD" rx="10" ry="10" style="stroke:#DDDDDD;stroke-width:0.5;"/><polygon fill="#313139" points="460.0393,124.5781,580.6794,124.5781,592.6794,136.5781,580.6794,148.5781,460.0393,148.5781,448.0393,136.5781,460.0393,124.5781" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120.6401" x="460.0393" y="140.3862">Usuário possui conta?</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19.5024" x="428.5369" y="133.9839">sim</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="20.4424" x="592.6794" y="133.9839">não</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="89.2695" x="383.7788" y="158.5781"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69.2695" x="393.7788" y="179.7168">Fazer Login</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="170.1348" x="527.2378" y="158.5781"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="150.1348" x="537.2378" y="179.7168">Acessar tela de Cadastro</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="238.5137" x="493.0483" y="212.5469"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="218.5137" x="503.0483" y="233.6855">Preencher informações e criar conta</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="89.2695" x="567.6704" y="266.5156"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69.2695" x="577.6704" y="287.6543">Fazer Login</text><polygon fill="#313139" points="520.3594,306.4844,532.3594,318.4844,520.3594,330.4844,508.3594,318.4844,520.3594,306.4844" style="stroke:#E7E7E7;stroke-width:0.5;"/><polygon fill="#313139" points="453.022,362.4844,587.6968,362.4844,599.6968,374.4844,587.6968,386.4844,453.022,386.4844,441.022,374.4844,453.022,362.4844" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="134.6748" x="453.022" y="378.2925">Qual o perfil do usuário?</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="31.2544" x="409.7676" y="371.8901">Aluno</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="51.2402" x="599.6968" y="371.8901">Professor</text><rect fill="none" height="445.0078" style="stroke:#FFFFFF;stroke-width:1.5;" width="426.8223" x="11" y="396.4844"/><path d="M211.6953,396.4844 L211.6953,405.7813 L201.6953,415.7813 L11,415.7813" fill="none" style="stroke:#FFFFFF;stroke-width:1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="190.6953" x="14" y="410.4795">Fluxo do Aluno (Candidato)</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="263.252" x="107.6626" y="432.7813"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="243.252" x="117.6626" y="453.9199">Acessar a Página Inicial (Feed de Vagas)</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="228.8574" x="124.8599" y="486.75"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="208.8574" x="134.8599" y="507.8887">Visualizar e rolar as oportunidades</text><polygon fill="#313139" points="160.825,555.7188,317.7522,555.7188,329.7522,567.7188,317.7522,579.7188,160.825,579.7188,148.825,567.7188,160.825,555.7188" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="156.9272" x="160.825" y="571.5269">Encontra vaga de interesse?</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19.5024" x="129.3225" y="565.1245">sim</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="20.4424" x="329.7522" y="565.1245">não</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="215.6973" x="27.7344" y="589.7188"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="195.6973" x="37.7344" y="610.8574">Clicar na vaga para ver detalhes</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="225.166" x="23" y="658.6875"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="205.166" x="33" y="679.8262">Ler requisitos e responsabilidades</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="224.3633" x="23.4014" y="726.0898"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="204.3633" x="33.4014" y="747.2285">Clicar em "Quero me candidatar!"</text><ellipse cx="135.583" cy="804.4922" fill="none" rx="11" ry="11" style="stroke:#DDDDDD;stroke-width:0.5;"/><ellipse cx="135.583" cy="804.4922" fill="#DDDDDD" rx="6" ry="6" style="stroke:#DDDDDD;stroke-width:1;"/><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="149.6563" x="268.166" y="589.7188"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="129.6563" x="278.166" y="610.8574">Continuar navegando</text><ellipse cx="342.9941" cy="669.6875" fill="none" rx="11" ry="11" style="stroke:#DDDDDD;stroke-width:0.5;"/><ellipse cx="342.9941" cy="669.6875" fill="#DDDDDD" rx="6" ry="6" style="stroke:#DDDDDD;stroke-width:1;"/><rect fill="none" height="656.3789" style="stroke:#FFFFFF;stroke-width:1.5;" width="740.7734" x="457.8223" y="396.4844"/><path d="M703.252,396.4844 L703.252,405.7813 L693.252,415.7813 L457.8223,415.7813" fill="none" style="stroke:#FFFFFF;stroke-width:1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="235.4297" x="460.8223" y="410.4795">Fluxo do Professor (Coordenador)</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="243.5996" x="679.6304" y="432.7813"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="223.5996" x="689.6304" y="453.9199">Acessar o dashboard "Minhas Vagas"</text><polygon fill="#313139" points="721.1296,486.75,881.7307,486.75,893.7307,498.75,881.7307,510.75,721.1296,510.75,709.1296,498.75,721.1296,486.75" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="160.6011" x="721.1296" y="502.5581">Deseja criar uma nova vaga?</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19.5024" x="689.6272" y="496.1558">sim</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="20.4424" x="893.7307" y="496.1558">não</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="189.002" x="511.6045" y="520.75"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="169.002" x="521.6045" y="541.8887">Clicar no botão "Criar Vaga"</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="210.1484" x="501.0313" y="589.7188"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="190.1484" x="511.0313" y="610.8574">Preencher o formulário da vaga</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="112.4199" x="549.8955" y="658.6875"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="92.4199" x="559.8955" y="679.8262">Publicar a vaga</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="256.5664" x="477.8223" y="726.0898"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="236.5664" x="487.8223" y="747.2285">Retornar ao dashboard "Minhas Vagas"</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="163.6895" x="914.9102" y="569.1523"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="143.6895" x="924.9102" y="590.291">Selecionar vaga na lista</text><polygon fill="#313139" points="957.1511,638.1211,1036.3586,638.1211,1048.3586,650.1211,1036.3586,662.1211,957.1511,662.1211,945.1511,650.1211,957.1511,638.1211" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="79.2075" x="957.1511" y="653.9292">Ação é Editar?</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19.5024" x="925.6487" y="647.5269">sim</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="74.814" x="1048.3586" y="647.5269">não, é Excluir</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="127.1973" x="829.6045" y="672.1211"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="107.1973" x="839.6045" y="693.2598">Clicar em "Editar"</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="237.6289" x="774.3887" y="739.5234"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="217.6289" x="784.3887" y="760.6621">Modificar informações no formulário</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="124.1445" x="831.1309" y="806.9258"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="104.1445" x="841.1309" y="828.0645">Salvar alterações</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="132.1602" x="1034.2266" y="672.1211"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="112.1602" x="1044.2266" y="693.2598">Clicar em "Excluir"</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="136.5781" x="1032.0176" y="739.5234"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="116.5781" x="1042.0176" y="760.6621">Confirmar exclusão</text><polygon fill="#313139" points="996.7549,846.8945,1008.7549,858.8945,996.7549,870.8945,984.7549,858.8945,996.7549,846.8945" style="stroke:#E7E7E7;stroke-width:0.5;"/><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="256.5664" x="868.4717" y="890.8945"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="236.5664" x="878.4717" y="912.0332">Retornar ao dashboard "Minhas Vagas"</text><polygon fill="#313139" points="904.5493,520.75,1088.9604,520.75,1100.9604,532.75,1088.9604,544.75,904.5493,544.75,892.5493,532.75,904.5493,520.75" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19.5024" x="1000.7549" y="554.9604">sim</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="184.4111" x="904.5493" y="536.5581">Deseja gerenciar vaga existente?</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="20.4424" x="1100.9604" y="530.1558">não</text><polygon fill="#313139" points="996.7549,944.8633,1008.7549,956.8633,996.7549,968.8633,984.7549,956.8633,996.7549,944.8633" style="stroke:#E7E7E7;stroke-width:0.5;"/><polygon fill="#313139" points="801.4302,974.8633,813.4302,986.8633,801.4302,998.8633,789.4302,986.8633,801.4302,974.8633" style="stroke:#E7E7E7;stroke-width:0.5;"/><ellipse cx="801.4302" cy="1029.8633" fill="none" rx="11" ry="11" style="stroke:#DDDDDD;stroke-width:0.5;"/><ellipse cx="801.4302" cy="1029.8633" fill="#DDDDDD" rx="6" ry="6" style="stroke:#DDDDDD;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="612.3052" x2="612.3052" y1="192.5469" y2="212.5469"/><polygon fill="#E7E7E7" points="608.3052,202.5469,612.3052,212.5469,616.3052,202.5469,612.3052,206.5469" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="612.3052" x2="612.3052" y1="246.5156" y2="266.5156"/><polygon fill="#E7E7E7" points="608.3052,256.5156,612.3052,266.5156,616.3052,256.5156,612.3052,260.5156" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="448.0393" x2="428.4136" y1="136.5781" y2="136.5781"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="428.4136" x2="428.4136" y1="136.5781" y2="158.5781"/><polygon fill="#E7E7E7" points="424.4136,148.5781,428.4136,158.5781,432.4136,148.5781,428.4136,152.5781" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="592.6794" x2="612.3052" y1="136.5781" y2="136.5781"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="612.3052" x2="612.3052" y1="136.5781" y2="158.5781"/><polygon fill="#E7E7E7" points="608.3052,148.5781,612.3052,158.5781,616.3052,148.5781,612.3052,152.5781" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="428.4136" x2="428.4136" y1="192.5469" y2="318.4844"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="428.4136" x2="508.3594" y1="318.4844" y2="318.4844"/><polygon fill="#E7E7E7" points="498.3594,314.4844,508.3594,318.4844,498.3594,322.4844,502.3594,318.4844" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="612.3052" x2="612.3052" y1="300.4844" y2="318.4844"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="612.3052" x2="532.3594" y1="318.4844" y2="318.4844"/><polygon fill="#E7E7E7" points="542.3594,314.4844,532.3594,318.4844,542.3594,322.4844,538.3594,318.4844" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="520.3594" x2="520.3594" y1="104.5781" y2="124.5781"/><polygon fill="#E7E7E7" points="516.3594,114.5781,520.3594,124.5781,524.3594,114.5781,520.3594,118.5781" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="239.2886" x2="239.2886" y1="466.75" y2="486.75"/><polygon fill="#E7E7E7" points="235.2886,476.75,239.2886,486.75,243.2886,476.75,239.2886,480.75" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="135.583" x2="135.583" y1="623.6875" y2="658.6875"/><polygon fill="#E7E7E7" points="131.583,648.6875,135.583,658.6875,139.583,648.6875,135.583,652.6875" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="135.583" x2="135.583" y1="692.6563" y2="726.0898"/><polygon fill="#E7E7E7" points="131.583,716.0898,135.583,726.0898,139.583,716.0898,135.583,720.0898" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="135.583" x2="135.583" y1="760.0586" y2="793.4922"/><polygon fill="#E7E7E7" points="131.583,783.4922,135.583,793.4922,139.583,783.4922,135.583,787.4922" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="342.9941" x2="342.9941" y1="623.6875" y2="658.6875"/><polygon fill="#E7E7E7" points="338.9941,648.6875,342.9941,658.6875,346.9941,648.6875,342.9941,652.6875" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="148.825" x2="135.583" y1="567.7188" y2="567.7188"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="135.583" x2="135.583" y1="567.7188" y2="589.7188"/><polygon fill="#E7E7E7" points="131.583,579.7188,135.583,589.7188,139.583,579.7188,135.583,583.7188" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="329.7522" x2="342.9941" y1="567.7188" y2="567.7188"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="342.9941" x2="342.9941" y1="567.7188" y2="589.7188"/><polygon fill="#E7E7E7" points="338.9941,579.7188,342.9941,589.7188,346.9941,579.7188,342.9941,583.7188" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="239.2886" x2="239.2886" y1="520.7188" y2="555.7188"/><polygon fill="#E7E7E7" points="235.2886,545.7188,239.2886,555.7188,243.2886,545.7188,239.2886,549.7188" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="606.1055" x2="606.1055" y1="554.7188" y2="589.7188"/><polygon fill="#E7E7E7" points="602.1055,579.7188,606.1055,589.7188,610.1055,579.7188,606.1055,583.7188" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="606.1055" x2="606.1055" y1="623.6875" y2="658.6875"/><polygon fill="#E7E7E7" points="602.1055,648.6875,606.1055,658.6875,610.1055,648.6875,606.1055,652.6875" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="606.1055" x2="606.1055" y1="692.6563" y2="726.0898"/><polygon fill="#E7E7E7" points="602.1055,716.0898,606.1055,726.0898,610.1055,716.0898,606.1055,720.0898" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="893.2031" x2="893.2031" y1="706.0898" y2="739.5234"/><polygon fill="#E7E7E7" points="889.2031,729.5234,893.2031,739.5234,897.2031,729.5234,893.2031,733.5234" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="893.2031" x2="893.2031" y1="773.4922" y2="806.9258"/><polygon fill="#E7E7E7" points="889.2031,796.9258,893.2031,806.9258,897.2031,796.9258,893.2031,800.9258" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1100.3066" x2="1100.3066" y1="706.0898" y2="739.5234"/><polygon fill="#E7E7E7" points="1096.3066,729.5234,1100.3066,739.5234,1104.3066,729.5234,1100.3066,733.5234" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="945.1511" x2="893.2031" y1="650.1211" y2="650.1211"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="893.2031" x2="893.2031" y1="650.1211" y2="672.1211"/><polygon fill="#E7E7E7" points="889.2031,662.1211,893.2031,672.1211,897.2031,662.1211,893.2031,666.1211" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1048.3586" x2="1100.3066" y1="650.1211" y2="650.1211"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1100.3066" x2="1100.3066" y1="650.1211" y2="672.1211"/><polygon fill="#E7E7E7" points="1096.3066,662.1211,1100.3066,672.1211,1104.3066,662.1211,1100.3066,666.1211" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="893.2031" x2="893.2031" y1="840.8945" y2="858.8945"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="893.2031" x2="984.7549" y1="858.8945" y2="858.8945"/><polygon fill="#E7E7E7" points="974.7549,854.8945,984.7549,858.8945,974.7549,862.8945,978.7549,858.8945" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1100.3066" x2="1100.3066" y1="773.4922" y2="858.8945"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1100.3066" x2="1008.7549" y1="858.8945" y2="858.8945"/><polygon fill="#E7E7E7" points="1018.7549,854.8945,1008.7549,858.8945,1018.7549,862.8945,1014.7549,858.8945" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="996.7549" x2="996.7549" y1="603.1211" y2="638.1211"/><polygon fill="#E7E7E7" points="992.7549,628.1211,996.7549,638.1211,1000.7549,628.1211,996.7549,632.1211" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="996.7549" x2="996.7549" y1="870.8945" y2="890.8945"/><polygon fill="#E7E7E7" points="992.7549,880.8945,996.7549,890.8945,1000.7549,880.8945,996.7549,884.8945" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="996.7549" x2="996.7549" y1="544.75" y2="569.1523"/><polygon fill="#E7E7E7" points="992.7549,559.1523,996.7549,569.1523,1000.7549,559.1523,996.7549,563.1523" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1100.9604" x2="1182.5957" y1="532.75" y2="532.75"/><polygon fill="#E7E7E7" points="1178.5957,744.5078,1182.5957,754.5078,1186.5957,744.5078,1182.5957,748.5078" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1182.5957" x2="1182.5957" y1="532.75" y2="956.8633"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="1182.5957" x2="1008.7549" y1="956.8633" y2="956.8633"/><polygon fill="#E7E7E7" points="1018.7549,952.8633,1008.7549,956.8633,1018.7549,960.8633,1014.7549,956.8633" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="996.7549" x2="996.7549" y1="924.8633" y2="944.8633"/><polygon fill="#E7E7E7" points="992.7549,934.8633,996.7549,944.8633,1000.7549,934.8633,996.7549,938.8633" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="709.1296" x2="606.1055" y1="498.75" y2="498.75"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="606.1055" x2="606.1055" y1="498.75" y2="520.75"/><polygon fill="#E7E7E7" points="602.1055,510.75,606.1055,520.75,610.1055,510.75,606.1055,514.75" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="893.7307" x2="996.7549" y1="498.75" y2="498.75"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="996.7549" x2="996.7549" y1="498.75" y2="520.75"/><polygon fill="#E7E7E7" points="992.7549,510.75,996.7549,520.75,1000.7549,510.75,996.7549,514.75" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="606.1055" x2="606.1055" y1="760.0586" y2="986.8633"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="606.1055" x2="789.4302" y1="986.8633" y2="986.8633"/><polygon fill="#E7E7E7" points="779.4302,982.8633,789.4302,986.8633,779.4302,990.8633,783.4302,986.8633" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="996.7549" x2="996.7549" y1="968.8633" y2="986.8633"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="996.7549" x2="813.4302" y1="986.8633" y2="986.8633"/><polygon fill="#E7E7E7" points="823.4302,982.8633,813.4302,986.8633,823.4302,990.8633,819.4302,986.8633" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="801.4302" x2="801.4302" y1="466.75" y2="486.75"/><polygon fill="#E7E7E7" points="797.4302,476.75,801.4302,486.75,805.4302,476.75,801.4302,480.75" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="801.4302" x2="801.4302" y1="998.8633" y2="1018.8633"/><polygon fill="#E7E7E7" points="797.4302,1008.8633,801.4302,1018.8633,805.4302,1008.8633,801.4302,1012.8633" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="441.022" x2="239.2886" y1="374.4844" y2="374.4844"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="239.2886" x2="239.2886" y1="374.4844" y2="432.7813"/><polygon fill="#E7E7E7" points="235.2886,422.7813,239.2886,432.7813,243.2886,422.7813,239.2886,426.7813" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="599.6968" x2="801.4302" y1="374.4844" y2="374.4844"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="801.4302" x2="801.4302" y1="374.4844" y2="432.7813"/><polygon fill="#E7E7E7" points="797.4302,422.7813,801.4302,432.7813,805.4302,422.7813,801.4302,426.7813" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="520.3594" x2="520.3594" y1="330.4844" y2="362.4844"/><polygon fill="#E7E7E7" points="516.3594,352.4844,520.3594,362.4844,524.3594,352.4844,520.3594,356.4844" style="stroke:#E7E7E7;stroke-width:1;"/></g></svg></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 - PFE_25.2_8002_V
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>
