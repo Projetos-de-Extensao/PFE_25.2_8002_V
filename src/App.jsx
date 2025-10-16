@@ -4,6 +4,7 @@ import Textarea from './components/ui/Textarea/Textarea.jsx';
 import PageHeader from './components/Layout/PageHeader/PageHeader.jsx';
 import Input from './components/ui/Input/Input.jsx';
 import JobCard from './components/vagas/JobCards/JobCard.jsx';
+import Sidebar from './components/Layout/Sidebar/Sidebar.jsx';
 
 const vagasDeExemplo = [
   {
@@ -65,17 +66,19 @@ function App() {
       {/* quando não passado o atributo label, ele nao irá renderiza-lo na páginas */}
       <Input type="mail" placeholder='Digite seu email' id='email' />
 
-       {vagasDeExemplo.map((vaga) => (
-          <JobCard
-            key={vaga.id}
-            id={vaga.id}
-            time={vaga.time}
-            title={vaga.title}
-            professor={vaga.professor}
-            description={vaga.description}
-            responsibilities={vaga.responsibilities}
-          />
-        ))}
+      {vagasDeExemplo.map((vaga) => (
+        <JobCard
+          key={vaga.id}
+          id={vaga.id}
+          time={vaga.time}
+          title={vaga.title}
+          professor={vaga.professor}
+          description={vaga.description}
+          responsibilities={vaga.responsibilities}
+        />
+      ))}
+
+        <Sidebar></Sidebar>
     </div>
   );
 }
