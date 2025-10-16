@@ -1,5 +1,7 @@
 import styles from './JobCard.module.scss'
 import Button from '../../ui/Button/Button';
+import SetaBaixo from '../../../assets/imgs/setinha-card-baixo.png'
+import SetaAlta from '../../../assets/imgs/setinha-preta-cima.png'
 import { useState } from 'react';
 import cx from 'classnames';
 
@@ -24,9 +26,7 @@ export default function JobCard({ time, professor, title, description, responsib
                     <h3 className={styles['job-card__title']}>{title}</h3>
                     <p className={styles['job-card__professor']}>Por {professor}</p>
                 </div>
-                <span className={styles['job-card__toggle-icon']}>
-                    {isExpanded ? '▲' : '▼'}
-                </span>
+                <img className={styles['job-card__toggle-icon']} src={isExpanded ? SetaAlta : SetaBaixo} />
             </div>
             {isExpanded && (
                 <div className={styles['job-card__details']}>
