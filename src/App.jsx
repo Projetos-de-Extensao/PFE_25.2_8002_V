@@ -5,6 +5,7 @@ import PageHeader from './components/Layout/PageHeader/PageHeader.jsx';
 import Input from './components/ui/Input/Input.jsx';
 import JobCard from './components/vagas/JobCards/JobCard.jsx';
 import Sidebar from './components/Layout/Sidebar/Sidebar.jsx';
+import MainHeader from './components/Layout/MainHeader/MainHeader.jsx'
 
 const vagasDeExemplo = [
   {
@@ -79,6 +80,7 @@ function App() {
       ))}
 
         <Sidebar></Sidebar>
+        <MainHeader/>
     </div>
   );
 }
