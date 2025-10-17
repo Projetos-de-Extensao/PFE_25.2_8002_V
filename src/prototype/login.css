@@ -68,13 +68,20 @@ label {
 .login__link {
     color: rgb(34, 40, 49);
     font-size: 70%;
-
 }
 
 .login__line {
-    width: 100%;
-    margin: 4% 0%;
-    font-size: 80%;
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
+
+.line {
+    height: 1px;
+    background-color: #393E46;
+    width: 145px;
 }
 
 @media (min-width: 480px) {

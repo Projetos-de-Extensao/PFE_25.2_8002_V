@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
@@ -13,19 +14,25 @@
         <section class="main__login">
 
             <img src="Images/LogoIbvagasLogin.png" alt="Logo ibvagas com legenda" class="login__logo">
+
             <form action="" class="login__form">
                     <input type="text" placeholder="Email ou telefone" name="email_Tel" class="login__input">
                     <input type="password" placeholder="Senha" name="senha" class="login__input" id="senha">
+
                     <div class="login__options">
                         <label>
                             <input type="checkbox" name="manter_conectado" id="manter_conectado" class="login__checkbox">Manter conectado?
                         </label>
                     <a href="www.ibmec.com.br" class="login__link">Esqueceu a senha?</a>
                     </div>
+
                     <button type="submit" class="login__button">Entrar</button>
-                    <div class="login__line"><img src="Images/LinhaLogin.png" alt="Linha de divisão entre entrar e criar conta" class="login__line"></div>
-                    <button class="login__button--alt">Criar uma nova conta</button>
-                    
+                    <div class="login__line">
+                        <div class="line"></div>
+                        <p>ou</p>
+                        <div class="line"></div>
+                    </div>
+                    <button class="login__button--alt">Criar uma nova conta</button>    
             </form>
 
         </section>
