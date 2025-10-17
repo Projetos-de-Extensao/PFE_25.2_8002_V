@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Libertinus+Serif+Display&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    transition: linear 0.1s;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login__button {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(34, 40, 49);
+    color: white;
+    font-size: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.login__button--alt {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(223, 208, 184);
+    color: rgb(0, 0, 0);
+    font-size: 100%;
+    border: none;
+    cursor: pointer;
+}
