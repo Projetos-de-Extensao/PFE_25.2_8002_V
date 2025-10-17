@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Candidatura</title>
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/candidatura.css">
+</head>
+
+<body>
+    <header class="main__header">
+        <img src="../assets/imgs/setinha.png" alt="Seta de Retorno">
+        <h1>
+            Formulário de Candidatura
+        </h1>
+    </header>
+    
+    <main>
+        <section class="main__dados">
+            <div class="container__obrigatorios">
+                <h2>
+                    Dados Obrigatórios
+                </h2>
+
+                <div class="container__nome">
+                    <label class="title" for="obrigatorios__nome">Nome e Sobrenome</label>
+                    <input class="input" name="campo_Nome" id="obrigatorios__nome" type="text" placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="container__matricula">
+                    <label class="title" for="obrigatorios__matricula">Matrícula</label>
+                    <input class="input" name="campo_Matricula" id="obrigatorios__matricula" type="text" placeholder="Digite a sua matrícula">
+                </div>
+
+                <div class="container__disciplina">
+                    <label class="title" for="obrigatorios__disciplina">Disciplina</label>
+                    <input class="input" name="campo_Disciplina" id="obrigatorios__disciplina" type="text" placeholder="Matemática Discreta (Pré-definida)">
+                </div>
+
+                <div class="container__nascimento">
+                    <label class="title" for="obrigatorios__nascimento">Data de Nascimento</label>
+                    <input class="input" name="campo_Nascimento" id="obrigatorios__nascimento" type="date" placeholder="dd/mm/aaaa">
+                </div>
+
+                <div class="container__nacionalidade">
+                    <label class="title" for="obrigatorios__nacionalidade">Nacionalidade</label>
+                    <input class="input" name="campo_Nacionalidade" id="obrigatorios__nacionalidade" type="text" placeholder="Ex: Brasileira">
+                </div>
+
+                <div class="container__curso">
+                    <label class="title" for="obrigatorios__curso">Curso</label>
+                    <input class="input" name="campo_Curso" id="obrigatorios__curso" type="text" placeholder="Ex: Ciência da Computação">
+                </div>
+
+                <div class="container__periodo">
+                    <label class="title" for="obrigatorios__periodo">Período</label>
+                    <input class="input" name="campo_Periodo" id="obrigatorios__periodo" type="text" placeholder="Digite o número do seu período">
+                </div>
+            </div>
+
+            <div class="container__adicionais">
+                <h2>
+                    Qualificações Adicionais
+                </h2>
+
+                <div class="container__qualidades">
+                    <label class="title" for="adicionais__qualidades">Por que você se acha um bom candidato para a vaga?</label>
+                    <textarea class="input_textbox" name="texto_Qualidades" id="adicionais__qualidades" placeholder="Digite os seus motivos, habilidades e como pode contribuir"></textarea>
+                </div>
+
+                <div class="container__experiencias">
+                    <label class="title" for="adicionais__experiencias">Experiências Relevantes</label>
+                    <textarea class="input_textbox" name="texto_Experiencias" id="adicionais__experiencias" placeholder="Projetos, outras monitorias etc"></textarea>
+                </div>
+
+                <div class="container__disponibilidade">
+                    <label class="title" for="adiconais__disponibilidade">Disponibilidade</label>
+                    <textarea class="input_textbox" name="texto_Disponibilidade" id="adiconais__disponibilidade" placeholder="Ex: Segundas e quartas à noite"></textarea>
+                </div>
+
+                <div class="container__links">
+                    <label class="title" for="adicionais__links">Links Úteis (LinkedIn, GitHub etc.)</label>
+                    <textarea class="input_textbox" name="texto_Links" id="adicionais__links" placeholder="https://linkedin.com/in/seu-perfil"></textarea>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
