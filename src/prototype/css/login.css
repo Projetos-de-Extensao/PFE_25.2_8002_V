@@ -72,6 +72,7 @@ label {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 4%;
+    margin-top: 4%;
 }
 
 .login__link {
@@ -105,14 +106,6 @@ label {
 
     .login__button--alt {
         height: 14%;
-    }
-
-    .login__button:hover {
-        background-color: #393E46;
-    }
-
-    .login__button--alt:hover {
-        background-color: #EADAC2;
     }
 
     label {

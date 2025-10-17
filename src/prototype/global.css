@@ -12,18 +12,68 @@ html {
     width: 100%;
 }
 
-.login__button {
-    width: 100%;
-    height: 50px;
-    border-radius: 10px;
-    background-color: rgb(34, 40, 49);
-    color: white;
-    font-size: 100%;
+.button--small{
+
+}
+.btn {
+    /* Estilos base (Tamanho Padrão "default") */
+    padding: 0.9rem 5rem;
+    min-width: 20.5rem;
     border: none;
+    border-radius: 10px;
+    font-size: 100%;
+    font-weight: 300;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+
+    /* Transição suave para o hover */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.login__button--alt {
+/* --- Variantes de Cor --- */
+
+.btn--primary {
+    background-color: #222831; 
+    color: #FFFFFF;
+}
+
+.btn--primary:hover {
+    background-color: #393E46;
+}
+
+.btn--alternative {
+    background-color: #DFD0B8;
+    color: #222831;
+}
+
+.btn--alternative:hover {
+    background-color: #EADAC2;
+}
+
+.btn--danger {
+    background-color: #F85A57;
+    color: #FFFFFF;
+}
+
+.btn--danger:hover {
+    background-color: #F0807E;
+}
+
+
+/* --- Modificadores de Tamanho --- */
+
+.btn--medium {
+    padding: 0.9rem 2.9rem;
+    min-width: 13rem;
+}
+
+.btn--small {
+    padding: 0.9rem 2.6rem;
+    min-width: 10rem;
+}
+
+.button--alt {
     width: 100%;
     height: 50px;
     border-radius: 10px;
