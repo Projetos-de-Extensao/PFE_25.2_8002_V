@@ -12,9 +12,6 @@ html {
     width: 100%;
 }
 
-.button--small{
-
-}
 .btn {
     /* Estilos base (Tamanho Padrão "default") */
     padding: 0.9rem 5rem;
@@ -30,6 +27,7 @@ html {
     /* Transição suave para o hover */
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
+
 
 /* --- Variantes de Cor --- */
 

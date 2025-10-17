@@ -2,7 +2,7 @@ body {
     height: 100%;
     width: 100%;
     justify-content: center;
-    align-items: center;
+
     flex-direction: column;
 }
 
@@ -10,9 +10,9 @@ main {
     height: 80%;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
 }
 
 .main__header {
@@ -38,41 +38,45 @@ main {
     font-weight: 300;
 }
 
-.main__criacao {
+.main__detalhes {
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 90%;
 }
 
-.container__seletor {
+.container__title {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.container__title h2 {
+    font-size: 2rem;
+}
+
+.container__detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
 }
 
 .container__requisitos {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 
 .container__responsabilidades {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 
-.input {
-    border-radius: 10px;
-    padding: 2%;
-}
-
-.input_textbox {
-    border-radius: 10px;
-    padding: 2% 2% 10% 2%;
-}
-
-.title {
-    font-size: 0.8rem;
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 5%;
 }
