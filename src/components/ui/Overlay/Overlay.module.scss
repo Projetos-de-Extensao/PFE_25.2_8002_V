@@ -1,0 +1,17 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 900;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  // (opcional, se quiser fade suave ao sair)
+  &.fade-out {
+    opacity: 0;
+  }
+}
