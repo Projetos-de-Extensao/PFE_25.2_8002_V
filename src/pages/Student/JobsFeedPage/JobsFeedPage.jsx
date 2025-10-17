@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import styles from './JobsFeedPage.module.scss'
 import JobCard from '../../../components/vagas/JobCards/JobCard.jsx'
 import MainHeader from '../../../components/Layout/MainHeader/MainHeader.jsx'
+import Sidebar from '../../../components/Layout/Sidebar/Sidebar.jsx'
 
 const vagasDeExemplo = [
     {
@@ -92,9 +94,20 @@ const vagasDeExemplo = [
 ];
 
 export default function JobsFeedPage() {
+
+
+    // 2. Crie o estado para controlar a visibilidade da sidebar
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    // 3. Crie a função que vai abrir/fechar a sidebar
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
+
     return (
         <>
-            <MainHeader />
+            <Sidebar isOpen={isSidebarOpen} />
+            <MainHeader onMenuClick={toggleSidebar} />
             <main className={styles.feedMain}>
                 <section className={styles.feedMain__box}>
                     <h1 className={styles.feedMain__title}>Vagas Recentes</h1>

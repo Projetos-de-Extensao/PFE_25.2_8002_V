@@ -2,12 +2,12 @@ import styles from './MainHeader.module.scss';
 import avatarPlaceholder from '../../../assets/imgs/Avatar.png'
 import hamburguer from '../../../assets/imgs/menu_svgrepo.com.png'
 
-export default function Header() {
+export default function Header({onMenuClick}) {
     return (
         <header className={styles.header}>
             <div className={styles.header__up}>
                 <div className={styles.header__box}>
-                    <button className={styles.header__hamburger} aria-label="Abrir menu">
+                    <button onClick={onMenuClick} className={styles.header__hamburger} aria-label="Abrir menu">
                         <img src={hamburguer} alt="" />
                     </button>
                     <span className={styles.header__greeting}>Olá, João Gabriel!</span>

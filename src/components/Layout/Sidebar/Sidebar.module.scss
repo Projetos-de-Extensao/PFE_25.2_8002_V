@@ -7,6 +7,20 @@
     height: 100vh;
     width: 310px; //mudar para vw
     padding: 35px 31px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+
+    // Estado inicial: escondida fora da tela
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+
+    // Modificador para o estado aberto
+    &--open {
+        transform: translateX(0);
+    }
 
     &__logo {
         width: 35px;
@@ -37,7 +51,7 @@
 
     &__navLink {
         font-weight: $font-weight-light;
-        
+
         &--logout:hover {
             color: $text-color-danger;
         }

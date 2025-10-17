@@ -1,9 +1,11 @@
 import styles from './Sidebar.module.scss';
 import LogoSimples from '../../../assets/imgs/ibvagas-1.png'
 
-export default function Sidebar() {
+export default function Sidebar({isOpen}) {
+    const sidebarClasses = `${styles.sidebar} ${isOpen ? styles['sidebar--open'] : ''}`;
     return (
-        <aside className={styles.sidebar}>
+        <aside className={sidebarClasses}>
+
 
             <img
                 src={LogoSimples}
