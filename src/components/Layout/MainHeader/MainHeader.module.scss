@@ -1,6 +1,6 @@
 @import "../../../styles/_variables.scss";
 
-.header{
+.header {
     background-color: $background-color-dark;
     height: 9.8rem;
     padding: 0px 19px;
@@ -8,8 +8,10 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    z-index: 10; // garante que o header fique por cima
 
-    &__box{
+    &__box {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -17,20 +19,21 @@
         color: $text-color-light;
     }
 
-    &__hamburger{
+    &__hamburger {
         border: none;
         background-color: transparent;
         cursor: pointer;
     }
-    
-    &__up{
+
+    &__up {
         display: flex;
         justify-content: space-between;
     }
 
-    &__down{
+    &__down {
         text-align: end;
-        & a{
+
+        & a {
             color: $text-color-light;
         }
     }
