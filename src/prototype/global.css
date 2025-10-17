@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Libertinus+Serif+Display&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Paleta de cores - nomes genericos */
+    --cor-primaria: #222831;
+    --cor-cinza: #393E46;
+    --cor-areia: #948979;
+    --cor-bege: #DFD0B8;
+    --cor-bege-claro: #EADAC2;
+    --cor-branca: #FFFFFF;
+    --cor-vermelha: #F85A57;
+    --cor-vermelha-claro: #F0807E;
+
+    /* --- Cores de Texto --- */
+    --text-color-primary: var(--cor-primaria);
+    --text-color-secondary: var(--cor-cinza);
+    --text-color-light: var(--cor-branca);
+    --text-color-danger: var(--cor-vermelha);
+
+    /* --- Cores de Fundo --- */
+    --background-color-page: var(--cor-branca);
+    --background-color-card: var(--cor-branca);
+    --background-color-dark: var(--cor-primaria);
+    --background-color-input: var(--cor-branca);
+
+    /* --- Cores de Botão --- */
+    --button-primary-background: var(--cor-primaria);
+    --button-primary-text: var(--cor-branca);
+    --button-primary-hover: var(--cor-cinza);
+
+    --button-alternative-background: var(--cor-bege);
+    --button-alternative-text: var(--cor-primaria);
+    --button-alternative-hover: var(--cor-bege-claro);
+
+    --button-danger-background: var(--cor-vermelha);
+    --button-danger-text: var(--cor-branca);
+    --button-danger-hover: var(--cor-vermelha-claro);
+
+    /* --- Cores de Formulário --- */
+    --input-border-color: var(--cor-primaria);
+    --input-text-color: var(--cor-primaria);
+    --input-placeholder-color: var(--cor-cinza);
+
+    /* --- Família da Fonte --- */
+    --font-family-base: 'Roboto', sans-serif;
+
+    /* --- Tamanhos de Fonte --- */
+    --font-size-title-lg: 26px;
+    --font-size-title-md: 20px;
+    --font-size-body: 16px;
+    --font-size-small: 12px;
+
+    /* --- Pesos da Fonte (Font Weights) --- */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+
+    /* --- TOKENS DE UNIDADES --- */
+    --border-radius-base: 10px;
+    --border-color: var(--cor-primaria);
+    --padding-inputs: 8px 10px;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+    /* Estilos base (Tamanho Padrão "default") */
+    padding: 0.9rem 5rem;
+    min-width: 20.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 100%;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+
+    /* Transição suave para o hover */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* --- Variantes de Cor --- */
+
+.btn--primary {
+    background-color: #222831; 
+    color: #FFFFFF;
+}
+
+.btn--primary:hover {
+    background-color: #393E46;
+}
+
+.btn--alternative {
+    background-color: #DFD0B8;
+    color: #222831;
+}
+
+.btn--alternative:hover {
+    background-color: #EADAC2;
+}
+
+.btn--danger {
+    background-color: #F85A57;
+    color: #FFFFFF;
+}
+
+.btn--danger:hover {
+    background-color: #F0807E;
+}
+
+
+/* --- Modificadores de Tamanho --- */
+
+.btn--medium {
+    padding: 0.9rem 2.9rem;
+    min-width: 13rem;
+}
+
+.btn--small {
+    padding: 0.9rem 2.6rem;
+    min-width: 10rem;
+}
+
+.button--alt {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(223, 208, 184);
+    color: rgb(0, 0, 0);
+    font-size: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.input-box {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.input-box__label {
+    /* $font-size-body */
+    font-size: var(--font-size-body);
+}
+
+.input-box__input {
+    /* $padding-inputs */
+    padding: var(--padding-inputs);
+    
+    width: 22.3rem;
+    
+    /* $border-color */
+    border: 1px solid var(--border-color);
+    
+    /* $border-radius-base */
+    border-radius: var(--border-radius-base);
+
+    /* Inputs não herdam fontes por padrão. 
+      Adicionando para consistência com seu design system.
+    */
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body);
+    
+    /* Adicionando cores do seu _variables.scss */
+    color: var(--input-text-color);
+    background-color: var(--background-color-input);
+}
