@@ -7,7 +7,7 @@ body {
 }
 
 main {
-    height: 80%;
+    padding: 22px 16px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -38,41 +38,14 @@ main {
     font-weight: 300;
 }
 
-.main__dados {
+.main__dados{
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
+    gap: 2rem;
 }
 
-.container__obrigatorios {
+.container{
     display: flex;
+    gap: 2rem;
     flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.container__adicionais {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.title {
-    font-size: 0.8rem;
-}
-
-.input {
-    border-radius: 10px;
-    padding: 2%;
-}
-
-.input_textbox {
-    border-radius: 10px;
-    padding: 2% 2% 10% 2%;
 }

@@ -151,29 +151,41 @@ html {
 }
 
 .input-box__label {
-    /* $font-size-body */
     font-size: var(--font-size-body);
 }
 
 .input-box__input {
-    /* $padding-inputs */
     padding: var(--padding-inputs);
-    
-    width: 22.3rem;
-    
-    /* $border-color */
+    min-width: 22.3rem;
     border: 1px solid var(--border-color);
-    
-    /* $border-radius-base */
     border-radius: var(--border-radius-base);
-
-    /* Inputs não herdam fontes por padrão. 
-      Adicionando para consistência com seu design system.
-    */
     font-family: var(--font-family-base);
     font-size: var(--font-size-body);
-    
-    /* Adicionando cores do seu _variables.scss */
+    color: var(--input-text-color);
+    background-color: var(--background-color-input);
+}
+
+.textarea {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 22.3rem;
+}
+
+.textarea__label {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-body);
+    color: var(--text-color-primary);
+}
+
+.textarea__input {
+    width: 22.3rem;
+    padding: var(--padding-inputs);
+    border-radius: var(--border-radius-base);
+    border: 1px solid var(--border-color);
+    resize: none;
+    font-size: var(--font-size-body);
+    font-family: var(--font-family-base);
     color: var(--input-text-color);
     background-color: var(--background-color-input);
 }
