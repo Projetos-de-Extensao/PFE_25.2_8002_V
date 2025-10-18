@@ -15,29 +15,6 @@ main {
     flex-direction: column;
 }
 
-.main__header {
-    width: 100%;
-    padding: 3%;
-    position: relative;
-    background-color: #222831;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main__header img {
-    width: 30px;
-    margin-right: auto;
-}
-
-.main__header h1 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    font-weight: 300;
-}
-
 .main__dados{
     display: flex;
     flex-direction: column;

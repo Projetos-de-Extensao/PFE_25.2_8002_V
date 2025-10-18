@@ -74,6 +74,14 @@ html {
     width: 100%;
 }
 
+/* 
+================================
+    1. Componentes Genéricos 
+================================
+*/
+
+/* 1.1 Botões */
+
 .btn {
     /* Estilos base (Tamanho Padrão "default") */
     padding: 0.9rem 5rem;
@@ -144,6 +152,8 @@ html {
     cursor: pointer;
 }
 
+/* 1.2 Inputs */
+
 .input-box {
     display: flex;
     gap: 5px;
@@ -164,6 +174,8 @@ html {
     color: var(--input-text-color);
     background-color: var(--background-color-input);
 }
+
+/* 1.3 Textearea */
 
 .textarea {
     display: flex;
@@ -188,4 +200,36 @@ html {
     font-family: var(--font-family-base);
     color: var(--input-text-color);
     background-color: var(--background-color-input);
+}
+
+
+/* 
+================================
+    2. Componentes de Layout
+================================
+*/
+
+.page__header {
+    width: 100%;
+    padding: 28px 21px;
+    position: relative;
+    background-color: #222831;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap
+}
+
+.page__header img {
+    width: 19px;
+    margin-right: auto;
+}
+
+.page__header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-title-md);
 }
