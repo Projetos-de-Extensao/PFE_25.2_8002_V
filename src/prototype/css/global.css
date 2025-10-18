@@ -66,7 +66,7 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family-base)
 }
 
 html {
@@ -133,23 +133,14 @@ html {
 
 .btn--medium {
     padding: 0.9rem 2.9rem;
-    min-width: 13rem;
+    min-width: 0rem;
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 .btn--small {
     padding: 0.9rem 2.6rem;
     min-width: 10rem;
-}
-
-.button--alt {
-    width: 100%;
-    height: 50px;
-    border-radius: 10px;
-    background-color: rgb(223, 208, 184);
-    color: rgb(0, 0, 0);
-    font-size: 100%;
-    border: none;
-    cursor: pointer;
 }
 
 /* 1.2 Inputs */
@@ -209,6 +200,7 @@ html {
 ================================
 */
 
+/* 2.1 Header secundário das páginas */
 .page__header {
     width: 100%;
     padding: 28px 21px;
@@ -234,7 +226,7 @@ html {
     font-size: var(--font-size-title-md);
 }
 
-
+/* 2.2 Cabeçalho principal do feed de aluno e professor */
 .header {
     background-color: var(--background-color-dark);
     height: 9.8rem;
@@ -244,7 +236,7 @@ html {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    z-index: 10; /* Garante que o header fique por cima */
+    z-index: 10;
 }
 
 .header__box {
@@ -261,11 +253,9 @@ html {
     cursor: pointer;
 }
 
-/* Estilo de placeholder para o ícone do hamburguer */
 .header__hamburger img {
-    width: 24px;
-    height: 24px;
-    filter: invert(1); /* Deixa o ícone branco */
+    width: 27px;
+    height: 27px;
 }
 
 .header__up {
@@ -274,18 +264,20 @@ html {
     align-items: center;
 }
 
-/* Estilo de placeholder para o avatar */
-.header__avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--cor-cinza);
-    text-align: center;
-    line-height: 40px;
-    font-size: 10px;
-    color: white;
+.header__greeting{
+    font-size: var(--font-size-title-md);
 }
 
+.header__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--cor-cinza);
+}
+
+.header__avatar img{
+ width: 100%;
+}
 
 .header__down {
     text-align: end;
@@ -294,26 +286,22 @@ html {
 .header__down a {
     color: var(--text-color-light);
     text-decoration: none;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-body);
 }
-/* ============================================= */
-/* Fim de: main-header.css             */
-/* ============================================= */
 
 
-
-/* ============================================= */
-/* Início de: job-card.css              */
-/* ============================================= */
-/*
-  Descrição: Estilos para o card de vaga.
+/* 
+================================
+    3. Componentes de Vagas
+================================
 */
 
+/* 3.1 Cards de vagas */
 .job-card {
     padding: 15px;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-base);
-    width: 22.3rem;
+    min-width: 22.3rem;
     cursor: pointer;
     background-color: var(--background-color-card);
     transition: box-shadow 0.2s ease-in-out;
@@ -386,7 +374,7 @@ html {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 5px; /* Adicionado para espaçamento */
+    gap: 5px;
 }
 
 .job-card__responsibilities li {
@@ -407,20 +395,11 @@ html {
 
 .job-card__actions {
     margin-top: 10px;
-    /* O botão usará os estilos de .btn */
 }
 
-.feedMain {
+.job-card__actions--professor{
     display: flex;
-    background-color: var(--background-color-page);
-    flex-direction: column;
-    align-items: center;
-    padding: 25px 19px;
-    margin-top: -1.5rem; 
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    position: relative;
-    z-index: 100;
+    gap: 0.7rem;
 }
 
 .feedMain__box {
@@ -428,7 +407,7 @@ html {
     flex-direction: column;
     gap: 15px;
     width: 100%;
-    max-width: 22.3rem; 
+    min-width: 22.3rem; 
 }
 
 .feedMain__title {
