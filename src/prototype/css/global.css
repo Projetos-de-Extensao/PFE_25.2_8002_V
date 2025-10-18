@@ -307,6 +307,18 @@ html {
     transition: box-shadow 0.2s ease-in-out;
 }
 
+.job-card .job-card__details {
+    display: none;
+}
+
+/* Mostra os detalhes APENAS se o card tiver a classe .job-card--expanded */
+.job-card.job-card--expanded .job-card__details {
+    display: flex; /* <-- Mostra o bloco */
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 13px;
+}
+
 .job-card:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
@@ -346,14 +358,6 @@ html {
     height: 20px;
     object-fit: contain;
     flex-shrink: 0; /* Impede que a imagem encolha */
-}
-
-
-.job-card__details {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-    margin-top: 13px;
 }
 
 .job-card__description {
