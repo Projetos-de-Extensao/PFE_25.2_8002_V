@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo - Feed de Vagas</title>
+    
+    <link rel="stylesheet" href="./css/global.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: var(--font-family-base);
+            /* O fundo do body é escuro, pois o header é escuro */
+            background-color: var(--background-color-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__up">
+            <div class="header__box">
+                <button class="header__hamburger" aria-label="Abrir menu">
+                    <img src="../assets/imgs/menu_svgrepo.com.png" alt="Menu" />
+                </button>
+                <span class="header__greeting">Olá, João Gabriel!</span>
+            </div>
+            <div class="header__avatar" alt="Avatar do usuário">
+                JG
+            </div>
+        </div>
+
+        <div class="header__down">
+            <a href="#" class="header__link">
+                Minhas candidaturas &gt;
+            </a>
+        </div>
+    </header>
+    <main class="feedMain">
+        <section class="feedMain__box">
+            <h1 class="feedMain__title">Vagas Recentes</h1>
+
+            <article class="job-card job-card--expanded">
+                <div class="job-card__header">
+                    <div class="header__text">
+                        <span class="job-card_time">Há 3 horas</span>
+                        <h3 class="job-card__title">Programação Estruturada</h3>
+                        <p class="job-card__professor">Por Cassius Moreira</p>
+                    </div>
+                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-preta-cima.png" alt="Recolher" />
+                </div>
+                <div class="job-card__details">
+                    <p class="job-card__description">Buscamos um(a) monitor(a) para apoiar turmas em lógica e construção de algoritmos...</p>
+                    <div>
+                        <h4 class="job-card__responsibilities-title">Responsabilidade</h4>
+                        <ul class="job-card__responsibilities">
+                            <li>Tirar dúvidas sobre variáveis, controle de fluxo, etc.</li>
+                            <li>Apoiar exercícios práticos e projetos curtos em C.</li>
+                            <li>Corrigir listas e dar feedback objetivo.</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="job-card__details-link">Ver mais detalhes</a>
+                    <div class="job-card__actions">
+                        <button class="btn btn--primary">Me candidatar!</button>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="job-card">
+                <div class="job-card__header">
+                    <div class="header__text">
+                        <span class="job-card_time">Há 2 dias</span>
+                        <h3 class="job-card__title">Análise de Dados</h3>
+                        <p class="job-card__professor">Por Maria Silva</p>
+                    </div>
+                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
+                </div>
+                </article>
+
+            <article class="job-card">
+                <div class="job-card__header">
+                    <div class="header__text">
+                        <span class="job-card_time">Há 4 dias</span>
+                        <h3 class="job-card__title">Desenvolvimento Web Front-End</h3>
+                        <p class="job-card__professor">Por Carlos Oliveira</p>
+                    </div>
+                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
+                </div>
+                </article>
+
+            <article class="job-card">
+                <div class="job-card__header">
+                    <div class="header__text">
+                        <span class="job-card_time">Há 1 semana</span>
+                        <h3 class="job-card__title">Banco de Dados</h3>
+                        <p class="job-card__professor">Por Ana Beatriz</p>
+                    </div>
+                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
+                </div>
+                </article>
+
+
+        </section>
+    </main>
+    </body>
+</html>
