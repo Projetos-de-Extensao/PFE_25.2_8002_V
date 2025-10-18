@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="main__header">
+    <header class="page__header">
         <img src="../assets/imgs/setinha.png" alt="Seta de Retorno">
         <h1>
             Nova vaga
@@ -19,21 +19,21 @@
 
     <main>
         <section class="main__criacao">
-            <div class="container__seletor">
+            <div class="input-box">
                 <label class="title" for="main__seletor">Disciplina</label>
-                <select class="input" name="seletor_Disciplina" id="main__seletor">
+                <select class="input-box__input" name="seletor_Disciplina" id="main__seletor">
                     <option value="">Selecione uma opção</option>
                 </select>
             </div>
 
-            <div class="container__requisitos">
+            <div class="input-box">
                 <label class="title" for="main__requisites">Requisitos</label>
-                <textarea class="input_textbox" name="texto_Requisitos" id="main__requisites" placeholder="Digite os requisitos aqui"></textarea>
+                <textarea class="textarea__input" name="texto_Requisitos" id="main__requisites" placeholder="Digite os requisitos aqui" rows="7"></textarea>
             </div>
 
-            <div class="container__responsabilidades">
+            <div class="input-box">
                 <label class="title" for="main__responsabilities">Responsabilidades</label>
-                <textarea class="input_textbox" name="texto_Responsabilidades" id="main__responsabilities" placeholder="Defina as responsabilidades da vaga aqui"></textarea>
+                <textarea class="textarea__input" name="texto_Responsabilidades" id="main__responsabilities" placeholder="Defina as responsabilidades da vaga aqui"  rows="7"></textarea>
             </div>
             
             <button class="btn btn--primary">Criar vaga</button>

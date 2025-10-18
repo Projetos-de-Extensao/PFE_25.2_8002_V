@@ -1,78 +1,14 @@
-body {
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 main {
-    height: 80%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.main__header {
-    width: 100%;
-    padding: 3%;
-    position: relative;
-    background-color: #222831;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main__header img {
-    width: 30px;
-    margin-right: auto;
-}
-
-.main__header h1 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    font-weight: 300;
 }
 
 .main__criacao {
     display: flex;
+    padding: 22px 16px;
     flex-direction: column;
-    gap: 30px;
-    width: 90%;
-}
-
-.container__seletor {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.container__requisitos {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.container__responsabilidades {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.title {
-    font-size: 0.8rem;
-}
-
-.input {
-    border-radius: 10px;
-    padding: 2%;
-}
-
-.input_textbox {
-    border-radius: 10px;
-    padding: 2% 2% 10% 2%;
+    gap: 21px;
 }

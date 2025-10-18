@@ -191,7 +191,7 @@ html {
 }
 
 .textarea__input {
-    width: 22.3rem;
+    /* width: 22.3rem; */
     padding: var(--padding-inputs);
     border-radius: var(--border-radius-base);
     border: 1px solid var(--border-color);
