@@ -10,3 +10,20 @@
     position: relative;
     z-index: 100;
 }
+
+.feedMain__box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    min-width: 22.3rem; 
+}
+
+.feedMain__title {
+    width: 100%;
+    text-align: start;
+    font-size: var(--font-size-title-lg);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-color-primary);
+    margin: 0 0 10px 0;
+}

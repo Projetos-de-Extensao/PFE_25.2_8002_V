@@ -4,21 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protótipo - Feed de Vagas</title>
+    <title>Protótipo - Feed de Vagas (Aluno)</title>
 
     <link rel="stylesheet" href="./css/feedPages.css">
     <link rel="stylesheet" href="./css/global.css">
-
+    <link rel="stylesheet" href="./css/sidebar.css">
 </head>
 
 <body>
+    <div class="overlay"></div>
+    <aside class="sidebar">
+        <img src="../assets/imgs/ibvagas-1.png" alt="Logo IBVagas" class="sidebar__logo" />
+        <hr class="sidebar__divider" />
+        <div class="sidebar__body">
+            <nav class="sidebar__nav">
+                <ul class="sidebar__navList">
+                    <li class="sidebar__navItem">
+                        <a href="#" class="sidebar__navLink">Minha Conta</a>
+                    </li>
+                    <li class="sidebar__navItem">
+                        <a href="./cadastro.html" class="sidebar__navLink sidebar__navLink--logout">
+                            Sair
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar__footer">
+                <a href="./feedAluno.html" class="sidebar__footerLink">Modo Aluno</a>
+                <a href="./feedProfessor.html" class="sidebar__footerLink">Modo Professor</a>
+            </div>
+        </div>
+    </aside>
     <header class="header">
         <div class="header__up">
             <div class="header__box">
                 <button class="header__hamburger" aria-label="Abrir menu">
                     <img src="../assets/imgs/menu_svgrepo.com.png" alt="Menu" />
                 </button>
-                <span class="header__greeting">Olá, João Gabriel!</span>
+                <span class="header__greeting">Olá, John Carvalho!</span>
             </div>
             <div class="header__avatar" alt="Avatar do usuário">
                 <img src="../assets/imgs/Avatar.png" alt="">
@@ -31,6 +54,7 @@
             </a>
         </div>
     </header>
+
     <main class="feedMain">
         <section class="feedMain__box">
             <h1 class="feedMain__title">Vagas Recentes</h1>
@@ -73,13 +97,12 @@
                 </div>
                 <div class="job-card__details">
                     <p class="job-card__description">Vaga para monitor(a) com conhecimento em Python (Pandas, NumPy) e
-                        SQL para auxiliar alunos na análise e visualização de datasets.</p>
+                        SQL...</p>
                     <div>
                         <h4 class="job-card__responsibilities-title">Responsabilidade</h4>
                         <ul class="job-card__responsibilities">
                             <li>Ajudar na limpeza e preparação de dados.</li>
                             <li>Tirar dúvidas sobre bibliotecas Pandas e Matplotlib.</li>
-                            <li>Auxiliar na interpretação de resultados estatísticos.</li>
                         </ul>
                     </div>
                     <a href="#" class="job-card__details-link">Ver mais detalhes</a>
@@ -99,8 +122,8 @@
                     <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
                 </div>
                 <div class="job-card__details">
-                    <p class="job-card__description">Oportunidade para monitor(a) com experiência em HTML5, CSS3
-                        (Flexbox, Grid) e JavaScript (React.js) para auxiliar no desenvolvimento de projetos.</p>
+                    <p class="job-card__description">Oportunidade para monitor(a) com experiência em HTML5, CSS3 e
+                        JavaScript (React.js)...</p>
                     <div>
                         <h4 class="job-card__responsibilities-title">Responsabilidade</h4>
                         <ul class="job-card__responsibilities">
@@ -115,84 +138,6 @@
                 </div>
             </article>
 
-            <article class="job-card">
-                <div class="job-card__header">
-                    <div class="header__text">
-                        <span class="job-card_time">Há 1 semana</span>
-                        <h3 class="job-card__title">Banco de Dados</h3>
-                        <p class="job-card__professor">Por Ana Beatriz</p>
-                    </div>
-                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
-                </div>
-                <div class="job-card__details">
-                    <p class="job-card__description">Buscamos monitor(a) para a disciplina de Banco de Dados, com foco
-                        em modelagem relacional (MER/DER) e linguagem SQL.</p>
-                    <div>
-                        <h4 class="job-card__responsibilities-title">Responsabilidade</h4>
-                        <ul class="job-card__responsibilities">
-                            <li>Auxiliar na criação de diagramas entidade-relacionamento.</li>
-                            <li>Corrigir e dar suporte em consultas SQL (JOINs, GROUP BY).</li>
-                            <li>Explicar conceitos de normalização de dados.</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="job-card__details-link">Ver mais detalhes</a>
-                    <div class="job-card__actions">
-                        <button class="btn btn--primary">Me candidatar!</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="job-card">
-                <div class="job-card__header">
-                    <div class="header__text">
-                        <span class="job-card_time">Há 1 semana</span>
-                        <h3 class="job-card__title">Banco de Dados</h3>
-                        <p class="job-card__professor">Por Ana Beatriz</p>
-                    </div>
-                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
-                </div>
-                <div class="job-card__details">
-                    <p class="job-card__description">Vaga para monitoria focada em Bancos de Dados Não-Relacionais.
-                        Desejável conhecimento em MongoDB ou Redis.</p>
-                    <div>
-                        <h4 class="job-card__responsibilities-title">Responsabilidade</h4>
-                        <ul class="job-card__responsibilities">
-                            <li>Ajudar na modelagem de documentos (MongoDB).</li>
-                            <li>Explicar diferenças entre SQL e NoSQL.</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="job-card__details-link">Ver mais detalhes</a>
-                    <div class="job-card__actions">
-                        <button class="btn btn--primary">Me candidatar!</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="job-card">
-                <div class="job-card__header">
-                    <div class="header__text">
-                        <span class="job-card_time">Há 1 semana</span>
-                        <h3 class="job-card__title">Banco de Dados</h3>
-                        <p class="job-card__professor">Por Ana Beatriz</p>
-                    </div>
-                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
-                </div>
-                <div class="job-card__details">
-                    <p class="job-card__description">Buscamos monitor(a) para a disciplina de Banco de Dados, com foco
-                        em modelagem relacional (MER/DER) e linguagem SQL.</p>
-                    <div>
-                        <h4 class="job-card__responsibilities-title">Responsabilidade</h4>
-                        <ul class="job-card__responsibilities">
-                            <li>Auxiliar na criação de diagramas entidade-relacionamento.</li>
-                            <li>Corrigir e dar suporte em consultas SQL (JOINs, GROUP BY).</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="job-card__details-link">Ver mais detalhes</a>
-                    <div class="job-card__actions">
-                        <button class="btn btn--primary">Me candidatar!</button>
-                    </div>
-                </div>
-            </article>
         </section>
     </main>
 

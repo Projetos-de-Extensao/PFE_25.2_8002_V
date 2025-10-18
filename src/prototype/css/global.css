@@ -212,9 +212,14 @@ html {
     white-space: nowrap
 }
 
-.page__header img {
-    width: 19px;
+.page__header a {
     margin-right: auto;
+    line-height: 0; 
+}
+
+.page__header a img {
+    width: 19px;
+    display: block;
 }
 
 .page__header h1 {
@@ -313,7 +318,7 @@ html {
 
 /* Mostra os detalhes APENAS se o card tiver a classe .job-card--expanded */
 .job-card.job-card--expanded .job-card__details {
-    display: flex; /* <-- Mostra o bloco */
+    display: flex;
     flex-direction: column;
     gap: 13px;
     margin-top: 13px;
@@ -357,7 +362,7 @@ html {
     width: 20px;
     height: 20px;
     object-fit: contain;
-    flex-shrink: 0; /* Impede que a imagem encolha */
+    flex-shrink: 0;
 }
 
 .job-card__description {
@@ -406,19 +411,107 @@ html {
     gap: 0.7rem;
 }
 
-.feedMain__box {
+/* 3.2 Sidebar */
+
+.sidebar {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    min-width: 22.3rem; 
+    background-color: var(--background-color-dark);
+    height: 100vh;
+    width: 310px;
+    padding: 35px 31px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
 }
 
-.feedMain__title {
-    width: 100%;
-    text-align: start;
-    font-size: var(--font-size-title-lg);
-    font-weight: var(--font-weight-medium);
-    color: var(--text-color-primary);
-    margin: 0 0 10px 0;
+.sidebar--open {
+    transform: translateX(0);
+}
+
+.sidebar__logo {
+    width: 35px;
+}
+
+.sidebar__divider {
+    margin: 30px 0px;
+    border: 0;
+    border-top: 1px solid var(--cor-cinza);
+    opacity: 0.5;
+}
+
+.sidebar__body {
+    color: var(--text-color-light);
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.sidebar__navList {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    list-style: none;
+}
+
+.sidebar__navItem {
+    cursor: pointer;
+}
+
+.sidebar__navLink {
+    font-weight: var(--font-weight-light);
+    color: var(--text-color-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.sidebar__navLink:hover {
+    color: var(--cor-bege-claro);
+}
+
+.sidebar__navLink--logout:hover {
+    color: var(--text-color-danger);
+}
+
+
+.sidebar__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: var(--font-size-small);
+}
+
+.sidebar__footerLink {
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--text-color-light);
+}
+
+
+/* ================================
+    Estilos do Overlay
+================================
+*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.overlay--visible {
+    opacity: 1;
+    visibility: visible;
 }
