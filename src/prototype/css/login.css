@@ -82,7 +82,7 @@ label {
 
 .login__line {
     display: flex;
-    gap: 3px;
+    gap: 6px;
     justify-content: center;
     align-items: center;
     margin: 3%;
