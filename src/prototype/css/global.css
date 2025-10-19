@@ -176,20 +176,6 @@ html {
     gap: 5px;
     min-width: 22.3rem;
 }
-.textarea__senha{
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    gap: 17px;
-}
-
-.textarea__p{
-    text-align: center;
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-size: 1.2rem;
-    
-}
 
 .textarea__label {
     font-weight: var(--font-weight-medium);
