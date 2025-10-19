@@ -516,3 +516,34 @@ html {
     opacity: 1;
     visibility: visible;
 }
+
+/* Transforma a sidebar em fixo para desktop */
+@media (min-width: 1024px) {
+
+    .sidebar {
+        transform: translateX(0);
+        transition: none;
+    }
+
+    .header__hamburger,
+    .overlay {
+        display: none;
+    }
+    
+    .header,
+    .feedMain {
+        margin-left: 310px;
+    }
+    .header {
+        width: calc(100% - 310px);
+    }
+    
+    .sidebar--open {
+        transform: translateX(0); 
+    }
+    
+    .overlay--visible {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
