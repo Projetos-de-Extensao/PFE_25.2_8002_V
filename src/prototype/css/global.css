@@ -176,20 +176,6 @@ html {
     gap: 5px;
     min-width: 22.3rem;
 }
-.textarea__senha{
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    gap: 17px;
-}
-
-.textarea__p{
-    text-align: center;
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-size: 1.2rem;
-    
-}
 
 .textarea__label {
     font-weight: var(--font-weight-medium);
@@ -529,4 +515,35 @@ html {
 .overlay--visible {
     opacity: 1;
     visibility: visible;
+}
+
+/* Transforma a sidebar em fixo para desktop */
+@media (min-width: 1024px) {
+
+    .sidebar {
+        transform: translateX(0);
+        transition: none;
+    }
+
+    .header__hamburger,
+    .overlay {
+        display: none;
+    }
+    
+    .header,
+    .feedMain {
+        margin-left: 310px;
+    }
+    .header {
+        width: calc(100% - 310px);
+    }
+    
+    .sidebar--open {
+        transform: translateX(0); 
+    }
+    
+    .overlay--visible {
+        opacity: 0;
+        visibility: hidden;
+    }
 }

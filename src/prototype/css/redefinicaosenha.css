@@ -1,11 +1,4 @@
 
-.page__header{
-    justify-content: flex-start;
-    height: 105px;
-}
-.header__seta{
-    height: 75%;
-}
 .main{
     height: 100%;
     display: flex;
@@ -16,63 +9,36 @@
     gap: 24px;
     
 }
-.input-box{
-        width:90%
-    }
-
-.input-box__input{
-    width: 2%;
-    height: 45px;
-}
 
 .btn--primary-full{
     background-color: #222831; 
     color: #FFFFFF;
-    width: 90%;
+    width: 85%;
     height: 50px;
 }
+
 .btn--primary-full:hover{
     background-color: #393E46;
 
 }
-
-@media (min-width: 600px) {
-    body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-    }
-    .main{
-        margin-top: 20vh;
-        height: 300px;
-        width: 500px;
-    }
-    .input-box__input{
-    width: 450px;
-    height: 45px;
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 22.3rem;
+}
+.text__senha{
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 17px;
 }
 
+.text__p{
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 1.2rem;
+    
 }
-@media(min-width:428px) and (max-width:600px){
-        body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-    }
-    .main{
-        margin-top: 20vh;
-        height: 100%;
-        width: 90%;
-    }
-    .input-box{
-        width:90%
-    }
-    .input-box__input{
-    width: 100%;
-    height: 45px;
-}
-}
+    
