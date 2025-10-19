@@ -14,19 +14,23 @@
         <a href="./login.html"><img src="../assets/imgs/setinha.png" alt="Seta de Retorno" class="header__seta"></a>
     </header>
 
-    <main class="main">
-        <div class="text text__senha">
-            <h1>Redefinição de Senha!</h1>
+    <main>
+        <section class="main__redefinicao">
+            <div class="container__texto">
+                <h1>Redefinição de Senha!</h1>
 
-            <p class="text text__p">Informe um email e enviaremos um link para recuperação da sua senha</p>
-        </div>
-        
-        <section class="input-box">
-            <label for="email" class="input-box__label">Email</label>
-            <input type="text" id="email" class="input-box__input" placeholder="Digite seu email">
+                <p>
+                    Informe um email e enviaremos um link para recuperação da sua senha
+                </p>
+            </div>
+            
+            <form class="input-box">
+                <label for="email" class="input-box__label">Email</label>
+                <input type="text" id="email" placeholder="Digite seu email" class="input-box__input">
+
+                <a href="confirmacaoemail.html" class="btn btn--primary">Enviar link de recuperação</a>
+            </form>
         </section>
-
-        <a href="confirmacaoemail.html" class="btn btn--primary-full">Enviar link de recuperação</a>
     </main>
 </body>
 </html>

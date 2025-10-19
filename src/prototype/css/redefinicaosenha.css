@@ -1,44 +1,31 @@
-
-.main{
-    height: 100%;
+body {
     display: flex;
     flex-direction: column;
-    justify-content:start;
-    align-items: center;
-    margin-top: 50%;
-    gap: 24px;
-    
+    height: 100vh;
 }
 
-.btn--primary-full{
-    background-color: #222831; 
-    color: #FFFFFF;
-    width: 85%;
-    height: 50px;
-}
-
-.btn--primary-full:hover{
-    background-color: #393E46;
-
-}
-.text{
+main {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    min-width: 22.3rem;
-}
-.text__senha{
     justify-content: center;
     align-items: center;
-    width: 90%;
-    gap: 17px;
 }
 
-.text__p{
-    text-align: center;
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-size: 1.2rem;
-    
+.main__redefinicao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
 }
-    
+
+.container__texto {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-box {
+    width: 100%;
+}
