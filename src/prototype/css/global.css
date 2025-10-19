@@ -182,6 +182,7 @@ html {
     width: 90%;
     gap: 17px;
 }
+
 .textarea__p{
     text-align: center;
     font-family: 'Roboto';
@@ -222,7 +223,6 @@ html {
     position: relative;
     background-color: #222831;
     display: flex;
-    justify-content: center;
     align-items: center;
     white-space: nowrap
 }
