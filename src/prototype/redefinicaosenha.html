@@ -19,14 +19,17 @@
             <div class="container__texto">
                 <h1>Redefinição de Senha!</h1>
 
-                <p>
+                <p class="container__texto">
                     Informe um email e enviaremos um link para recuperação da sua senha
                 </p>
             </div>
             
             <form class="input-box">
-                <label for="email" class="input-box__label">Email</label>
-                <input type="text" id="email" placeholder="Digite seu email" class="input-box__input">
+                <!-- Div para formatar o form sem mexer no input -->
+                <div>
+                    <label for="email" class="input-box__label">Email</label>
+                    <input type="text" id="email" placeholder="Digite seu email" class="input-box__input">
+                </div>
 
                 <a href="confirmacaoemail.html" class="btn btn--primary">Enviar link de recuperação</a>
             </form>
