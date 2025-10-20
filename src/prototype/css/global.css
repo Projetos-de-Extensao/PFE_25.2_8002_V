@@ -84,8 +84,8 @@ html {
 
 .btn {
     /* Estilos base (Tamanho Padrão "default") */
-    padding: 0.9rem 5rem;
-    min-width: 20.5rem;
+    padding: 0.9rem 4rem;
+    min-width: 100%;
     border: none;
     border-radius: 10px;
     font-size: 100%;
@@ -97,6 +97,13 @@ html {
     /* Transição suave para o hover */
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
+
+@media (min-width: 768px) {
+    .btn{
+        min-width: 22.3rem;
+    }
+}
+
 
 
 /* --- Variantes de Cor --- */

@@ -20,6 +20,7 @@ main {
     flex-direction: column;
     gap: 30px;
     width: 90%;
+    padding: 25px 19px;
 }
 
 .container__title {

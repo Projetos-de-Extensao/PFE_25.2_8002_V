@@ -47,7 +47,7 @@ Aqui categorizamos, com base nos critérios de "To Do" estabelecidos na aba "met
 - *À fazer, sprint ainda não finalizado.*
 - *À fazer, sprint ainda não finalizado.*
 
-**Ferramenta de comunicação:** x .
+**Ferramenta de comunicação:** Discord.
 
 ## Sprint 2
 > Data de início: 25/09/25 

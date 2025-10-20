@@ -1,10 +1,11 @@
 
-main{
+main section{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 25px 19px;
     gap: 1rem
 }
 
@@ -22,9 +23,16 @@ main{
     height: 163px;
     object-fit: cover;}
 
-.linha-divisoria{
-    height: 30px;
-    width: 90%;    
+.line{
+    height: 1px;
+    background-color: #222831;
+    width: 100%;    
+}
+
+@media (min-width: 768px) {
+    .line{
+        width: 22.3rem;
+    }
 }
 
 .sair{
