@@ -27,3 +27,47 @@
     color: var(--text-color-primary);
     margin: 0 0 10px 0;
 }
+ .overlay--modal {
+      position: fixed; inset: 0; 
+      background: rgba(0,0,0,0.55);
+      opacity: 0; visibility: hidden;
+      transition: opacity .2s ease, visibility .2s ease;
+      z-index: 2000;
+    }
+    .overlay--modal.is-visible { opacity: 1; visibility: visible; }
+
+    .modal {
+      position: fixed; inset: 0;
+      display: grid; place-items: center;
+      pointer-events: none;
+      z-index: 2001;
+    }
+    .modal.is-visible { pointer-events: auto; }
+    .modal__card {
+      width: calc(100% - 32px);
+      max-width: 420px;
+      background: var(--background-color-card);
+      color: var(--text-color-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-base);
+      box-shadow: 0 10px 30px rgba(0,0,0,.15);
+      padding: 18px 16px;
+      transform: translateY(10px);
+      transition: transform .2s ease, opacity .2s ease;
+      opacity: 0;
+    }
+    .modal.is-visible .modal__card { transform: translateY(0); opacity: 1; }
+
+    .modal__title {
+      font-size: var(--font-size-body);
+      text-align: center;
+      margin: 6px 8px 14px;
+    }
+    .modal__actions {
+      display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+    }
+    .modal__actions .btn { min-width: 0; padding: .9rem 2rem; }
+    .btn--rounded { border-radius: 12px; }
+    .is-hidden { 
+        display: none; 
+    }

@@ -74,4 +74,83 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+
+
+    // ==========================
+    //   MODAL DE CONFIRMAÇÃO
+    // ==========================
+    const modal = document.getElementById("deleteModal");
+    const modalOverlay = document.getElementById("modalOverlay");
+
+    const stateConfirm = document.getElementById("modalStateConfirm");
+    const stateDone    = document.getElementById("modalStateDone");
+
+    const confirmBtn = document.getElementById("confirmDeleteBtn");
+    const cancelBtn  = document.getElementById("cancelDeleteBtn");
+    const doneBtn    = document.getElementById("doneBtn");
+
+    let pendingDeleteCard = null; // referência do card que será apagado
+
+    function setModalState(isDone) {
+    if (isDone) {
+        stateConfirm.classList.add("is-hidden");
+        stateDone.classList.remove("is-hidden");
+        doneBtn && doneBtn.focus();
+    } else {
+        stateDone.classList.add("is-hidden");
+        stateConfirm.classList.remove("is-hidden");
+        confirmBtn && confirmBtn.focus();
+    }
+    }
+
+    function openModal(card) {
+        pendingDeleteCard = card;
+        setModalState(false); // abre no estado de confirmação
+        modal.classList.add("is-visible");
+        modalOverlay.classList.add("is-visible");
+        document.documentElement.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+        modal.classList.remove("is-visible");
+        modalOverlay.classList.remove("is-visible");
+        pendingDeleteCard = null;
+        document.documentElement.style.overflow = "";
+    }
+
+    // Delegação: abrir modal ao clicar em qualquer botão Excluir
+    document.addEventListener("click", function(e) {
+    const delBtn = e.target.closest(".job-card__delete");
+    if (!delBtn) return;
+    e.stopPropagation();
+    e.preventDefault();
+    const card = delBtn.closest(".job-card");
+    if (card) openModal(card);
+    });
+
+    // Confirmar: remove o card e muda o modal para estado “sucesso”
+    if (confirmBtn) {
+    confirmBtn.addEventListener("click", function() {
+        if (pendingDeleteCard) {
+        pendingDeleteCard.remove(); // aqui ficaria a chamada da API real
+        }
+        setModalState(true); // mostra mensagem de sucesso + "Entendido"
+    });
+    }
+
+    // Cancelar: fecha modal
+    if (cancelBtn) cancelBtn.addEventListener("click", closeModal);
+
+    // “Entendido”: fecha modal
+    if (doneBtn) doneBtn.addEventListener("click", closeModal);
+
+    // Fechar clicando no overlay
+    if (modalOverlay) modalOverlay.addEventListener("click", closeModal);
+
+    // Fechar com ESC
+    document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape" && modal.classList.contains("is-visible")) {
+        closeModal();
+    }
+    });
 });

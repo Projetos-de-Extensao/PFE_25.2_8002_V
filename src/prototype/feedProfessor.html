@@ -1,218 +1,166 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feed de Vagas (Professor)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed de Vagas (Professor)</title>
 
-    <link rel="stylesheet" href="./css/feedPages.css">
-    <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/feedPages.css">
+  <link rel="stylesheet" href="./css/global.css">
+
 </head>
 
 <body>
-    <div class="overlay"></div>
-    <aside class="sidebar">
-        <img src="../assets/imgs/ibvagas-1.png" alt="Logo IBVagas" class="sidebar__logo" />
-        <hr class="sidebar__divider" />
-        <div class="sidebar__body">
-            <nav class="sidebar__nav">
-                <ul class="sidebar__navList">
-                    <li class="sidebar__navItem">
-                        <a href="perfil.html" class="sidebar__navLink">Minha Conta</a>
-                    </li>
-                    <li class="sidebar__navItem">
-                        <a href="./login.html" class="sidebar__navLink sidebar__navLink--logout">
-                            Sair
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="sidebar__footer">
-                <a href="./feedAluno.html" class="sidebar__footerLink">Modo Aluno</a>
-                <a href="./feedProfessor.html" class="sidebar__footerLink">Modo Professor</a>
+  <div class="overlay"></div>
+  <aside class="sidebar">
+    <img src="../assets/imgs/ibvagas-1.png" alt="Logo IBVagas" class="sidebar__logo" />
+    <hr class="sidebar__divider" />
+    <div class="sidebar__body">
+      <nav class="sidebar__nav">
+        <ul class="sidebar__navList">
+          <li class="sidebar__navItem">
+            <a href="perfil.html" class="sidebar__navLink">Minha Conta</a>
+          </li>
+          <li class="sidebar__navItem">
+            <a href="./login.html" class="sidebar__navLink sidebar__navLink--logout">Sair</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar__footer">
+        <a href="./feedAluno.html" class="sidebar__footerLink">Modo Aluno</a>
+        <a href="./feedProfessor.html" class="sidebar__footerLink">Modo Professor</a>
+      </div>
+    </div>
+  </aside>
+
+  <header class="header">
+    <div class="header__up">
+      <div class="header__box">
+        <button class="header__hamburger" aria-label="Abrir menu">
+          <img src="../assets/imgs/menu_svgrepo.com.png" alt="Menu" />
+        </button>
+        <span class="header__greeting">Olá, John Carvalho!</span>
+      </div>
+      <div class="header__avatar" alt="Avatar do usuário">
+        <img src="../assets/imgs/Avatar.png" alt="">
+      </div>
+    </div>
+
+    <div class="header__down">
+      <a href="./criacao.html" class="header__link">Criar Vaga &gt;</a>
+    </div>
+  </header>
+
+  <main class="feedMain">
+    <section class="feedMain__box">
+      <h1 class="feedMain__title">Vagas Recentes</h1>
+
+      <article class="job-card job-card--expanded">
+        <div class="job-card__header">
+          <div class="header__text">
+            <span class="job-card_time">Há 3 horas</span>
+            <h2 class="job-card__title">Programação Estruturada</h2>
+            <p class="job-card__professor">Por Cassius Moreira</p>
+          </div>
+          <img class="job-card__toggle-icon" src="../assets/imgs/setinha-preta-cima.png" alt="Recolher" />
+        </div>
+        <div class="job-card__details">
+          <p class="job-card__description">Buscamos um(a) monitor(a) para apoiar turmas em lógica e construção de algoritmos...</p>
+          <div>
+            <h3 class="job-card__responsibilities-title">Responsabilidade</h3>
+            <ul class="job-card__responsibilities">
+              <li>Tirar dúvidas sobre variáveis, controle de fluxo, etc.</li>
+              <li>Apoiar exercícios práticos e projetos curtos em C.</li>
+              <li>Corrigir listas e dar feedback objetivo.</li>
+            </ul>
+          </div>
+          <a href="#" class="job-card__details-link">Ver mais detalhes</a>
+          <div class="job-card__actions--professor">
+            <button class="btn btn--medium btn--primary">Editar</button>
+            <button class="btn btn--medium btn--danger job-card__delete">Excluir</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="job-card">
+        <div class="job-card__header">
+          <div class="header__text">
+            <span class="job-card_time">Há 2 dias</span>
+            <h2 class="job-card__title">Análise de Dados</h2>
+            <p class="job-card__professor">Por Maria Silva</p>
+          </div>
+          <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
+        </div>
+        <div class="job-card__details">
+          <p class="job-card__description">Descrição da vaga de Análise de Dados...</p>
+          <div>
+            <h3 class="job-card__responsibilities-title">Responsabilidade</h3>
+            <ul class="job-card__responsibilities"><li>Responsabilidade 1</li></ul>
+          </div>
+          <a href="#" class="job-card__details-link">Ver mais detalhes</a>
+          <div class="job-card__actions--professor">
+            <button class="btn btn--medium btn--primary">Editar</button>
+            <button class="btn btn--medium btn--danger job-card__delete">Excluir</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="job-card">
+        <div class="job-card__header">
+          <div class="header__text">
+            <span class="job-card_time">Há 4 dias</span>
+            <h2 class="job-card__title">Desenvolvimento Web Front-End</h2>
+            <p class="job-card__professor">Por Carlos Oliveira</p>
+          </div>
+          <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
+        </div>
+        <div class="job-card__details">
+          <p class="job-card__description">Descrição da vaga de Front-End...</p>
+          <div>
+            <h3 class="job-card__responsibilities-title">Responsabilidade</h3>
+            <ul class="job-card__responsibilities"><li>Responsabilidade 1</li></ul>
+          </div>
+          <a href="#" class="job-card__details-link">Ver mais detalhes</a>
+          <div class="job-card__actions--professor">
+            <button class="btn btn--medium btn--primary">Editar</button>
+            <button class="btn btn--medium btn--danger job-card__delete">Excluir</button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Overlay e Modal exclusivos para exclusão -->
+  <div id="modalOverlay" class="overlay--modal" aria-hidden="true"></div>
+
+  <div id="deleteModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="deleteModalTitle" aria-describedby="deleteModalDesc">
+    <div class="modal__card">
+        <!-- Estado 1: confirmação -->
+        <div id="modalStateConfirm" class="modal__content">
+            <h2 id="deleteModalTitle" class="modal__title">Tem certeza que deseja remover essa vaga permanentemente?</h2>
+            <div class="modal__actions">
+                <button id="confirmDeleteBtn" class="btn btn--primary btn--rounded">Confirmar!</button>
+                <button id="cancelDeleteBtn" class="btn btn--alternative btn--rounded">Cancelar</button>
             </div>
         </div>
-    </aside>
 
-    <header class="header">
-        <div class="header__up">
-            <div class="header__box">
-                <button class="header__hamburger" aria-label="Abrir menu">
-                    <img src="../assets/imgs/menu_svgrepo.com.png" alt="Menu" />
-                </button>
-                <span class="header__greeting">Olá, John Carvalho!</span>
+        <!-- Estado 2: sucesso -->
+        <div id="modalStateDone" class="modal__content is-hidden" role="status" aria-live="polite">
+            <div class="confirm__icon" aria-hidden="true" style="text-align:center; margin-bottom:8px;">
+                <svg viewBox="0 0 24 24" width="64" height="64">
+                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M7 12l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </div>
-            <div class="header__avatar" alt="Avatar do usuário">
-                <img src="../assets/imgs/Avatar.png" alt="">
+            <h3 class="modal__title" style="margin-bottom:12px;">Vaga excluída com sucesso.</h3>
+            <div class="modal__actions">
+                <button id="doneBtn" class="btn btn--primary btn--rounded">Entendido</button>
             </div>
         </div>
+    </div>
+  </div>
 
-        <div class="header__down">
-            <a href="./criacao.html" class="header__link">
-                Criar Vaga &gt;
-            </a>
-        </div>
-    </header>
-    <main class="feedMain">
-        <section class="feedMain__box">
-            <h1 class="feedMain__title">Vagas Recentes</h1>
-
-            <article class="job-card job-card--expanded">
-                <div class="job-card__header">
-                    <div class="header__text">
-                        <span class="job-card_time">Há 3 horas</span>
-                        <h2 class="job-card__title">Programação Estruturada</h2>
-                        <p class="job-card__professor">Por Cassius Moreira</p>
-                    </div>
-                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-preta-cima.png" alt="Recolher" />
-                </div>
-                <div class="job-card__details">
-                    <p class="job-card__description">Buscamos um(a) monitor(a) para apoiar turmas em lógica e construção
-                        de algoritmos...</p>
-                    <div>
-                        <h3 class="job-card__responsibilities-title">Responsabilidade</h3>
-                        <ul class="job-card__responsibilities">
-                            <li>Tirar dúvidas sobre variáveis, controle de fluxo, etc.</li>
-                            <li>Apoiar exercícios práticos e projetos curtos em C.</li>
-                            <li>Corrigir listas e dar feedback objetivo.</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="job-card__details-link">Ver mais detalhes</a>
-                    <div class="job-card__actions--professor">
-                        <button class="btn btn--medium btn--primary">Editar</button>
-                        <button class="btn btn--medium btn--danger">Excluir</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="job-card">
-                <div class="job-card__header">
-                    <div class="header__text">
-                        <span class="job-card_time">Há 2 dias</span>
-                        <h2 class="job-card__title">Análise de Dados</h2>
-                        <p class="job-card__professor">Por Maria Silva</p>
-                    </div>
-                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
-                </div>
-                <div class="job-card__details">
-                    <p class="job-card__description">Descrição da vaga de Análise de Dados...</p>
-                    <div>
-                        <h3 class="job-card__responsibilities-title">Responsabilidade</h3>
-                        <ul class="job-card__responsibilities">
-                            <li>Responsabilidade 1</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="job-card__details-link">Ver mais detalhes</a>
-                    <div class="job-card__actions--professor">
-                        <button class="btn btn--medium btn--primary">Editar</button>
-                        <button class="btn btn--medium btn--danger">Excluir</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="job-card">
-                <div class="job-card__header">
-                    <div class="header__text">
-                        <span class="job-card_time">Há 4 dias</span>
-                        <h2 class="job-card__title">Desenvolvimento Web Front-End</h2>
-                        <p class="job-card__professor">Por Carlos Oliveira</p>
-                    </div>
-                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
-                </div>
-                <div class="job-card__details">
-                    <p class="job-card__description">Descrição da vaga de Front-End...</p>
-                    <div>
-                        <h3 class="job-card__responsibilities-title">Responsabilidade</h3>
-                        <ul class="job-card__responsibilities">
-                            <li>Responsabilidade 1</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="job-card__details-link">Ver mais detalhes</a>
-                    <div class="job-card__actions--professor">
-                        <button class="btn btn--medium btn--primary">Editar</button>
-                        <button class="btn btn--medium btn--danger">Excluir</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="job-card">
-                <div class="job-card__header">
-                    <div class="header__text">
-                        <span class="job-card_time">Há 1 semana</span>
-                        <h2 class="job-card__title">Banco de Dados</h2>
-                        <p class="job-card__professor">Por Ana Beatriz</p>
-                    </div>
-                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
-                </div>
-                <div class="job-card__details">
-                    <p class="job-card__description">Descrição da vaga de Banco de Dados...</p>
-                    <div>
-                        <h3 class="job-card__responsibilities-title">Responsabilidade</h3>
-                        <ul class="job-card__responsibilities">
-                            <li>Responsabilidade 1</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="job-card__details-link">Ver mais detalhes</a>
-                    <div class="job-card__actions--professor">
-                        <button class="btn btn--medium btn--primary">Editar</button>
-                        <button class="btn btn--medium btn--danger">Excluir</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="job-card">
-                <div class="job-card__header">
-                    <div class="header__text">
-                        <span class="job-card_time">Há 1 semana</span>
-                        <h2 class="job-card__title">Banco de Dados</h2>
-                        <p class="job-card__professor">Por Ana Beatriz</p>
-                    </div>
-                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
-                </div>
-                <div class="job-card__details">
-                    <p class="job-card__description">Descrição da vaga de Banco de Dados...</p>
-                    <div>
-                        <h3 class="job-card__responsibilities-title">Responsabilidade</h3>
-                        <ul class="job-card__responsibilities">
-                            <li>Responsabilidade 1</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="job-card__details-link">Ver mais detalhes</a>
-                    <div class="job-card__actions--professor">
-                        <button class="btn btn--medium btn--primary">Editar</button>
-                        <button class="btn btn--medium btn--danger">Excluir</button>
-                    </div>
-                </div>
-            </article>
-
-            <article class="job-card">
-                <div class="job-card__header">
-                    <div class="header__text">
-                        <span class="job-card_time">Há 1 semana</span>
-                        <h2 class="job-card__title">Banco de Dados</h2>
-                        <p class="job-card__professor">Por Ana Beatriz</p>
-                    </div>
-                    <img class="job-card__toggle-icon" src="../assets/imgs/setinha-card-baixo.png" alt="Expandir" />
-                </div>
-                <div class="job-card__details">
-                    <p class="job-card__description">Descrição da vaga de Banco de Dados...</p>
-                    <div>
-                        <h3 class="job-card__responsibilities-title">Responsabilidade</h3>
-                        <ul class="job-card__responsibilities">
-                            <li>Responsabilidade 1</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="job-card__details-link">Ver mais detalhes</a>
-                    <div class="job-card__actions--professor">
-                        <button class="btn btn--medium btn--primary">Editar</button>
-                        <button class="btn btn--medium btn--danger">Excluir</button>
-                    </div>
-                </div>
-            </article>
-        </section>
-    </main>
-    
-    <script src="./scripts/script.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
-
 </html>

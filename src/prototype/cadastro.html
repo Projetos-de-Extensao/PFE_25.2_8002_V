@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro — IBVagas</title>
+
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/cadastro.css" />
+</head>
+<body>
+  <header class="page__header">
+    <a href="./login.html" aria-label="Voltar">
+      <img src="../assets/imgs/setinha.png" alt="Voltar" />
+    </a>
+    <h1>Cadastro</h1>
+  </header>
+
+  <main class="cadastro">
+    <section class="cadastro__card">
+      <form id="formCadastro" class="cadastro__form" novalidate>
+        <!-- Feedback global -->
+        <div id="formAlert" class="cadastro__alert" role="alert" aria-live="polite"></div>
+
+        <!-- Nome completo -->
+        <div class="input-box">
+          <label for="nome" class="input-box__label">Nome completo</label>
+          <input
+            id="nome"
+            name="nome"
+            class="input-box__input"
+            type="text"
+            placeholder="Seu nome completo"
+            required
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]{2,}$"
+          />
+          <small class="cadastro__error" data-error-for="nome"></small>
+        </div>
+
+        <!-- Email institucional -->
+        <div class="input-box">
+          <label for="email" class="input-box__label">Email institucional</label>
+          <input
+            id="email"
+            name="email"
+            class="input-box__input"
+            type="email"
+            inputmode="email"
+            placeholder="seu.email@aluno.ibmec.edu.br"
+            required
+          />
+          <small class="cadastro__error" data-error-for="email"></small>
+        </div>
+
+        <!-- Senha -->
+        <div class="input-box">
+          <label for="senha" class="input-box__label">Senha</label>
+          <input
+            id="senha"
+            name="senha"
+            class="input-box__input"
+            type="password"
+            placeholder="Mín. 8 caracteres, 1 maiúscula e 1 caractere especial"
+            required
+            minlength="8"
+            pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=\[\]{};':&quot;\\|,.&lt;&gt;\/?]).{8,}$"
+          />
+          <small class="cadastro__error" data-error-for="senha"></small>
+        </div>
+
+        <!-- Data de nascimento -->
+        <div class="input-box">
+          <label for="nascimento" class="input-box__label">Data de nascimento</label>
+          <input
+            id="nascimento"
+            name="nascimento"
+            class="input-box__input"
+            type="date"
+            required
+          />
+          <small class="cadastro__error" data-error-for="nascimento"></small>
+        </div>
+
+        <!-- Matrícula -->
+        <div class="input-box">
+          <label for="matricula" class="input-box__label">Matrícula</label>
+          <input
+            id="matricula"
+            name="matricula"
+            class="input-box__input"
+            type="text"
+            inputmode="numeric"
+            placeholder="Somente números"
+            required
+            pattern="^[0-9]+$"
+          />
+          <small class="cadastro__error" data-error-for="matricula"></small>
+        </div>
+
+        <!-- Foto de perfil -->
+        <div class="input-box">
+          <label for="foto" class="input-box__label">Foto de perfil (JPG, PNG, WEBP)</label>
+          <input
+            id="foto"
+            name="foto"
+            class="input-box__input"
+            type="file"
+            accept=".jpg,.jpeg,.png,.webp"
+            required
+          />
+          <small class="cadastro__hint">
+            Proporção 4:3, mínimo 250×250 px, tamanho até 5 MB.
+          </small>
+          <small class="cadastro__error" data-error-for="foto"></small>
+        </div>
+
+        <!-- Papel inferido pelo domínio (informativo) -->
+        <div class="input-box">
+          <label class="input-box__label">Perfil detectado</label>
+          <input id="perfilDetectado" class="input-box__input" type="text" value="—" readonly />
+        </div>
+
+        <!-- Ações -->
+        <div class="cadastro__actions">
+             <!-- Mantive o butao de criar conta redirecionando para a pagina de confirmacao ao inves de submit, somente para o prototipo -->
+          <a class="btn btn--primary btn--medium" href="./confirmacaocadastro.html">Criar conta</a>
+          <a class="btn btn--alternative btn--medium" href="./login.html">Já tenho conta</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>

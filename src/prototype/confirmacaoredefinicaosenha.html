@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solicitação Efetuada! — IBVagas</title>
+
+  <!-- Estilos do projeto -->
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/confirmacaoredefinicaosenha.css" />
+</head>
+<body>
+  <!-- Identidade visual no topo -->
+  <header class="page__header">
+    <a href="./login.html" aria-label="Voltar">
+      <img src="../assets/imgs/setinha.png" alt="Voltar" />
+    </a>
+  </header>
+
+  <main class="confirm">
+    <section class="confirm__card" role="status" aria-live="polite">
+      <!-- Ícone ilustrativo (check) -->
+      <div class="confirm__icon" aria-hidden="true">
+        <!-- SVG inline para evitar dependência de arquivo -->
+        <svg viewBox="0 0 24 24" width="72" height="72" focusable="false">
+          <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M7 12l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <h1 class="confirm__title">Solicitação Efetuada!</h1>
+
+      <p class="confirm__text">
+        Enviamos um email com as instruções para redefinir sua senha.
+        Verifique sua caixa de entrada (e a pasta de spam).
+      </p>
+
+      <div class="confirm__actions">
+        <a href="./login.html" class="btn btn--primary" aria-label="Voltar para a tela de login">
+          Entendido!
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

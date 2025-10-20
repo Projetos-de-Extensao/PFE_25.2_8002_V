@@ -1,0 +1,64 @@
+.confirm__brand {
+  display: grid;
+  place-items: center;
+  padding: 20px 16px;
+  background-color: var(--background-color-page);
+}
+
+.confirm__logo {
+  width: 48px;
+  height: auto;
+  display: block;
+}
+
+.confirm {
+  min-height: calc(100vh - 88px); 
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  background-color: var(--background-color-page);
+}
+
+.confirm__card {
+  width: 100%;
+  max-width: 560px;
+  background: var(--background-color-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-base);
+  padding: 28px 22px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(34, 40, 49, 0.08);
+}
+
+.confirm__icon {
+  margin: 6px auto 12px;
+  color: var(--cor-primaria); /* herda no SVG via currentColor */
+  line-height: 0;
+}
+
+.confirm__title {
+  font-size: var(--font-size-title-md);
+  color: var(--text-color-primary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 8px;
+}
+
+.confirm__text {
+  font-size: var(--font-size-body);
+  color: var(--text-color-secondary);
+  margin: 0 auto 18px;
+  max-width: 42ch; 
+}
+
+.confirm__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.confirm__actions .btn {
+  min-width: 0;     
+  width: auto;      
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
