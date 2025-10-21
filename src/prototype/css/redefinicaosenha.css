@@ -56,9 +56,6 @@ div{
 }
 
 @media (min-width: 768px) {
-    .page__header{
-        display: none;
-    }
     .input-box {
         width: 385px;
     }
