@@ -11,23 +11,17 @@
 
 <body>
        <header class="page__header">
-            <a href="./feedAluno.html"><img src="../assets/imgs/setinha.png" alt="Seta de Retorno" class="header__seta"></a>
-            <a href="edicaodados.html" id="lapis"><img src="../assets/imgs/lapisbege.png" alt="Lápis de edição" id="lapis"></a>
+            <a href="./perfil.html"><img src="../assets/imgs/setinha.png" alt="Seta de Retorno" class="header__seta"></a>
        </header>
 
        <main>
             <div class="perfil">
                 <img src="../assets/imgs/group19.png" alt="Foto de perfil do usuário" class="perfil__img">
             </div>
-            <div class="opcoes">
-                <a href="edicaodados.html" class="editar">
-                    <img src="../assets/imgs/lapis.png" alt="lápis de edição" class="lapis">
-                </a>
-            </div>
-            <section class="perfil__info">
+            <section class=" perfil__info perfil__info--editar">
                 <div class="input-box">
                     <label for="nome" class="input-box__label">Nome e Sobrenome *</label>
-                    <input type="text" id="nome" name="nome" class="input-box__input" value="John" readonly>
+                    <input type="text" id="nome" name="nome" class="input-box__input" value="John">
                 </div>
                 <div class="input-box">
                     <label for="senha"  class="input-box__label">Senha *</label>
@@ -35,13 +29,13 @@
                 </div>
                 <div class="input-box">
                     <label for="celular" class="input-box__label">Celular</label>
-                    <input type="text" id="celular" name="celular" class="input-box__input" value="(21) 99999-2155" readonly>
+                    <input type="text" id="celular" name="celular" class="input-box__input" value="(21) 99999-2155">
                 </div>
                 <div class="input-box">
                     <label for="pronomes" class="input-box__label">Como você quer ser chamado?</label>
-                    <input type="text" id="pronomes" name="pronomes" class="input-box__input" value="Ele/Dele" readonly>
+                    <input type="text" id="pronomes" name="pronomes" class="input-box__input" value="Ele/Dele">
                 </div>
-                <a href="redefinicaosenha.html" class="btn btn--primary">Solicitar alteração de senha</a>
+                <a href="perfil.html" class="btn btn--primary">Confirmar alterações</a>
                 <a href="login.html" class="sair">Sair</a>
             </section>
        </main>
