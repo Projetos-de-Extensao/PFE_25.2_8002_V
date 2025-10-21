@@ -37,7 +37,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 355px;
     gap: 25px;
 }
 div{
@@ -45,9 +45,29 @@ div{
     flex-direction: column;
     height: auto;
 }
+.redefinicao__link {
+    display: none;
+    text-decoration: none;
+    color: #222831;
+    
+}
+.redefinicao__link:hover {
+    text-decoration: underline;
+}
 
-@media (min-width: 468px) {
+@media (min-width: 768px) {
+    .page__header{
+        display: none;
+    }
     .input-box {
         width: 385px;
+    }
+    .redefinicao__link {
+        display: block;
+    }
+}
+@media (min-width: 468px) {
+    .input-box {
+        width: 355px;
     }
 }

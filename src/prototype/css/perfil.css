@@ -1,12 +1,9 @@
 
-main section{
-    width: 100%;
+main{
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding: 25px 19px;
-    gap: 1rem
+    align-items: center;
+    justify-content: center;
 }
 
 .perfil{
@@ -14,9 +11,19 @@ main section{
     height: 205px;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #222831;
     margin-bottom: 10px;
     
+}
+.perfil__info{
+    width: 395px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 19px;
+    gap: 1rem
 }
 .perfil__img{
     width: 163px;
