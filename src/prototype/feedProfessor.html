@@ -211,8 +211,33 @@
             </article>
         </section>
     </main>
-    
+
+        <!-- Modal de confirmação de exclusão -->
+    <div id="deleteModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal__box" tabindex="-1">
+            <!-- Estado: confirmação -->
+            <div id="modalStateConfirm">
+                <h2 id="modalTitle" class="modal__title">Confirmar exclusão</h2>
+                <p class="modal__text">Tem certeza que deseja excluir esta vaga? Essa ação não poderá ser desfeita.</p>
+                <div class="modal__actions">
+                    <button id="cancelDeleteBtn" class="btn btn--medium">Cancelar</button>
+                    <button id="confirmDeleteBtn" class="btn btn--medium btn--danger">Confirmar exclusão</button>
+                </div>
+            </div>
+
+            <!-- Estado: sucesso -->
+            <div id="modalStateDone" class="is-hidden" aria-live="polite">
+                <h2 class="modal__title">Vaga excluída</h2>
+                <p class="modal__text">A vaga foi removida com sucesso.</p>
+                <div class="modal__actions">
+                    <button id="doneBtn" class="btn btn--medium btn--primary">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/modaldelete.js"></script>
 </body>
 
 </html>
