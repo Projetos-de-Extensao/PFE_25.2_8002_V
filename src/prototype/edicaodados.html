@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Document</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/perfil.css">
@@ -14,24 +11,18 @@
 
 <body>
        <header class="page__header">
-            <a href="./feedAluno.html"><img src="../assets/imgs/setinha.png" alt="Seta de Retorno" class="header__seta"></a>
-            <h1>Minha Conta</h1>
+            <a href="./perfil.html"><img src="../assets/imgs/setinha.png" alt="Seta de Retorno" class="header__seta"></a>
+            <h1>Editar</h1>
        </header>
 
        <main>
             <div class="perfil">
                 <img src="../assets/imgs/group19.png" alt="Foto de perfil do usuário" class="perfil__img">
             </div>
-            <div class="opcoes">
-                <div class="line"></div>
-                <a href="edicaodados.html" class="editar">
-                    <i class="fa-solid fa-pencil"></i>
-                </a>
-            </div>
-            <section class="perfil__info">
+            <section class=" perfil__info perfil__info--editar">
                 <div class="input-box">
                     <label for="nome" class="input-box__label">Nome e Sobrenome *</label>
-                    <input type="text" id="nome" name="nome" class="input-box__input" value="John" readonly>
+                    <input type="text" id="nome" name="nome" class="input-box__input" value="John">
                 </div>
                 <div class="input-box">
                     <label for="senha"  class="input-box__label">Senha *</label>
@@ -39,14 +30,13 @@
                 </div>
                 <div class="input-box">
                     <label for="celular" class="input-box__label">Celular</label>
-                    <input type="text" id="celular" name="celular" class="input-box__input" value="(21) 99999-2155" readonly>
+                    <input type="text" id="celular" name="celular" class="input-box__input" value="(21) 99999-2155">
                 </div>
                 <div class="input-box">
                     <label for="pronomes" class="input-box__label">Como você quer ser chamado?</label>
-                    <input type="text" id="pronomes" name="pronomes" class="input-box__input" value="Ele/Dele" readonly>
+                    <input type="text" id="pronomes" name="pronomes" class="input-box__input" value="Ele/Dele">
                 </div>
-                <a href="redefinicaosenha.html" class="btn btn--primary">Solicitar alteração de senha</a>
-                <a href="login.html" class="sair">Sair</a>
+                <a href="perfil.html" class="btn btn--primary">Confirmar alterações</a>
             </section>
        </main>
 </body>

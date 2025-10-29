@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     padding: 25px 19px;
-    margin-top: -1.5rem; 
+    margin-top: -1.5rem;
     border-top-left-radius: 1.7rem;
     border-top-right-radius: 1.7rem;
     position: relative;
@@ -16,7 +16,7 @@
     flex-direction: column;
     gap: 15px;
     width: 100%;
-    min-width: 22.3rem; 
+    min-width: 22.3rem;
 }
 
 .feedMain__title {
@@ -94,4 +94,188 @@
 @keyframes slideUp {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+/* 3.2 Sidebar */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color-dark);
+    height: 100vh;
+    width: 310px;
+    padding: 35px 31px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar--open {
+    transform: translateX(0);
+}
+
+.sidebar__logo {
+    width: 30px;
+}
+
+.sidebar__divider {
+    margin: 30px 0px;
+    border: 0;
+    border-top: 1px solid var(--cor-cinza);
+    opacity: 0.5;
+}
+
+.sidebar__body {
+    color: var(--text-color-light);
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.sidebar__navList {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    list-style: none;
+}
+
+.sidebar__navItem {
+    cursor: pointer;
+}
+
+.sidebar__navLink {
+    font-weight: var(--font-weight-light);
+    color: var(--text-color-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.sidebar__navLink:hover {
+    color: var(--cor-bege-claro);
+}
+
+.sidebar__navLink--logout:hover {
+    color: var(--text-color-danger);
+}
+
+
+.sidebar__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: var(--font-size-small);
+}
+
+.sidebar__footerLink {
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--text-color-light);
+}
+
+
+/* ================================
+    Estilos do Overlay
+================================
+*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.overlay--visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-right {
+    display: none;
+    background-color: var(--background-color-dark);
+    width: 90px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Transforma a sidebar em fixo para desktop */
+@media (min-width: 1024px) {
+
+    .sidebar {
+        transform: translateX(0);
+        transition: none;
+    }
+
+    .header__hamburger,
+    .overlay {
+        display: none;
+    }
+
+    .header,
+    .feedMain {
+        margin-left: 310px;
+    }
+
+    .header {
+        width: calc(100% - 310px);
+    }
+
+    .sidebar--open {
+        transform: translateX(0);
+    }
+
+    .overlay--visible {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar {
+        transform: translateX(0);
+        transition: none;
+    }
+
+    /* ADICIONE ESTA REGRA para mostrar a barra direita no PC */
+    .sidebar-right {
+        display: block;
+    }
+
+    .header__hamburger,
+    .overlay {
+        display: none;
+    }
+
+    /* MODIFIQUE ESTA REGRA */
+    .header,
+    .feedMain {
+        margin-left: 310px;
+        margin-right: 90px;
+    }
+
+    /* MODIFIQUE ESTA REGRA */
+    .header {
+        width: calc(100% - 310px - 90px);
+    }
+
+    .sidebar--open {
+        transform: translateX(0);
+    }
+
+    .overlay--visible {
+        opacity: 0;
+        visibility: hidden;
+    }
 }

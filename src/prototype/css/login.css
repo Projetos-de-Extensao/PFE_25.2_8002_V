@@ -25,6 +25,10 @@ main {
     flex-direction: column;
 }
 
+.login__form .btn {
+    min-width: 100%;
+}
+
 .login__logo {
     width: 70%;
 }

@@ -8,8 +8,8 @@
     --cor-bege: #DFD0B8;
     --cor-bege-claro: #EADAC2;
     --cor-branca: #FFFFFF;
-    --cor-vermelha: #F85A57;
-    --cor-vermelha-claro: #F0807E;
+    --cor-vermelha: #d32421;
+    --cor-vermelha-claro: #e74b48;
 
     /* --- Cores de Texto --- */
     --text-color-primary: var(--cor-primaria);
@@ -84,8 +84,8 @@ html {
 
 .btn {
     /* Estilos base (Tamanho Padrão "default") */
-    padding: 0.9rem 5rem;
-    min-width: 20.5rem;
+    padding: 0.9rem 4rem;
+    min-width: 100%;
     border: none;
     border-radius: 10px;
     font-size: 100%;
@@ -97,6 +97,13 @@ html {
     /* Transição suave para o hover */
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
+
+@media (min-width: 768px) {
+    .btn{
+        min-width: 22.3rem;
+    }
+}
+
 
 
 /* --- Variantes de Cor --- */
@@ -120,12 +127,12 @@ html {
 }
 
 .btn--danger {
-    background-color: #F85A57;
+    background-color: var(--button-danger-background);
     color: #FFFFFF;
 }
 
 .btn--danger:hover {
-    background-color: #F0807E;
+    background-color: var(--button-danger-hover);
 }
 
 
@@ -143,6 +150,7 @@ html {
     min-width: 10rem;
 }
 
+
 /* 1.2 Inputs */
 
 .input-box {
@@ -154,6 +162,7 @@ html {
 .input-box__label {
     font-size: var(--font-size-body);
     margin-left: 8px;
+    margin-bottom:3px ;
 }
 
 .input-box__input {
@@ -230,6 +239,12 @@ html {
     color: #fff;
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-title-md);
+}
+
+@media (min-width: 768px) {
+    .page__header h1{
+        font-size: 22px;
+    }
 }
 
 /* 2.2 Cabeçalho principal do feed de aluno e professor */
@@ -410,140 +425,4 @@ html {
 .job-card__actions--professor{
     display: flex;
     gap: 0.7rem;
-}
-
-/* 3.2 Sidebar */
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--background-color-dark);
-    height: 100vh;
-    width: 310px;
-    padding: 35px 31px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    z-index: 1000;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-}
-
-.sidebar--open {
-    transform: translateX(0);
-}
-
-.sidebar__logo {
-    width: 35px;
-}
-
-.sidebar__divider {
-    margin: 30px 0px;
-    border: 0;
-    border-top: 1px solid var(--cor-cinza);
-    opacity: 0.5;
-}
-
-.sidebar__body {
-    color: var(--text-color-light);
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.sidebar__navList {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-    list-style: none;
-}
-
-.sidebar__navItem {
-    cursor: pointer;
-}
-
-.sidebar__navLink {
-    font-weight: var(--font-weight-light);
-    color: var(--text-color-light);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.sidebar__navLink:hover {
-    color: var(--cor-bege-claro);
-}
-
-.sidebar__navLink--logout:hover {
-    color: var(--text-color-danger);
-}
-
-
-.sidebar__footer {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    font-size: var(--font-size-small);
-}
-
-.sidebar__footerLink {
-    text-decoration: underline;
-    cursor: pointer;
-    color: var(--text-color-light);
-}
-
-
-/* ================================
-    Estilos do Overlay
-================================
-*/
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.overlay--visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Transforma a sidebar em fixo para desktop */
-@media (min-width: 1024px) {
-
-    .sidebar {
-        transform: translateX(0);
-        transition: none;
-    }
-
-    .header__hamburger,
-    .overlay {
-        display: none;
-    }
-    
-    .header,
-    .feedMain {
-        margin-left: 310px;
-    }
-    .header {
-        width: calc(100% - 310px);
-    }
-    
-    .sidebar--open {
-        transform: translateX(0); 
-    }
-    
-    .overlay--visible {
-        opacity: 0;
-        visibility: hidden;
-    }
 }

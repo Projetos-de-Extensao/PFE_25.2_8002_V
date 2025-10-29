@@ -4,7 +4,7 @@
 
 Para garantir um desenvolvimento ágil e transparente, adotamos a metodologia **Scrum** como base para nosso fluxo de trabalho. No entanto, adaptamos o processo para a nossa realidade acadêmica, focando nos artefatos e cerimônias que nos trazem mais valor.
 
-- **Scrum Master:** O responsável por guiar a equipe na metodologia é **Israel Trindade**, cuja familiaridade com o Scrum é fundamental para o sucesso do projeto.
+- **Scrum Master:** O responsável por guiar a equipe na metodologia é **João Gabriel**, cuja familiaridade com o Scrum é fundamental para o sucesso do projeto.
 - **Sprints:** Nosso trabalho será organizado em ciclos, mas com a particularidade de que **não haverá reuniões diárias** (*daily meetings*). A comunicação será majoritariamente assíncrona para dar mais flexibilidade à equipe.
 
 ## O Quadro de gestão no GitHub Projects

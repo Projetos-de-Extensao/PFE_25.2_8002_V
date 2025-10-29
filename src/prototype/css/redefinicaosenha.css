@@ -8,24 +8,63 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* Configurações para deixar o conteudo igual ao figma na altura dos olhos */
+    justify-content: start;
     align-items: center;
+    margin-top: 20vh;
 }
 
 .main__redefinicao {
+    width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 30px;
 }
 
 .container__texto {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 385px;
+    text-align: center;
+    gap: 20px;
 }
 
 .input-box {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 355px;
+    gap: 25px;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.redefinicao__link {
+    display: none;
+    text-decoration: none;
+    color: #222831;
+    
+}
+.redefinicao__link:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .input-box {
+        width: 385px;
+    }
+    .redefinicao__link {
+        display: block;
+    }
+}
+@media (min-width: 468px) {
+    .input-box {
+        width: 355px;
+    }
 }
