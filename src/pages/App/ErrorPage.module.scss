@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+
+.error-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+    height: auto;
+    width: 80%;
+    font-size:$font-size-title-md;
+    text-align: center;
+    font-weight: $font-weight-regular;
+
+    &__img{
+        width: 200px;
+        height:200px;
+        margin-bottom: 30px;
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: $cor-primaria;
+        margin-top: 25vh;
+        
+        }
+     &__link-icon{
+        width: 10px;
+        height: 10px;
+    }    
+}
+
+@media (min-width: 480px) {
+    .message{
+         font-size:$font-size-title-lg;
+
+        &__link{
+            margin-top: 35vh;
+        }
+    }
+}
