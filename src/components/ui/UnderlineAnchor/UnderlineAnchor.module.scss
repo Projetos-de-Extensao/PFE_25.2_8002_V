@@ -1,0 +1,10 @@
+@import "../../../styles/_variables.scss";
+
+
+.underline-anchor{
+    color: rgb(34, 40, 49);
+    font-size:$font-size-small ;
+    text-decoration: underline;
+    cursor: pointer;
+ 
+}

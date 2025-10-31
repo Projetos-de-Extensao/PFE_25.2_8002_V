@@ -4,15 +4,21 @@
     display: flex;
     gap: 5px;
     flex-direction: column;
+    width: 100%;
+    height:46px;
+    margin-bottom: 10px;   
 
     &__label{
         font-size: $font-size-body;
+        
     }
 
     &__input{
             padding: $padding-inputs;
-            width: 22.3rem;
+            width: 100%;
             border: 1px solid $border-color;
             border-radius: $border-radius-base;
+            outline: none;
+            height:46px; 
     }
 }

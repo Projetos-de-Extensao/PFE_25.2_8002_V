@@ -2,7 +2,7 @@
 import styles from "./Button.module.scss";
 
 export default function Button({ children, onClick, type = 'button', variant = 'primary', size = 'default' }) {
-
+    
     const buttonClass = `
         ${styles.btn} 
         ${styles[`btn--${variant}`]} 
