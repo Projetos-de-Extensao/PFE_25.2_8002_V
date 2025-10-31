@@ -3,7 +3,7 @@ import styles from './JobsFeedPage.module.scss'
 import JobCard from '../../../components/vagas/JobCards/JobCard.jsx'
 import MainHeader from '../../../components/Layout/MainHeader/MainHeader.jsx'
 import Sidebar from '../../../components/Layout/Sidebar/Sidebar.jsx'
-import Overlay from '../../../components/ui/overlay/Overlay.jsx';
+import Overlay from "../../../components/ui/Overlay/Overlay.jsx";
 
 const vagasDeExemplo = [
     {
