@@ -1,13 +1,4 @@
-body {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-main {
+.main {
     margin-top: 15vh;
     height: 80%;
     width: 100%;
@@ -78,10 +69,6 @@ main {
 
     .login__button--alt {
         height: 14%;
-    }
-
-    label {
-        font-size: 90%;
     }
 
     .login__link {

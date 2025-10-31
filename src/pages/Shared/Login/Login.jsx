@@ -23,7 +23,7 @@ const inputs = [
 
 function Login() {
   return (
-    <main>
+    <main className={Styles.main}>
       <section className={Styles['main__login']}>
           <img src={LogoIbvagas} alt="Logo ibvagas com legenda" className={Styles['login__logo']} />
           <form className={Styles['login__form']}>
