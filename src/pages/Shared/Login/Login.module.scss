@@ -1,3 +1,6 @@
+@import '../../../styles/_variables.scss';
+
+
 .main {
     margin-top: 15vh;
     height: 80%;
@@ -37,7 +40,7 @@
     width: 70%;
 }
 .login__form {
-    height: 320px;
+    height: auto;
     width: 352px;
     display: flex;
     justify-content: center;
@@ -57,6 +60,16 @@
     background-color: #393E46;
     width: 145px;
 }
+.input-error {
+    color: $cor-vermelha-erro;
+    font-size: $font-size-small;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
 @media (min-width: 480px) {
     .main__login {
         height: 468px;

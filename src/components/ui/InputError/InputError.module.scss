@@ -1,0 +1,17 @@
+@import '../../../styles/_variables.scss';
+
+.input-error {
+    color: $cor-vermelha-erro;
+    font-size: $font-size-small;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.hidden {
+    display: none;
+}
+.visible {
+    display: flex;
+}

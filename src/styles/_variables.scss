@@ -8,6 +8,7 @@ $cor-bege-claro: #EADAC2;
 $cor-branca: #FFFFFF;
 $cor-vermelha: #F85A57;
 $cor-vermelha-claro: #F0807E;
+$cor-vermelha-erro:#ca0300;
 
 
 // --- Cores de Texto ---
@@ -42,6 +43,7 @@ $button-danger-hover: $cor-vermelha-claro;
 $input-border-color: $cor-primaria;
 $input-text-color: $cor-primaria;
 $input-placeholder-color: $cor-cinza;
+$input-error-color: $cor-vermelha-erro;
 
 // --- Família da Fonte ---
 $font-family-base: 'Roboto', sans-serif;

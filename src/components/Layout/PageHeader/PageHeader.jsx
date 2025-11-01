@@ -1,5 +1,5 @@
 // aqui ficará o header secundário, aquele que não tem a sidebar
-import Setinha from '../../../assets/imgs/Setinha.png';
+import Setinha from '../../../assets/imgs/setinha.png';
 import styles from './PageHeader.module.scss'
 
 export default function PageHeader({title}){
