@@ -9,15 +9,25 @@
 
   
   function Login() {
+    // Criação de estados que posteriormente vão definir qual classe nas mensagens (hidden,visible) de erro serão aplicadas
     const [emailValido, setEmailValido] = useState(true);
     const [passwordValido, setPasswordValido] = useState(true);
 
     const verificarEntrada = (event) => {
+
+      // Impede o carregamento da página ao enviar o formulário
       event.preventDefault();
+
+      // Localiza o form
       const form = event.target;
+
+      // Pega email do form
       const email = form.email.value;
+
+      // Pega senha do form
       const password = form.password.value;
 
+      // Critérios de verificação do email
       if (email.includes('@alunos.ibmec.edu.br')) {
         console.log('email correto');
         setEmailValido(true);
@@ -28,6 +38,7 @@
         // Ações caso a entrada for incorreta
       }
 
+      // Critérios de verificação da senha
       if (password.length >= 8) {
         console.log('Senha Correta');
         setPasswordValido(true);
@@ -37,6 +48,7 @@
       }
     };
 
+    // Atribui a classe hidden se satisfazer as condições e visible se não.
     const errorEmail = emailValido ? 'hidden' : 'visible';
     const errorPassword = passwordValido ? 'hidden' : 'visible';
 
@@ -50,6 +62,7 @@
               type={'email'}
               placeholder={'Digite seu email'}
             />
+            {/* Visibility é um parametro que dentro do componente InputError adiciona mais uma classe a estilização padrão */}
             <InputError
               name={'emailError'}
               message={'Email inválIdo'}
@@ -92,5 +105,5 @@
       </main>
     )
   }
-  
+
   export default Login    

@@ -2,6 +2,7 @@ import React from 'react'
 import Styles from './InputError.module.scss';
 
 export default function InputError({message,name,visibility}) {
+    // Concatena classe para mostrar ou não o erro
     const classe = `${Styles['input-error']} ${Styles[visibility]}`;
 
   return (
