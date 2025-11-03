@@ -9,7 +9,8 @@
     margin-bottom: 10px;   
 
     &__label{
-        font-size: $font-size-body;
+        font-size: $font-size-small;
+        text-align: start;
         
     }
 
@@ -21,4 +22,10 @@
             outline: none;
             height:46px; 
     }
+}
+@media (min-width: 480px) {
+    .input-box__label{
+        font-size: $font-size-body;
+    }
+    
 }
