@@ -27,25 +27,33 @@ Aqui categorizamos, com base nos critérios de "To Do" estabelecidos na aba "met
 
 | Tarefas | Responsabilidade |
 | :--- | :--- |
-| **Tela de Listagem de Vagas do Aluno** | XXXXXX |
-| **Listagem de vagas do professor** | XXXXXX |
+| **protótipo - Tela de Listagem de Vagas do Aluno** | João Gabriel |
+| **protótipo - Listagem de vagas do professor** | João Gabriel |
+| **protótipo - Tela de Login (professor e aluno)** | Caio Ximenes |
+| **protótipo - Tela de Perfil do aluno** | Caio Ximenes |
+| **protótipo - Tela de Perfil do Professor** | Caio Ximenes |
+| **protótipo - Tela de detalhes da vaga** | Marcos Paulo |
+| **protótipo - Tela de Criação da vaga** | Marcos Paulo |
+| **protótipo - Tela de Candidatura da vaga** | Marcos Paulo |
+| **protótipo - Telas de Feedback** | Micael Dali |
+| **protótipo - Tela de Cadastro** | Micael Dali |
+
+
 
 ### Sprint Retrospective
 
 **Riscos encontrados**
 
-- *À fazer, sprint ainda não finalizado.*
-- *À fazer, sprint ainda não finalizado.*
+- *A pouca interatividade entre um membro do time.*
+- *A grande quantidade de trabalhos simultâneos na faculdade.*
 
 **Dúvidas durante a interação**
 
-- *À fazer, sprint ainda não finalizado.*
-- *À fazer, sprint ainda não finalizado.*
+- *Fluxo de telas e de interatividade por parte do professor da matéria*
 
 **Pontos positivos durante as tarefas**
 
-- *À fazer, sprint ainda não finalizado.*
-- *À fazer, sprint ainda não finalizado.*
+- *Uma produção rápida e fidedigna ao que nos propomos a fazer*
 
 **Ferramenta de comunicação:** Discord.
 
@@ -56,28 +64,25 @@ Aqui categorizamos, com base nos critérios de "To Do" estabelecidos na aba "met
 
 | Tarefas | Responsabilidade |
 | :--- | :--- |
-| **Tela de Cadastro do Aluno** | XXXXXX |
-| **Tela de Cadastro do Professor** | XXXXXX |
-| **Tela de Cadastro do Coordenador** | XXXXXX |
+| **Criação de componentes instanciados no React JS** | João Gabriel |
+| **Maior aprendizado sobre a biblioteca e componentes** | Caio Ximenes |
+| **Maior aprendizado sobre a biblioteca e componentes** | Marcos Paulo |
 
 ### Sprint Retrospective
 
 **Riscos encontrados**
 
-- *À fazer, sprint ainda não finalizado.*
-- *À fazer, sprint ainda não finalizado.*
+- *Nenhum, tudo correu como esperado!*
 
 **Dúvidas durante a interação**
 
-- *À fazer, sprint ainda não finalizado.*
-- *À fazer, sprint ainda não finalizado.*
+- *Nenhuma, tudo ocorreu como esperado!*
 
 **Pontos positivos durante as tarefas**
 
-- *À fazer, sprint ainda não finalizado.*
-- *À fazer, sprint ainda não finalizado.*
+- *Os componentes do time aprenderam super bem o funcionamento da tecnologia e estão prontos para trabalhar.*
 
-**Ferramenta de comunicação:** x .
+**Ferramenta de comunicação:** Discord.
 
 ## Sprint 3
 > Data de início: 25/09/25 
@@ -86,8 +91,18 @@ Aqui categorizamos, com base nos critérios de "To Do" estabelecidos na aba "met
 
 | Tarefas | Responsabilidade |
 | :--- | :--- |
-| **Tela de Login do Aluno** | XXXXXX |
-| **Tela de Login do Professor** | XXXXXX |
+| **React JS - Tela de Listagem de Vagas do Aluno** | João Gabriel |
+| **React JS - Listagem de vagas do professor** | João Gabriel |
+| **React JS - Tela de Login (professor e aluno)** | Caio Ximenes |
+| **React JS - Tela de Perfil do aluno** | Caio Ximenes |
+| **React JS - Tela de Perfil do Professor** | Caio Ximenes |
+| **React JS - Tela de detalhes da vaga** | Marcos Paulo |
+| **React JS - Tela de Criação da vaga** | Marcos Paulo |
+| **React JS - Tela de Candidatura da vaga** | Marcos Paulo |
+| **React JS - Telas de Feedback** | Micael Dali |
+| **React JS - Tela de Cadastro** | Micael Dali |
+| **React JS - Tela de visualização de alunos candidatos (Professor)** | xxxxxx |
+
 
 ### Sprint Retrospective
 
