@@ -1,0 +1,60 @@
+body {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+main {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.main__detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+    padding: 25px 19px;
+}
+
+.container__title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container__title h2 {
+    font-size: 2rem;
+}
+
+.container__detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.container__requisitos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container__responsabilidades {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 5%;
+}
