@@ -1,15 +1,15 @@
 import PageHeader from "../../../components/Layout/PageHeader";
 import Button from "../../../components/ui/Button";
-import styles from "./JobsDetails.module.scss";
+import Styles from "./JobsDetails.module.scss";
 
-export default function DetalhesVaga() {
+export default function JobsDetails() {
     return (
         <>
-            <PageHeader title="Vaga de Monitoria"/>
+            <PageHeader title="Vaga de Monitoria" />
 
             <main>
-                <section className={styles['main__detalhes']}>
-                    <div className={styles['container__title']}>
+                <section className={Styles["main__detalhes"]}>
+                    <div className={Styles["container__title"]}>
                         <h2>
                             Programação Estruturada
                         </h2>
@@ -18,12 +18,12 @@ export default function DetalhesVaga() {
                         </p>
                     </div>
 
-                    <div className={styles['container__detalhes']}>
-                        <div className={styles['container__requisitos']}>
+                    <div className={Styles["container__detalhes"]}>
+                        <div className={Styles["container__requisitos"]}>
                             <h3>
                                 Requisitos
                             </h3>
-                            <ul className={styles['lista__requisitos']}>
+                            <ul className={Styles["lista__requisitos"]}>
                                 <li>
                                     Estar cursando cursos Tech ou Engenharia da Computação
                                 </li>
@@ -39,11 +39,11 @@ export default function DetalhesVaga() {
                             </ul>
                         </div>
 
-                        <div className={styles['container__responsabilidades']}>
+                        <div className={Styles["container__responsabilidades"]}>
                             <h3>
                                 Responsabilidades
                             </h3>
-                            <ul className={styles['lista__responsabilidades']}>
+                            <ul className={Styles["lista__responsabilidades"]}>
                                 <li>
                                     Tirar dúvidas sobre variáveis, controle de fluxo, funções, vetores e matrizes
                                 </li>

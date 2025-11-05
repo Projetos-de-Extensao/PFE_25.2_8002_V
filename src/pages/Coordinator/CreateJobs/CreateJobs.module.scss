@@ -1,0 +1,14 @@
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main__criacao {
+    display: flex;
+    padding: 22px 16px;
+    flex-direction: column;
+    gap: 21px;
+}
