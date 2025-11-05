@@ -1,0 +1,111 @@
+@import '../../../styles/_variables.scss';
+
+.main{
+    margin: 0%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  
+}
+
+.perfil{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2vh;
+
+    &__div{
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:$cor-primaria ;
+        
+    }
+    &__dados{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+        gap: 10px;
+        margin-bottom: 2vh;
+            
+
+
+        &__opcoes{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+            padding: 10px;
+
+            &__line{
+                height: 1px;
+                background-color: $cor-primaria;
+                width: 100%; 
+            }
+            &__editar {
+                width: 30px;
+                height: 30px;
+                cursor:pointer;
+
+        
+                
+            
+        }
+        }
+
+    }
+    &__actions{
+        display: flex;
+        justify-content:center ;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+
+    }
+    &__sair{
+        text-decoration: none;
+        color: $cor-primaria;
+        padding-top: 1vh;
+    }
+
+    
+}
+@media (min-width:468px){
+    .main{
+        height: 120vh;
+    }
+    .perfil{
+        height:auto;
+        &__div{
+            height: 35vh;
+        }
+
+        &__dados{
+            width: 400px;
+
+            &__opcoes{
+                &__editar {
+                width: 40px;
+                height: 40px;
+                cursor:pointer;
+            }
+        }
+        
+    }
+    &__actions{
+            width: 400px;
+
+        }
+
+
+    }
+}

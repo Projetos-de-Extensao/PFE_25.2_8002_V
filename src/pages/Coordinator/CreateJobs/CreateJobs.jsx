@@ -11,7 +11,7 @@ export default function CreateJobs() {
 
             <main>
                 <section className={Styles["main__criacao"]}>
-                    <Select />
+                    {/* <Select /> */}
 
                     <Textarea
                         label={"Resquisitos"}

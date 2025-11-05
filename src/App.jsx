@@ -6,6 +6,7 @@ import ErrorPage from "./pages/App/ErrorPage.jsx";
 import PasswordReset from "./pages/Shared/PasswordReset/PasswordReset.jsx";
 import JobsDetails from "./pages/Shared/JobsDetails/JobsDetails.jsx";
 import CreateJobs from "./pages/Coordinator/CreateJobs/CreateJobs.jsx";
+import ProfilePage from "./pages/Shared/ProfilePage/ProfilePage.jsx";
 
 
 let router = createBrowserRouter([
@@ -33,6 +34,10 @@ let router = createBrowserRouter([
   {
     path:"/create",
     element:<CreateJobs />
+  },
+  {
+    path:"/myprofile",
+    element:<ProfilePage />,
   }
 ]);
 
