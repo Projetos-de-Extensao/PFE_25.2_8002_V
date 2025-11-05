@@ -1,8 +1,8 @@
-import PageHeader from "../../../components/Layout/PageHeader";
-import Button from "../../../components/ui/Button";
+import PageHeader from "../../../components/Layout/PageHeader/PageHeader.jsx";
+import Button from "../../../components/ui/Button/Button.jsx";
 import Styles from "./CreateJobs.module.scss";
-import Select from "../../../components/ui/Select";
-import Textarea from "../../../components/ui/Textarea";
+// import Select from "../../../components/ui/Select/Select.jsx";
+import Textarea from "../../../components/ui/Textarea/Textarea.jsx";
 
 export default function CreateJobs() {
     return (

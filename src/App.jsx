@@ -4,6 +4,9 @@ import Myjobs from './pages/Professor/MyJobs/Myjobs.jsx';
 import Login from './pages/Shared/Login/Login.jsx';
 import ErrorPage from "./pages/App/ErrorPage.jsx";
 import PasswordReset from "./pages/Shared/PasswordReset/PasswordReset.jsx";
+import JobsDetails from "./pages/Shared/JobsDetails/JobsDetails.jsx";
+import CreateJobs from "./pages/Coordinator/CreateJobs/CreateJobs.jsx";
+
 
 let router = createBrowserRouter([
   {
@@ -20,9 +23,17 @@ let router = createBrowserRouter([
     element: <JobsFeedPage />,
   },
   {
-    path:'/reset',
-    element: <PasswordReset/>
+    path:"/reset",
+    element: <PasswordReset/>,
   },
+  {
+  path:"/details",
+  element: <JobsDetails />,
+  },
+  {
+    path:"/create",
+    element:<CreateJobs />
+  }
 ]);
 
 export default function App() {

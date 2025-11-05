@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 15vh;
+    padding-top: 15vh;
     height: auto;
     width: 80%;
     font-size:$font-size-title-md;
@@ -33,7 +33,8 @@
         justify-content: center;
         text-decoration: none;
         color: $cor-primaria;
-        margin-top: 25vh;
+        padding-top: 15vh;
+        
         
         }
      &__link-icon{
@@ -47,7 +48,7 @@
          font-size:$font-size-title-lg;
 
         &__link{
-            margin-top: 35vh;
+            padding-top: 15vh;
         }
     }
 }

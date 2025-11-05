@@ -1,5 +1,5 @@
-import PageHeader from "../../../components/Layout/PageHeader";
-import Button from "../../../components/ui/Button";
+import PageHeader from "../../../components/Layout/PageHeader/PageHeader.jsx";
+import Button from "../../../components/ui/Button/Button.jsx";
 import Styles from "./JobsDetails.module.scss";
 
 export default function JobsDetails() {
