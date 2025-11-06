@@ -9,7 +9,7 @@ import CreateJobs from "./pages/Coordinator/CreateJobs/CreateJobs.jsx";
 import ProfilePage from "./pages/Shared/ProfilePage/ProfilePage.jsx";
 import CreateAccount from "./pages/Shared/CreateAccount/CreateAccount.jsx";
 import CreateAccountConfirmation from "./pages/Shared/CreateAccountConfirmation/CreateAccountConfirmation.jsx";
-
+import PasswordResetConfirmation from "./pages/Shared/PasswordResetConfirmation/PasswordResetConfirmation.jsx";
 
 let router = createBrowserRouter([
   {
@@ -35,7 +35,7 @@ let router = createBrowserRouter([
   },
   {
     path:"/create",
-    element:<CreateJobs />
+    element:<CreateJobs />,
   },
   {
     path:"/myprofile",
@@ -48,7 +48,11 @@ let router = createBrowserRouter([
   {
     path:"/createaccountconfirmation",
     element:<CreateAccountConfirmation />,
-  } 
+  },
+  {
+    path:"/resetconfirmation",
+    element: <PasswordResetConfirmation />,
+  },
 ]);
 
 export default function App() {

@@ -6,7 +6,7 @@ import styles from "./CreateAccountConfirmation.module.scss";
 export default function CreateAccountConfirmation() {
   return (
     <>
-      <PageHeader title="Cadastro" backTo="/login" />
+      <PageHeader title="" backTo="/login" />
 
       <main className={styles.confirm}>
         <section
