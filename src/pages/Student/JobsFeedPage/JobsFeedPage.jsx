@@ -94,6 +94,11 @@ const vagasDeExemplo = [
 
 ];
 
+function apiFetch() {
+    // Aqui vai ficar o código de buscar na api encapsulado (função tem que retornar um json)
+    return vagasDeExemplo;
+}
+
 export default function JobsFeedPage() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
