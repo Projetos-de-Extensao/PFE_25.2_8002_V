@@ -1,13 +1,21 @@
 @import '../../../styles/variables.scss';
 
 // Lembrete pessoal: Conferir tudo novamente da parte de cards para deixar tudo como está na prototipação.
-
+.job-card{
+    transition: linear 0.3s;
+}
 .job-card {
+    display: inline-block;
+    margin-bottom: 1rem;
     padding: 15px;
     border: 1px solid $border-color;
     border-radius: $border-radius-base;
     width: 22.3rem;
+    max-height: 40rem;
     cursor: pointer;
+    
+    
+    
 
     &__header {
         display: flex;
@@ -24,6 +32,13 @@
         &__toggle-icon {
             font-size: 50px;
             color: $text-color-primary;
+            transition: transform 0.2s ease-in-out;
+
+            &--rotate{
+                transition: linear 0.2s;
+                transform: rotate(180deg);
+                
+            }
         }
     }
 
@@ -33,6 +48,7 @@
         flex-direction: column;
         gap: 13px;
         margin-top: 13px;
+        transition:all 0.3s ease;
 
         .job-card__responsibilities {
             padding-left: 2rem;
@@ -41,6 +57,10 @@
                 list-style-type: disc;
             }
         }
+        &--hidden{
+        transition: linear 0.3s;    
+        display: none;
+    }
     }
 
 

@@ -124,6 +124,7 @@ return (
         <main className={styles.feedMain}>
             <section className={styles.feedMain__box}>
                 <h1 className={styles.feedMain__title}>Vagas Recentes</h1>
+                <div className={styles['feedMain__box__vagas']}>
                 {vagasDeExemplo.map((vaga) => (
                     <JobCard
                         key={vaga.id}
@@ -135,6 +136,7 @@ return (
                         responsibilities={vaga.responsibilities}
                     />
                 ))}
+                </div>
             </section>
         </main>
     </>
