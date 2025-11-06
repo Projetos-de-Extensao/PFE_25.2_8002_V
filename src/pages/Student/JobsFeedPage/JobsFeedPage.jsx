@@ -94,38 +94,50 @@ const vagasDeExemplo = [
 
 ];
 
-function apiFetch() {
-    // Aqui vai ficar o código de buscar na api encapsulado (função tem que retornar um json)
-    return vagasDeExemplo;
-}
 
 export default function JobsFeedPage() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [filter, setFilter] = useState('');
+
 
     const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
     const closeSidebar = () => setIsSidebarOpen(false);
 
-    return (
-        <>
-            <Sidebar isOpen={isSidebarOpen} />
-            <Overlay isVisible={isSidebarOpen} onClick={closeSidebar} />
-            <MainHeader onMenuClick={toggleSidebar} />
-            <main className={styles.feedMain}>
-                <section className={styles.feedMain__box}>
-                    <h1 className={styles.feedMain__title}>Vagas Recentes</h1>
-                    {vagasDeExemplo.map((vaga) => (
-                        <JobCard
-                            key={vaga.id}
-                            id={vaga.id}
-                            time={vaga.time}
-                            title={vaga.title}
-                            professor={vaga.professor}
-                            description={vaga.description}
-                            responsibilities={vaga.responsibilities}
-                        />
-                    ))}
-                </section>
-            </main>
-        </>
-    )
+    function apiFetch() {
+        // Aqui vai ficar o código de buscar na api encapsulado (função tem que retornar um array de objetos)
+        return vagasDeExemplo;
+    }
+
+
+    function filtrarPorProfessor() {
+        let vagas = apiFetch();
+        let vagasFiltradas = vagas.filter((vaga) => vaga.professor.includes(filter));
+        return vagasFiltradas;
+    };
+
+
+return (
+    <>
+        <Sidebar isOpen={isSidebarOpen} />
+        <Overlay isVisible={isSidebarOpen} onClick={closeSidebar} />
+        <MainHeader onMenuClick={toggleSidebar} />
+        <main className={styles.feedMain}>
+            <section className={styles.feedMain__box}>
+                <h1 className={styles.feedMain__title}>Vagas Recentes</h1>
+                {vagasDeExemplo.map((vaga) => (
+                    <JobCard
+                        key={vaga.id}
+                        id={vaga.id}
+                        time={vaga.time}
+                        title={vaga.title}
+                        professor={vaga.professor}
+                        description={vaga.description}
+                        responsibilities={vaga.responsibilities}
+                    />
+                ))}
+            </section>
+        </main>
+    </>
+)
+
 }
