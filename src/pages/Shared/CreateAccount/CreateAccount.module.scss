@@ -1,0 +1,67 @@
+.cadastro {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background-color: var(--background-color-page);
+}
+
+.cadastro__card {
+  width: 100%;
+  max-width: 720px;
+  background: var(--background-color-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-base);
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(34, 40, 49, 0.08);
+}
+
+.cadastro__form {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cadastro__alert {
+    grid-column: 1 / -1;
+    color: var(--text-color-danger);
+    min-height: 1.2em;
+  }
+
+  .input-box .input-box__input {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  // linhas inteiras
+  .input-box:nth-child(1),
+  .input-box:nth-child(2),
+  .input-box:nth-child(6),
+  .input-box:nth-child(7),
+  .cadastro__actions {
+    grid-column: 1 / -1;
+  }
+}
+
+.cadastro__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  .btn { min-width: 0; }
+}
+
+.cadastro__error {
+  color: var(--text-color-danger);
+  font-size: var(--font-size-small);
+  min-height: 1em;
+}
+
+.cadastro__hint {
+  color: var(--text-color-secondary);
+  font-size: var(--font-size-small);
+}
