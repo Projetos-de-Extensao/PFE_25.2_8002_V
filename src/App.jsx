@@ -7,6 +7,8 @@ import PasswordReset from "./pages/Shared/PasswordReset/PasswordReset.jsx";
 import JobsDetails from "./pages/Shared/JobsDetails/JobsDetails.jsx";
 import CreateJobs from "./pages/Coordinator/CreateJobs/CreateJobs.jsx";
 import ProfilePage from "./pages/Shared/ProfilePage/ProfilePage.jsx";
+import CreateAccount from "./pages/Shared/CreateAccount/CreateAccount.jsx";
+import CreateAccountConfirmation from "./pages/Shared/CreateAccountConfirmation/CreateAccountConfirmation.jsx";
 
 
 let router = createBrowserRouter([
@@ -38,7 +40,15 @@ let router = createBrowserRouter([
   {
     path:"/myprofile",
     element:<ProfilePage />,
-  }
+  },
+  {
+    path:"/createaccount",
+    element:<CreateAccount />,
+  },
+  {
+    path:"/createaccountconfirmation",
+    element:<CreateAccountConfirmation />,
+  } 
 ]);
 
 export default function App() {

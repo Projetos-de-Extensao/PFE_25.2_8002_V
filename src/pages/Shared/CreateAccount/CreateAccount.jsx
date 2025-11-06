@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import PageHeader from "../components/layout/PageHeader/PageHeader.jsx";
-import Button from "../components/ui/Button/Button.jsx";
-
-import './CreateAccount.module.scss';
+import PageHeader from "../../../components/Layout/PageHeader/PageHeader.jsx";
+import Button from "../../../components/ui/Button/Button.jsx";
+import Input from "../../../components/ui/Input/Input.jsx";
+import styles from "./CreateAccount.module.scss";
 
 const ROLE_BY_DOMAIN = {
+  "alunos.ibmec.edu.br": "Aluno",
   "aluno.ibmec.edu.br": "Aluno",
+  "professores.ibmec.edu.br": "Professor",
   "prof.ibmec.edu.br": "Professor",
   "ibmec.edu.br": "Coordenação",
 };
@@ -24,6 +26,28 @@ const ERR = {
   foto_ratio: "A imagem deve ter proporção 4:3 (largura:altura).",
 };
 
+/* helpers mínimos para data */
+function parseDateFlexible(v) {
+  if (!v) return null;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(v)) {
+    const [y, m, d] = v.split("-").map(Number);
+    return new Date(y, m - 1, d);
+  }
+  if (/^\d{2}\/\d{2}\/\d{4}$/.test(v)) {
+    const [d, m, y] = v.split("/").map(Number);
+    return new Date(y, m - 1, d);
+  }
+  return null;
+}
+function isValidBirthDateStr(v) {
+  const dt = parseDateFlexible(v);
+  if (!dt || Number.isNaN(dt.getTime())) return false;
+  const now = new Date();
+  const min = new Date(now);
+  min.setFullYear(now.getFullYear() - 100);
+  return !(dt > now || dt < min);
+}
+
 export default function CreateAccount() {
   const navigate = useNavigate();
 
@@ -40,7 +64,6 @@ export default function CreateAccount() {
   const [errors, setErrors] = useState({});
   const [alertMsg, setAlertMsg] = useState("");
 
-  // bounds de data (hoje e hoje - 100y)
   const today = new Date();
   const yyyy = today.getFullYear();
   const mm = String(today.getMonth() + 1).padStart(2, "0");
@@ -48,35 +71,50 @@ export default function CreateAccount() {
   const maxDate = `${yyyy}-${mm}-${dd}`;
   const minDate = `${yyyy - 100}-${mm}-${dd}`;
 
-  function handleChange(e) {
-    const { name, value, files } = e.target;
-    const next = { ...form, [name]: files ? files[0] : value };
-    setForm(next);
+  function handleChange(arg1, fieldName) {
+    // Caso 1: nativo/sem wrapper → event
+    if (arg1 && arg1.target) {
+      const { name, value, files, type } = arg1.target;
+      const key = name || fieldName;
+      const val = type === "file" ? (files ? files[0] : null) : value;
+      setForm((prev) => ({ ...prev, [key]: val }));
 
-    if (name === "email") {
-      const domain = value.toLowerCase().trim().split("@")[1] || "";
+      if (key === "email") {
+        const domain = String(val || "").toLowerCase().trim().split("@")[1] || "";
+        setPerfilDetectado(ROLE_BY_DOMAIN[domain] || "—");
+      }
+      return;
+    }
+
+    // Caso 2: wrapper → onValueChange(value[, name])
+    const value = arg1;
+    const key = fieldName || ""; // caso você passe o name pelo segundo arg
+    if (!key) return;            // sem key, não dá pra setar
+
+    setForm((prev) => ({ ...prev, [key]: value }));
+
+    if (key === "email") {
+      const domain = String(value || "").toLowerCase().trim().split("@")[1] || "";
       setPerfilDetectado(ROLE_BY_DOMAIN[domain] || "—");
     }
   }
 
+
   function validateBasic() {
     const errs = {};
 
-    // nome
     if (!/^[A-Za-zÀ-ÖØ-öø-ÿ\s]{2,}$/.test(form.nome.trim())) {
       errs.nome = ERR.nome;
     }
 
-    // email
     const email = form.email.trim().toLowerCase();
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     const domain = email.split("@")[1] || "";
-    const domainOk = Object.keys(ROLE_BY_DOMAIN).includes(domain);
+    const domainOk = Object.prototype.hasOwnProperty.call(ROLE_BY_DOMAIN, domain);
     if (!emailOk || !domainOk) {
       errs.email = ERR.email;
     }
 
-    // senha
     const senha = form.senha;
     const senhaOk =
       /(?=.*[A-Z])/.test(senha) &&
@@ -84,18 +122,10 @@ export default function CreateAccount() {
       senha.length >= 8;
     if (!senhaOk) errs.senha = ERR.senha;
 
-    // nascimento
-    if (!form.nascimento) {
+    if (!isValidBirthDateStr(form.nascimento)) {
       errs.nascimento = ERR.nascimento;
-    } else {
-      const dt = new Date(form.nascimento + "T00:00:00");
-      const now = new Date();
-      const min = new Date(now);
-      min.setFullYear(now.getFullYear() - 100);
-      if (dt > now || dt < min) errs.nascimento = ERR.nascimento;
     }
 
-    // matricula
     if (!/^[0-9]+$/.test(form.matricula.trim())) {
       errs.matricula = ERR.matricula;
     }
@@ -106,8 +136,7 @@ export default function CreateAccount() {
 
   function validateImage(file) {
     return new Promise((resolve) => {
-      if (!file)
-        return resolve({ ok: false, msg: ERR.foto_tipo });
+      if (!file) return resolve({ ok: false, msg: ERR.foto_tipo });
 
       const validTypes = ["image/jpeg", "image/png", "image/webp"];
       if (!validTypes.includes(file.type))
@@ -121,12 +150,9 @@ export default function CreateAccount() {
         URL.revokeObjectURL(url);
         const w = img.naturalWidth;
         const h = img.naturalHeight;
-        if (w < 250 || h < 250)
-          return resolve({ ok: false, msg: ERR.foto_dim });
+        if (w < 250 || h < 250) return resolve({ ok: false, msg: ERR.foto_dim });
         const ratio = w / h;
-        const target = 4 / 3;
-        const tol = 0.03;
-        if (Math.abs(ratio - target) > tol)
+        if (Math.abs(ratio - 4 / 3) > 0.03)
           return resolve({ ok: false, msg: ERR.foto_ratio });
         resolve({ ok: true });
       };
@@ -159,91 +185,98 @@ export default function CreateAccount() {
       return;
     }
 
-    // Aqui você faria seu POST real (fetch/axios).
-    // Se sucesso:
     navigate("/cadastro-confirmado", { replace: true });
   }
 
   return (
     <>
-      {/* Header do seu design system (opcional aqui) */}
       <PageHeader title="Cadastro" backTo="/login" />
 
-      <main className="cadastro">
-        <section className="cadastro__card">
-          <form className="cadastro__form" onSubmit={handleSubmit} noValidate>
-            <div className="cadastro__alert" aria-live="polite">{alertMsg}</div>
+      <main className={styles.cadastro}>
+        <div className={styles.brand}>
+          <img src="src/assets/imgs/Ibvagas.png" alt="IBvagas" className={styles.brand__img} />
+        </div>
+
+        <section className={styles.cadastro__card}>
+          <form className={styles.cadastro__form} onSubmit={handleSubmit} noValidate>
+            <div className={styles.cadastro__alert} aria-live="polite">
+              {alertMsg}
+            </div>
 
             {/* Nome */}
             <div className="input-box">
               <label htmlFor="nome" className="input-box__label">Nome completo</label>
-              <input
+              <Input
                 id="nome"
                 name="nome"
                 className="input-box__input"
                 type="text"
                 placeholder="Seu nome completo"
                 value={form.nome}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e, "nome")}
+                onValueChange={(v) => handleChange(v, "nome")}
                 required
               />
-              <small className="cadastro__error">{errors.nome}</small>
+              <small className={styles.cadastro__error}>{errors.nome}</small>
             </div>
 
             {/* Email */}
             <div className="input-box">
               <label htmlFor="email" className="input-box__label">Email institucional</label>
-              <input
+              <Input
                 id="email"
                 name="email"
                 className="input-box__input"
                 type="email"
                 inputMode="email"
-                placeholder="seu.email@aluno.ibmec.edu.br"
+                placeholder="seu.email@alunos.ibmec.edu.br"
                 value={form.email}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e, "email")}
+                onValueChange={(v) => handleChange(v, "email")}
                 required
               />
-              <small className="cadastro__error">{errors.email}</small>
+              <small className={styles.cadastro__error}>{errors.email}</small>
             </div>
 
             {/* Senha */}
             <div className="input-box">
               <label htmlFor="senha" className="input-box__label">Senha</label>
-              <input
+              <Input
                 id="senha"
                 name="senha"
                 className="input-box__input"
                 type="password"
                 placeholder="Mín. 8 caracteres, 1 maiúscula e 1 caractere especial"
                 value={form.senha}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e, "senha")}
+                onValueChange={(v) => handleChange(v, "senha")}
                 required
               />
-              <small className="cadastro__error">{errors.senha}</small>
+              <small className={styles.cadastro__error}>{errors.senha}</small>
             </div>
 
-            {/* Nascimento */}
+            {/* Data de nascimento */}
             <div className="input-box">
               <label htmlFor="nascimento" className="input-box__label">Data de nascimento</label>
-              <input
+              <Input
                 id="nascimento"
                 name="nascimento"
                 className="input-box__input"
                 type="date"
                 value={form.nascimento}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e, "nascimento")}
+                onValueChange={(v) => handleChange(v, "nascimento")}
                 min={minDate}
                 max={maxDate}
                 required
               />
-              <small className="cadastro__error">{errors.nascimento}</small>
+              <small className={styles.cadastro__error}>{errors.nascimento}</small>
             </div>
 
             {/* Matrícula */}
             <div className="input-box">
               <label htmlFor="matricula" className="input-box__label">Matrícula</label>
-              <input
+              <Input
                 id="matricula"
                 name="matricula"
                 className="input-box__input"
@@ -251,34 +284,36 @@ export default function CreateAccount() {
                 inputMode="numeric"
                 placeholder="Somente números"
                 value={form.matricula}
-                onChange={handleChange}
+                onChange={(e) => handleChange(e, "matricula")}
+                onValueChange={(v) => handleChange(v, "matricula")}
                 required
               />
-              <small className="cadastro__error">{errors.matricula}</small>
+              <small className={styles.cadastro__error}>{errors.matricula}</small>
             </div>
 
-            {/* Foto */}
+
+            {/* Foto (usa event por causa do files) */}
             <div className="input-box">
               <label htmlFor="foto" className="input-box__label">Foto de perfil (JPG, PNG, WEBP)</label>
-              <input
+              <Input
                 id="foto"
                 name="foto"
                 className="input-box__input"
                 type="file"
                 accept=".jpg,.jpeg,.png,.webp"
-                onChange={handleChange}
+                onChange={(e) => handleChange(e, "foto")}
                 required
               />
-              <small className="cadastro__hint">
+              <small className={styles.cadastro__hint}>
                 Proporção 4:3, mínimo 250×250 px, até 5 MB.
               </small>
-              <small className="cadastro__error">{errors.foto}</small>
+              <small className={styles.cadastro__error}>{errors.foto}</small>
             </div>
 
             {/* Perfil detectado */}
             <div className="input-box">
               <label className="input-box__label">Perfil detectado</label>
-              <input
+              <Input
                 className="input-box__input"
                 type="text"
                 value={perfilDetectado}
@@ -286,8 +321,7 @@ export default function CreateAccount() {
               />
             </div>
 
-            {/* Ações */}
-            <div className="cadastro__actions">
+            <div className={styles.cadastro__actions}>
               <Button type="submit" variant="primary">Criar conta</Button>
               <Button as="a" href="/login" variant="alternative">Já tenho conta</Button>
             </div>

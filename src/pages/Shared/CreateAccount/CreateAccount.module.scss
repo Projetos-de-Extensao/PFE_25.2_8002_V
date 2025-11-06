@@ -1,67 +1,78 @@
 .cadastro {
-  width: 100%;
+  padding: 32px 24px 72px;
+}
+
+.brand {
   display: grid;
   place-items: center;
-  padding: 24px;
-  background-color: var(--background-color-page);
+  margin: 12px auto 20px;     /* afasta do topo e do form */
+  padding-top: 8px;           /* leve respiro */
+}
+
+.brand__img {
+  display: block;
+  width: min(210px, 60%);     /* responsivo: limita a 210px ou 60% da largura */
+  height: auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast; /* texto do logo mais nítido */
 }
 
 .cadastro__card {
-  width: 100%;
-  max-width: 720px;
-  background: var(--background-color-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-base);
-  padding: 22px;
-  box-shadow: 0 4px 14px rgba(34, 40, 49, 0.08);
+  margin: 24px auto;
+  max-width: 720px;            /* ajuste o limite que preferir (720–960px) */
+  margin: 0 auto;    
 }
 
 .cadastro__form {
   display: grid;
-  gap: 14px;
+  row-gap: 20px;   
+  column-gap: 16px;
   min-width: 0;
 
-  @media (min-width: 640px) {
+  @media (min-width: 480px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .cadastro__alert {
-    grid-column: 1 / -1;
-    color: var(--text-color-danger);
-    min-height: 1.2em;
-  }
-
-  .input-box .input-box__input {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  // linhas inteiras
-  .input-box:nth-child(1),
-  .input-box:nth-child(2),
-  .input-box:nth-child(6),
-  .input-box:nth-child(7),
+  .cadastro__alert,
+  .cadastro__file,
   .cadastro__actions {
     grid-column: 1 / -1;
   }
 }
 
-.cadastro__actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-
-  .btn { min-width: 0; }
+.cadastro {
+  --text-color-danger: #d32f2f;
 }
-
-.cadastro__error {
-  color: var(--text-color-danger);
+.cadastro .cadastro__alert,
+.cadastro .input-box .error,
+.cadastro .input-box .input-error,
+.cadastro .input-box small.is-error,
+.cadastro [data-error],
+.cadastro .cadastro__error {
+  color: #d32f2f;
   font-size: var(--font-size-small);
-  min-height: 1em;
+  line-height: 1.25;
+  margin-top: 6px;
+  margin: 0 auto;
 }
 
-.cadastro__hint {
+.cadastro .cadastro__hint {
   color: var(--text-color-secondary);
   font-size: var(--font-size-small);
+  margin-top: 6px;
+}
+
+.cadastro__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;             
+  margin-top: 28px;      
+  margin-bottom: 48px;   
+}
+
+@media (max-width: 639px) {
+  .cadastro__actions .btn {
+    width: 100%;
+    min-width: 0;        
+  }
 }
