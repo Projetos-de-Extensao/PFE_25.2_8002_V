@@ -5,6 +5,12 @@ import { useNavigate } from "react-router-dom";
 import styles from "./PasswordResetConfirmation.module.scss";
 
 export default function PasswordResetConfirmation() {
+  const navigate = useNavigate();
+  
+  function reenviarEmail() {
+    // Aqui se coloca o c[odigo de enviar email
+    alert('Email enviado');
+  }
   return (
     <>
       <PageHeader title="" backTo="/login" />
@@ -25,7 +31,7 @@ export default function PasswordResetConfirmation() {
           </p>
 
           <div className={styles.resetconfirm__actions}>
-            <Button as="a" href="/login" variant="primary" onClick={useNavigate('/login')}>
+            <Button as="a" href="/login" variant="primary" onClick={reenviarEmail}>
               Reenviar Email
             </Button>
           </div>

@@ -104,7 +104,7 @@
               />
               <UnderlineAnchor
                 placeholder="Esqueci minha senha"
-                onClick={() => navigate('/reset')}
+                link={'/reset'}
               />
             </div>
             <Button
