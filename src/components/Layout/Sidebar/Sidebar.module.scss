@@ -51,6 +51,7 @@
 
     &__navLink {
         font-weight: $font-weight-light;
+        color: $text-color-light;
 
         &--logout:hover {
             color: $text-color-danger;
@@ -65,5 +66,9 @@
         font-size: $font-size-small;
         text-decoration: underline;
         cursor: pointer;
+
+        &Link {
+            color: $text-color-light;
+        }
     }
 }

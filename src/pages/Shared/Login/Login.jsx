@@ -6,6 +6,7 @@
   import Button from '../../../components/ui/Button/Button.jsx';
   import UnderlineAnchor from '../../../components/ui/UnderlineAnchor/UnderlineAnchor.jsx';
   import InputError from '../../../components/ui/InputError/InputError.jsx';
+  import { useNavigate } from 'react-router-dom';
 
   
   function Login() {
@@ -14,6 +15,8 @@
     const [passwordValido, setPasswordValido] = useState(true);
 
     const verificarEntrada = (event) => {
+      // Variavel feita para retornar quantos erros e assim permitir a entrada do usuário caso seja 0.
+      let variavelControle = 0;
 
       // Impede o carregamento da página ao enviar o formulário
       event.preventDefault();
@@ -35,6 +38,7 @@
       } else {
         console.log('Credenciais inválidas');
         setEmailValido(false);
+        variavelControle++;
         // Ações caso a entrada for incorreta
       }
 
@@ -42,21 +46,36 @@
       if (password.length >= 8) {
         console.log('Senha Correta');
         setPasswordValido(true);
+       
       } else {
         console.log('Senha Inválida');
         setPasswordValido(false);
+        variavelControle++;
+        
       }
+      return variavelControle;
     };
 
     // Atribui a classe hidden se satisfazer as condições e visible se não.
     const errorEmail = emailValido ? 'hidden' : 'visible';
     const errorPassword = passwordValido ? 'hidden' : 'visible';
 
+    const navigate = useNavigate();
+
+    const redirecionar = (event) => {
+      // O que precisar fazer antes de redirecionar
+      if(verificarEntrada(event) === 0){
+        navigate('/feed');
+      }
+      else{}
+      
+    }
+
     return (
       <main className={Styles.main}>
         <section className={Styles['main__login']}>
           <img src={LogoIbvagas} alt="Logo ibvagas com legenda" className={Styles['login__logo']} />
-          <form className={Styles['login__form']} onSubmit={verificarEntrada}>
+          <form className={Styles['login__form']} onSubmit={redirecionar} >
             <Input
               name={'email'}
               type={'email'}
@@ -84,7 +103,8 @@
                 label="Lembrar-me"
               />
               <UnderlineAnchor
-                placeholder="Esqueci uma senha"
+                placeholder="Esqueci minha senha"
+                onClick={() => navigate('/reset')}
               />
             </div>
             <Button
@@ -99,6 +119,8 @@
             <Button
               children={'Criar uma nova conta'}
               variant='alternative'
+              onClick={() => navigate('/signup')}
+              
             />
           </form>
         </section>

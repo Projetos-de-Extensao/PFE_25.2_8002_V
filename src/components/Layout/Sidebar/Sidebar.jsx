@@ -1,5 +1,6 @@
 import styles from './Sidebar.module.scss';
 import LogoSimples from '../../../assets/imgs/ibvagas-1.png'
+import { Link } from 'react-router-dom';
 
 export default function Sidebar({isOpen}) {
     const sidebarClasses = `${styles.sidebar} ${isOpen ? styles['sidebar--open'] : ''}`;
@@ -19,20 +20,21 @@ export default function Sidebar({isOpen}) {
                 <nav className={styles.sidebar__nav}>
                     <ul className={styles.sidebar__navList}>
                         <li className={styles.sidebar__navItem}>
-                            <a className={styles.sidebar__navLink}>Minha Conta</a>
+                            <Link className={styles.sidebar__navLink} to='/myprofile' >Minha Conta</Link>
                         </li>
 
                         <li className={styles.sidebar__navItem}>
-                            <a className={`${styles.sidebar__navLink} ${styles['sidebar__navLink--logout']}`}>
+                            <Link className={`${styles.sidebar__navLink} ${styles['sidebar__navLink--logout']}`} to='/'>
                                 Sair
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
 
                 <div className={styles.sidebar__footer}>
-                    <p className={styles.sidebar__footerLink}>Modo Aluno</p>
-                    <p className={styles.sidebar__footerLink}>Modo Professor</p>
+                    <Link className={styles.sidebar__footerLink}>Modo Aluno</Link>
+                    <Link className={styles.sidebar__footerLink}>Modo Professor</Link>
+                    <Link className={styles.sidebar__footerLink}>Modo Coordenador</Link>
                 </div>
             </div>
 

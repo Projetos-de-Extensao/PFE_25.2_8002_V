@@ -1,5 +1,6 @@
 import PageHeader from "../../../components/Layout/PageHeader/PageHeader.jsx";
 import Button from "../../../components/ui/Button/Button.jsx";
+import { useNavigate } from "react-router-dom";
 
 import styles from "./PasswordResetConfirmation.module.scss";
 
@@ -24,7 +25,7 @@ export default function PasswordResetConfirmation() {
           </p>
 
           <div className={styles.resetconfirm__actions}>
-            <Button as="a" href="/login" variant="primary">
+            <Button as="a" href="/login" variant="primary" onClick={useNavigate('/login')}>
               Reenviar Email
             </Button>
           </div>
