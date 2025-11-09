@@ -1,0 +1,28 @@
+body {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    padding: 22px 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main__dados{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
