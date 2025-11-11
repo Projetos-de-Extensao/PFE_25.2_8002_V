@@ -7,7 +7,7 @@ import cx from 'classnames';
 
 // Criar uma condicional para o card renderizar um ou mais botão dependendo do usuário
 
-export default function JobCard({ time, professor, title, description, responsibilities = [] }) {
+export default function JobCard({ time, professor, title, description,materia, responsibilities = [] }) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const handleToggle = () => {
@@ -23,7 +23,7 @@ export default function JobCard({ time, professor, title, description, responsib
             <div className={styles['job-card__header']}>
                 <div className={styles['header__text']}>
                     <span className={styles['job-card_time']}>{time}</span>
-                    <h3 className={styles['job-card__title']}>{title}</h3>
+                    <h3 className={styles['job-card__title']}>{materia}</h3>
                     <p className={styles['job-card__professor']}>Por {professor}</p>
                 </div>
                 <img className={styles['job-card__toggle-icon']} src={isExpanded ? SetaAlta : SetaBaixo} />
