@@ -4,12 +4,13 @@ import JobCard from '../../../components/vagas/JobCards/JobCard.jsx'
 import MainHeader from '../../../components/Layout/MainHeader/MainHeader.jsx'
 import Sidebar from '../../../components/Layout/Sidebar/Sidebar.jsx'
 import Overlay from "../../../components/ui/Overlay/Overlay.jsx";
+import Filter from "../../../components/ui/Filter/Filter.jsx";
 
 const vagasDeExemplo = [
     {
         id: 1,
         time: 'Há 3 horas',
-        title: 'Programação Estruturada',
+        materia: 'Programação Estruturada',
         professor: 'Cassius Moreira',
         description: 'Buscamos um(a) monitor(a) para apoiar turmas em lógica e construção de algoritmos...',
         responsibilities: [
@@ -21,7 +22,7 @@ const vagasDeExemplo = [
     {
         id: 2,
         time: 'Há 2 dias',
-        title: 'Análise de Dados',
+        materia: 'Análise de Dados',
         professor: 'Maria Silva',
         description: 'Vaga para monitor(a) com conhecimento em Python, Pandas e bibliotecas de visualização...',
         responsibilities: [
@@ -32,7 +33,7 @@ const vagasDeExemplo = [
     {
         id: 3,
         time: 'Há 4 dias',
-        title: 'Desenvolvimento Web Front-End',
+        materia: 'Desenvolvimento Web Front-End',
         professor: 'Carlos Oliveira',
         description: 'Procura-se monitor(a) com experiência em React, HTML5 e CSS3 (SASS/SCSS) para auxiliar a turma...',
         responsibilities: [
@@ -44,7 +45,7 @@ const vagasDeExemplo = [
     {
         id: 4,
         time: 'Há 1 semana',
-        title: 'Banco de Dados',
+        materia: 'Banco de Dados',
         professor: 'Ana Beatriz',
         description: 'Vaga para monitoria em Banco de Dados, focado em SQL e modelagem relacional. Desejável conhecimento em NoSQL...',
         responsibilities: [
@@ -57,7 +58,7 @@ const vagasDeExemplo = [
     {
         id: 5,
         time: 'Há 1 semana',
-        title: 'Engenharia de Software',
+        materia: 'Engenharia de Software',
         professor: 'Ricardo Souza',
         description: 'Buscando monitor(a) para a disciplina de Engenharia de Software, com foco em metodologias ágeis e UML...',
         responsibilities: [
@@ -69,7 +70,7 @@ const vagasDeExemplo = [
     {
         id: 6,
         time: 'Há 2 semanas',
-        title: 'Inteligência Artificial',
+        materia: 'Inteligência Artificial',
         professor: 'Juliana Paes',
         description: 'Oportunidade para monitoria em IA, cobrindo algoritmos de machine learning, redes neurais e processamento de linguagem natural...',
         responsibilities: [
@@ -82,7 +83,7 @@ const vagasDeExemplo = [
     {
         id: 7,
         time: 'Há 2 semanas',
-        title: 'Inteligência Artificial',
+        materia: 'Inteligência Artificial',
         professor: 'Juliana Paes',
         description: 'Oportunidade para monitoria em IA, cobrindo algoritmos de machine learning, redes neurais e processamento de linguagem natural...',
         responsibilities: [
@@ -96,6 +97,8 @@ const vagasDeExemplo = [
 
 
 export default function JobsFeedPage() {
+    const filters = ['professor', 'materia'];
+
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [filter, setFilter] = useState('');
 
@@ -123,13 +126,16 @@ return (
         <MainHeader onMenuClick={toggleSidebar} />
         <main className={styles.feedMain}>
             <section className={styles.feedMain__box}>
-                <h1 className={styles.feedMain__title}>Vagas Recentes</h1>
+                <h1 className={styles.feedMain__materia}>Vagas Recentes</h1>
+                <Filter 
+                filtros={filters}
+                json={vagasDeExemplo} />
                 {vagasDeExemplo.map((vaga) => (
                     <JobCard
                         key={vaga.id}
                         id={vaga.id}
                         time={vaga.time}
-                        title={vaga.title}
+                        materia={vaga.materia}
                         professor={vaga.professor}
                         description={vaga.description}
                         responsibilities={vaga.responsibilities}
