@@ -1,7 +1,7 @@
 // 1. A importação agora coloca os estilos no objeto 'styles'
 import styles from "./Button.module.scss";
 
-export default function Button({ children, onClick, type = 'button', variant = 'primary', size = 'default' }) {
+export default function Button({ children, onClick, type = 'button', variant = 'primary', size = 'default', onSubmit = null }) {
     
     const buttonClass = `
         ${styles.btn} 

@@ -1,0 +1,17 @@
+@import "../../../styles/_variables.scss";
+
+.filter-form{
+    display: flex;
+    flex-direction: row;
+    width: 360px;
+    align-items: start;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    &__filters{
+        width: 100%;
+    }
+}
+.hidden {
+    display: none;
+}

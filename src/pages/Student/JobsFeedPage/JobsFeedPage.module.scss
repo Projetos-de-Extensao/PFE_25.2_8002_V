@@ -16,6 +16,7 @@
     &__box {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 15px;
 
     }
@@ -24,5 +25,22 @@
         width: 100%;
         text-align: start;
     }
+    &__header {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
 
+}
+.img-filter {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.hidden {
+    display: none;
 }
