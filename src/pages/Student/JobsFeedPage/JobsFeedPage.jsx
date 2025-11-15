@@ -6,6 +6,8 @@ import Sidebar from '../../../components/Layout/Sidebar/Sidebar.jsx'
 import Overlay from "../../../components/ui/Overlay/Overlay.jsx";
 import Filter from "../../../components/ui/Filter/Filter.jsx";
 import FilterIcon from '../../../assets/imgs/filter-svgrepo-com.png'
+import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
     const vagasDeExemplo = [
         {
@@ -104,7 +106,7 @@ export default function JobsFeedPage() {
     const [filter, setFilter] = useState('');
     const [showFilters, setShowFilters] = useState(false);
     const [jobList, setJobList] = useState(vagasDeExemplo);
-    
+    const navigate = useNavigate();
     
     
 
@@ -138,6 +140,11 @@ export default function JobsFeedPage() {
         
     }
 
+    function mostrarDetalhes(id,vaga){
+        const path = `/details/${id}`
+        navigate(path, {state:{vagaCompleta : vaga}})
+
+    }
 
 return (
     <>
@@ -164,6 +171,7 @@ return (
                         professor={vaga.professor}
                         description={vaga.description}
                         responsibilities={vaga.responsibilities}
+                        onClick={() =>mostrarDetalhes(vaga.id,vaga)}
                     />
                 ))}
             </section>

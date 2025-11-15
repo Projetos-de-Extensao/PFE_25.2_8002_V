@@ -1,20 +1,40 @@
+import { use } from "react";
 import PageHeader from "../../../components/Layout/PageHeader/PageHeader.jsx";
 import Button from "../../../components/ui/Button/Button.jsx";
 import Styles from "./JobsDetails.module.scss";
+import { useLocation } from "react-router-dom";
 
 export default function JobsDetails() {
+    const location = useLocation();
+    const vaga = location.state?.vagaCompleta;
+
+    if (!vaga) {
+        return (
+            <main className={Styles.errorContainer}>
+                <PageHeader title="Erro" />
+                <section className={Styles["main__detalhes"]}>
+                    <h2>Detalhes da Vaga Não Encontrados</h2>
+                    <p>
+                        Não foi possível carregar os detalhes completos da vaga. Por favor, retorne ao feed.
+                    </p>
+                </section>
+            </main>
+        );
+    }
+
     return (
         <>
-            <PageHeader title="Vaga de Monitoria" />
+            <PageHeader title={`Vaga: ${vaga.materia}`} />
 
             <main>
+                
                 <section className={Styles["main__detalhes"]}>
                     <div className={Styles["container__title"]}>
                         <h2>
-                            Programação Estruturada
+                           {vaga.materia}
                         </h2>
                         <p>
-                            Prof Cassius Moreira
+                            {vaga.professor}
                         </p>
                     </div>
 
@@ -44,18 +64,11 @@ export default function JobsDetails() {
                                 Responsabilidades
                             </h3>
                             <ul className={Styles["lista__responsabilidades"]}>
-                                <li>
-                                    Tirar dúvidas sobre variáveis, controle de fluxo, funções, vetores e matrizes
-                                </li>
-                                <li>
-                                    Apoiar exercícios práticos e projetos curtos em C (ou linguagem equivalente)
-                                </li>
-                                <li>
-                                    Corrigir listas e dar feedback objetivo
-                                </li>
-                                <li>
-                                    Acompanhar fóruns e registrar dificulades recorrentes
-                                </li>
+                                {vaga.responsibilities.map((element, index) => (
+                                    <li key={index}>
+                                        {element}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     </div>

@@ -30,7 +30,7 @@ let router = createBrowserRouter([
     element: <PasswordReset/>,
   },
   {
-  path:"/details",
+  path:"/details/:id",
   element: <JobsDetails />,
   },
   {

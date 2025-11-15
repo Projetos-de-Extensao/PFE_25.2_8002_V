@@ -4,10 +4,11 @@ import SetaBaixo from '../../../assets/imgs/setinha-card-baixo.png'
 import SetaAlta from '../../../assets/imgs/setinha-preta-cima.png'
 import { useState } from 'react';
 import cx from 'classnames';
+import { Link } from 'react-router-dom';
 
 // Criar uma condicional para o card renderizar um ou mais botão dependendo do usuário
 
-export default function JobCard({ time, professor, title, description,materia, responsibilities = [] }) {
+export default function JobCard({ time, professor, title, description,materia, responsibilities = [] ,onClick}) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const handleToggle = () => {
@@ -17,6 +18,14 @@ export default function JobCard({ time, professor, title, description,materia, r
     const cardClasses = cx(styles['job-card'], {
         [styles['job-card--expanded']]: isExpanded,
     });
+
+    const handleButtonClick = (e) => {
+        // Isso impede que o clique no botão ative a expansão do card pai
+        e.stopPropagation();
+        if (onClick) {
+            onClick(e);
+        }
+    };
 
     return (
         <article className={cardClasses} onClick={handleToggle}>
@@ -43,7 +52,7 @@ export default function JobCard({ time, professor, title, description,materia, r
                     {/* futuramente será mudado para a tag link com o uso do react rounter dom */}
                     <a href="#" className={styles['job-card__details-link']}>Ver mais detalhes</a>
                     <div className={styles['job-card__actions']}>
-                        <Button variant="primary">Me candidatar!</Button>
+                        <Button variant="primary" onClick={handleButtonClick}>Me candidatar!</Button>
                     </div>
                 </div>
             )}
