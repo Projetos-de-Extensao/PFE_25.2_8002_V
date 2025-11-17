@@ -119,7 +119,7 @@
             <Button
               children={'Criar uma nova conta'}
               variant='alternative'
-              onClick={() => navigate('/signup')}
+              onClick={() => navigate('/createaccount')}
               
             />
           </form>

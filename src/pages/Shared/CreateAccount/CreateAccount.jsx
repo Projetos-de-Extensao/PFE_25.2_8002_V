@@ -185,7 +185,7 @@ export default function CreateAccount() {
       return;
     }
 
-    navigate("/cadastro-confirmado", { replace: true });
+    navigate("/createaccountconfirmation", { replace: true });
   }
 
   return (
@@ -322,8 +322,9 @@ export default function CreateAccount() {
             </div>
 
             <div className={styles.cadastro__actions}>
-              <Button type="submit" variant="primary">Criar conta</Button>
-              <Button as="a" href="/login" variant="alternative">Já tenho conta</Button>
+              {/* Navigate apenas para fim de apresentação*/}
+              <Button type="submit" variant="primary" onClick={() => navigate('/createaccountconfirmation')}>Criar conta</Button>
+              <Button as="a" href="/login" variant="alternative" onClick={() => navigate('/')}>Já tenho conta</Button>
             </div>
           </form>
         </section>
