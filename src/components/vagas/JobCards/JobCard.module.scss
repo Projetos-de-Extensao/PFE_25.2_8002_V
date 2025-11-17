@@ -9,6 +9,33 @@
     width: 22.3rem;
     cursor: pointer;
 
+    &__state{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        padding: 2% 10%;
+        font-size: $font-size-small;
+        border-radius: 1em;
+        color: $cor-branca;
+        
+        
+        &--open{
+
+            display: none;
+        }
+        &--applied{
+            background-color:$cor-primaria;
+        }
+        &--acepted{
+            background-color: $cor-verde;
+        }
+        &--finalized{
+            background-color:$cor-areia;
+            
+        }
+    }
+
     &__header {
         display: flex;
         justify-content: space-between;

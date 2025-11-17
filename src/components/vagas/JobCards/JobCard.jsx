@@ -1,35 +1,70 @@
-import styles from './JobCard.module.scss'
+import styles from './JobCard.module.scss';
 import Button from '../../ui/Button/Button';
-import SetaBaixo from '../../../assets/imgs/setinha-card-baixo.png'
-import SetaAlta from '../../../assets/imgs/setinha-preta-cima.png'
+import SetaBaixo from '../../../assets/imgs/setinha-card-baixo.png';
+import SetaAlta from '../../../assets/imgs/setinha-preta-cima.png';
 import { useState } from 'react';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
 
-export default function JobCard({ time, professor, title, description, materia, responsibilities = [], onClick, detalhes }) {
+export default function JobCard({
+    time,
+    professor,
+    title,
+    description,
+    materia,
+    responsibilities = [],
+    onClick,
+    detalhes,
+    state,
+    conteudoBotao
+}) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const { id, vagaCompleta } = detalhes || {};
 
     const handleToggle = () => {
-        setIsExpanded(prevState => !prevState);
+        setIsExpanded(prev => !prev);
     };
-    
+
     const cardClasses = cx(styles['job-card'], {
         [styles['job-card--expanded']]: isExpanded,
     });
 
-    const handleButtonClick = (e) => {
-        e.stopPropagation();
-        if (onClick) {
-            onClick(e); 
+    function estadoClasse(){
+        switch (state) {
+            case 'open':
+                return "aberta";
+            case 'applied':
+                return "aplicada"
+            case 'acepted':
+                return "aceito"
+            default:
+                return "finalizada"
         }
-    };
-    
-    const handleLinkClick = (e) => {
-        e.stopPropagation();
     }
 
+    // Função pura para retornar a classe correta
+    function getEstadoClasse() {
+        switch (state) {
+            case 'open':
+                return styles['job-card__state'] + ' ' + styles['job-card__state--open'];
+            case 'applied':
+                return styles['job-card__state'] + ' ' + styles['job-card__state--applied'];
+            case 'acepted':
+                return styles['job-card__state'] + ' ' + styles['job-card__state--acepted'];
+            default:
+                return styles['job-card__state'] + ' ' + styles['job-card__state--finalized'];
+        }
+    }
+
+    const handleButtonClick = (e) => {
+        e.stopPropagation();
+        if (onClick) onClick(e);
+    };
+
+    const handleLinkClick = (e) => {
+        e.stopPropagation();
+    };
 
     return (
         <article className={cardClasses} onClick={handleToggle}>
@@ -39,21 +74,32 @@ export default function JobCard({ time, professor, title, description, materia, 
                     <h3 className={styles['job-card__title']}>{materia}</h3>
                     <p className={styles['job-card__professor']}>Por {professor}</p>
                 </div>
-                <img className={styles['job-card__toggle-icon']} src={isExpanded ? SetaAlta : SetaBaixo} />
+
+                {/* Classe dinâmica sem useEffect */}
+                <div className={getEstadoClasse()}>{estadoClasse()}</div>
+
+                <img
+                    className={styles['job-card__toggle-icon']}
+                    src={isExpanded ? SetaAlta : SetaBaixo}
+                />
             </div>
+
             {isExpanded && (
                 <div className={styles['job-card__details']}>
                     <p className={styles['job-card__description']}>{description}</p>
+
                     <div>
-                        <h4 className={styles['job-card__responsibilities-title']}>Responsabilidade</h4>
+                        <h4 className={styles['job-card__responsibilities-title']}>
+                            Responsabilidade
+                        </h4>
                         <ul className={styles['job-card__responsibilities']}>
                             {responsibilities.map((item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
                         </ul>
                     </div>
-                    
-                    <Link 
+
+                    <Link
                         to={`/details/${id}`}
                         state={{ vagaCompleta: vagaCompleta }}
                         onClick={handleLinkClick}
@@ -61,12 +107,14 @@ export default function JobCard({ time, professor, title, description, materia, 
                     >
                         Ver mais detalhes
                     </Link>
-                    
+
                     <div className={styles['job-card__actions']}>
-                        <Button variant="primary" onClick={handleButtonClick}>Me candidatar!</Button>
+                        <Button variant="primary" onClick={handleButtonClick}>
+                            {conteudoBotao}
+                        </Button>
                     </div>
                 </div>
             )}
-        </article >
-    )
+        </article>
+    );
 }
