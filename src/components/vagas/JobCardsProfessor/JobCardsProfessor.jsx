@@ -1,35 +1,32 @@
-import styles from './JobCard.module.scss'
+import styles from './JobCardsProfessor.module.scss'
 import Button from '../../ui/Button/Button';
 import SetaBaixo from '../../../assets/imgs/setinha-card-baixo.png'
 import SetaAlta from '../../../assets/imgs/setinha-preta-cima.png'
 import { useState } from 'react';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
+import Lapis from '../../../assets/imgs/pencil-solid-full.svg'
 
-export default function JobCard({ time, professor, title, description, materia, responsibilities = [], onClick, detalhes }) {
+// Criar uma condicional para o card renderizar um ou mais botão dependendo do usuário
+
+export default function JobCard({ time, professor, title, description, materia, responsibilities = [], onClick }) {
     const [isExpanded, setIsExpanded] = useState(false);
-
-    const { id, vagaCompleta } = detalhes || {};
 
     const handleToggle = () => {
         setIsExpanded(prevState => !prevState);
     };
-    
+    // Aqui eu baixei uma biblioteca recomendada para fazer de forma mais eficiente a expansão dos cards
     const cardClasses = cx(styles['job-card'], {
         [styles['job-card--expanded']]: isExpanded,
     });
 
     const handleButtonClick = (e) => {
+        // Isso impede que o clique no botão ative a expansão do card pai
         e.stopPropagation();
         if (onClick) {
-            onClick(e); 
+            onClick(e);
         }
     };
-    
-    const handleLinkClick = (e) => {
-        e.stopPropagation();
-    }
-
 
     return (
         <article className={cardClasses} onClick={handleToggle}>
@@ -39,6 +36,9 @@ export default function JobCard({ time, professor, title, description, materia, 
                     <h3 className={styles['job-card__title']}>{materia}</h3>
                     <p className={styles['job-card__professor']}>Por {professor}</p>
                 </div>
+                <Link onClick={handleButtonClick} to={`/edit/${materia}`}>
+                    <img className={styles['job-card__lapis']} src={Lapis} />
+                </Link>
                 <img className={styles['job-card__toggle-icon']} src={isExpanded ? SetaAlta : SetaBaixo} />
             </div>
             {isExpanded && (
@@ -47,23 +47,16 @@ export default function JobCard({ time, professor, title, description, materia, 
                     <div>
                         <h4 className={styles['job-card__responsibilities-title']}>Responsabilidade</h4>
                         <ul className={styles['job-card__responsibilities']}>
+                            {/* o li está dentro do loop mpa, com o objetivo de criar um li para cada arrya no import */}
                             {responsibilities.map((item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
                         </ul>
                     </div>
-                    
-                    <Link 
-                        to={`/details/${id}`}
-                        state={{ vagaCompleta: vagaCompleta }}
-                        onClick={handleLinkClick}
-                        className={styles['job-card__details-link']}
-                    >
-                        Ver mais detalhes
-                    </Link>
-                    
+                    {/* futuramente será mudado para a tag link com o uso do react rounter dom */}
+                    <a href="#" className={styles['job-card__details-link']}>Ver mais detalhes</a>
                     <div className={styles['job-card__actions']}>
-                        <Button variant="primary" onClick={handleButtonClick}>Me candidatar!</Button>
+                        <Button variant="primary" onClick={handleButtonClick}>Mais detalhes</Button>
                     </div>
                 </div>
             )}

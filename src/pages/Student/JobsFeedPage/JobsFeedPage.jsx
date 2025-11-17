@@ -145,6 +145,11 @@ export default function JobsFeedPage() {
         navigate(path, {state:{vagaCompleta : vaga}})
 
     }
+    function aplicar(id,vaga){
+        const path = `/aplication/${id}`
+        navigate(path, {state:{vagaCompleta : vaga}})
+
+    }
 
 return (
     <>
@@ -171,7 +176,8 @@ return (
                         professor={vaga.professor}
                         description={vaga.description}
                         responsibilities={vaga.responsibilities}
-                        onClick={() =>mostrarDetalhes(vaga.id,vaga)}
+                        onClick={() =>aplicar(vaga.id,vaga)}
+                        detalhes={{id:vaga.id, vagaCompleta:vaga}}
                     />
                 ))}
             </section>

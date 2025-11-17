@@ -12,7 +12,7 @@ const ErrorPage = () => {
             <img src={Triste} className={Styles['message__img']} alt="" />
             Oops! Parece que não temos o que procura...
         </div>
-        <a href="/feed" className={Styles['message__link']}>Voltar <img src={Return} alt="seta de voltar" className={Styles['message__link-icon']}/></a>
+        <a href="/feed/aluno" className={Styles['message__link']}>Voltar <img src={Return} alt="seta de voltar" className={Styles['message__link-icon']}/></a>
     </div>
   )
 }

@@ -65,7 +65,7 @@
     const redirecionar = (event) => {
       // O que precisar fazer antes de redirecionar
       if(verificarEntrada(event) === 0){
-        navigate('/feed');
+        navigate('/feed/aluno');
       }
       else{}
       

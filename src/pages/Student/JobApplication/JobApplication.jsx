@@ -3,11 +3,14 @@ import Button from "../../../components/ui/Button/Button.jsx";
 import Input from "../../../components/ui/Input/Input.jsx";
 import Textarea from "../../../components/ui/Textarea/Textarea.jsx";
 import Styles from "./JobApplication.module.scss"
+import { useLocation } from "react-router-dom";
 
 export default function JobApplication() {
+    const location = useLocation();
+    const vaga = location.state?.vagaCompleta;
     return (
         <>
-            <PageHeader title="Formulário de Candidatura" />
+            <PageHeader title={`${vaga.materia}`} />
 
             <main>
                 <form className={Styles["main__dados"]}>

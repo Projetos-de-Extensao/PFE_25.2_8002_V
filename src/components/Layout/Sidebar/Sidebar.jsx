@@ -1,9 +1,11 @@
 import styles from './Sidebar.module.scss';
 import LogoSimples from '../../../assets/imgs/ibvagas-1.png'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Sidebar({isOpen}) {
     const sidebarClasses = `${styles.sidebar} ${isOpen ? styles['sidebar--open'] : ''}`;
+    const navigate = useNavigate();
     return (
         <aside className={sidebarClasses}>
 
@@ -32,9 +34,9 @@ export default function Sidebar({isOpen}) {
                 </nav>
 
                 <div className={styles.sidebar__footer}>
-                    <Link className={styles.sidebar__footerLink}>Modo Aluno</Link>
-                    <Link className={styles.sidebar__footerLink}>Modo Professor</Link>
-                    <Link className={styles.sidebar__footerLink}>Modo Coordenador</Link>
+                    <Link className={styles.sidebar__footerLink} onClick={() => navigate('/feed/aluno')}>Modo Aluno</Link>
+                    <Link className={styles.sidebar__footerLink} onClick={() => navigate('/feed/professor')}>Modo Professor</Link>
+                    <Link className={styles.sidebar__footerLink} onClick={() => navigate('/feed/coordenador')}>Modo Coordenador</Link>
                 </div>
             </div>
 

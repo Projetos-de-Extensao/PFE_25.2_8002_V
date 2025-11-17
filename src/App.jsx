@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider } from "react-router-dom";
-import JobsFeedPage from './pages/Student/JobsFeedPage/JobsFeedPage.jsx';
+import JobsFeedPageAluno from './pages/Student/JobsFeedPage/JobsFeedPage.jsx';
+import JobApplication from './pages/Student/JobApplication/JobApplication.jsx';
+import JobsFeedPageProfessor from './pages/Professor/JobsFeedPage/JobsFeedPage.jsx';
 import Myjobs from './pages/Professor/MyJobs/Myjobs.jsx';
 import Login from './pages/Shared/Login/Login.jsx';
 import ErrorPage from "./pages/App/ErrorPage.jsx";
@@ -22,8 +24,12 @@ let router = createBrowserRouter([
     element: <Myjobs />,
   },
   {
-    path:"/feed",
-    element: <JobsFeedPage />,
+    path:"/feed/aluno",
+    element: <JobsFeedPageAluno />,
+  },
+  {
+    path:"/feed/professor",
+    element: <JobsFeedPageProfessor />,
   },
   {
     path:"/reset",
@@ -32,6 +38,10 @@ let router = createBrowserRouter([
   {
   path:"/details/:id",
   element: <JobsDetails />,
+  },
+  {
+  path:"/aplication/:id",
+  element: <JobApplication />,
   },
   {
     path:"/create",

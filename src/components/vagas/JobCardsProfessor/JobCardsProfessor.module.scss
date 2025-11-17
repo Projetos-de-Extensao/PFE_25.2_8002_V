@@ -1,0 +1,52 @@
+@import '../../../styles/variables.scss';
+
+// Lembrete pessoal: Conferir tudo novamente da parte de cards para deixar tudo como está na prototipação.
+
+.job-card {
+    padding: 15px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-base;
+    width: 22.3rem;
+    cursor: pointer;
+
+    &__lapis{
+            width: 30px;
+        }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header__text{
+            display: flex;
+            flex-direction: column;
+            gap: 3.5px;
+
+        }
+
+        &__toggle-icon {
+            font-size: 50px;
+            color: $text-color-primary;
+        }
+        
+    }
+
+    
+    &__details{
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        margin-top: 13px;
+
+        .job-card__responsibilities {
+            padding-left: 2rem;
+            
+            & li{
+                list-style-type: disc;
+            }
+        }
+    }
+
+
+}

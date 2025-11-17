@@ -1,0 +1,46 @@
+@import '../../../styles/variables.scss';
+
+.feedMain {
+    
+    display: flex;
+    background-color: $background-color-page;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 19px;
+    margin-top: -1.5rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    position: relative;
+    z-index: 100;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+    }
+
+    &__title {
+        width: 100%;
+        text-align: start;
+    }
+    &__header {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+}
+.img-filter {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.hidden {
+    display: none;
+}

@@ -1,4 +1,3 @@
-import { use } from "react";
 import PageHeader from "../../../components/Layout/PageHeader/PageHeader.jsx";
 import Button from "../../../components/ui/Button/Button.jsx";
 import Styles from "./JobsDetails.module.scss";
@@ -6,7 +5,8 @@ import { useLocation } from "react-router-dom";
 
 export default function JobsDetails() {
     const location = useLocation();
-    const vaga = location.state?.vagaCompleta;
+    // Acessa o objeto completo da vaga do state, com fallback seguro
+    const vaga = location.state?.vagaCompleta; 
 
     if (!vaga) {
         return (
