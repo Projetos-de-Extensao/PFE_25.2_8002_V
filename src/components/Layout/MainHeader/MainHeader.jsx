@@ -19,11 +19,6 @@ export default function Header({onMenuClick}) {
                 />
             </div>
 
-            <div className={styles.header__down}>
-                <a href="/candidaturas" className={styles.header__link}>
-                    Minhas candidaturas &gt;
-                </a>
-            </div>
         </header>
     );
 }
