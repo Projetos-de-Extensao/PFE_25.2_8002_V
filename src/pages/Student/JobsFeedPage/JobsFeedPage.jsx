@@ -26,7 +26,7 @@ const vagasDeExemplo = [
     {
         id: 2,
         time: 'Há 2 dias',
-        state: "acepted",
+        state: "open",
         materia: 'Análise de Dados',
         professor: 'Maria Silva',
         description: 'Vaga para monitor(a) com conhecimento em Python, Pandas e bibliotecas de visualização...',
@@ -51,7 +51,7 @@ const vagasDeExemplo = [
     {
         id: 4,
         time: 'Há 1 semana',
-        state: "applied",
+        state: "open",
         materia: 'Banco de Dados',
         professor: 'Ana Beatriz',
         description: 'Vaga para monitoria em Banco de Dados, focado em SQL e modelagem relacional. Desejável conhecimento em NoSQL...',
@@ -61,7 +61,6 @@ const vagasDeExemplo = [
             'Explicar conceitos de normalização e transações.',
         ],
     },
-
     {
         id: 5,
         time: 'Há 1 semana',
@@ -78,7 +77,7 @@ const vagasDeExemplo = [
     {
         id: 6,
         time: 'Há 2 semanas',
-        state: "applied",
+        state: "open",
         materia: 'Inteligência Artificial',
         professor: 'Juliana Paes',
         description: 'Oportunidade para monitoria em IA, cobrindo algoritmos de machine learning, redes neurais e processamento de linguagem natural...',
@@ -88,7 +87,6 @@ const vagasDeExemplo = [
             'Conduzir sessões de revisão antes das provas.',
         ],
     },
-
     {
         id: 7,
         time: 'Há 2 semanas',
@@ -102,7 +100,98 @@ const vagasDeExemplo = [
             'Conduzir sessões de revisão antes das provas.',
         ],
     },
-
+    // --- Novos itens adicionados ---
+    {
+        id: 8,
+        time: 'Há 1 dia',
+        state: "open",
+        materia: 'Cálculo Diferencial e Integral I',
+        professor: 'Dr. Oswaldo Cruz',
+        description: 'Vaga essencial para apoio na disciplina de Cálculo I, focada em limites, derivadas e integrais básicas.',
+        responsibilities: [
+            'Resolver exercícios de fixação sobre Limites e Continuidade.',
+            'Ajudar na compreensão de regras de derivação.',
+            'Realizar plantões de dúvida para provas.',
+        ],
+    },
+    {
+        id: 9,
+        time: 'Há 5 dias',
+        state: "applied",
+        materia: 'Redes de Computadores',
+        professor: 'Paula Fernandes',
+        description: 'Buscamos monitor(a) com bom entendimento de pilhas de protocolo (TCP/IP), roteamento e sub-redes.',
+        responsibilities: [
+            'Auxiliar na configuração de redes em simuladores (Packet Tracer, GNS3).',
+            'Explicar os modelos OSI e TCP/IP.',
+            'Apoiar na solução de problemas de conectividade.',
+        ],
+    },
+    {
+        id: 10,
+        time: 'Há 1 semana',
+        state: "open",
+        materia: 'Desenvolvimento Mobile (Android)',
+        professor: 'Renato Sales',
+        description: 'Procura-se monitor(a) para a disciplina de desenvolvimento de apps Android, utilizando Kotlin e Android Studio.',
+        responsibilities: [
+            'Tirar dúvidas sobre Ciclo de Vida de Activity e Fragments.',
+            'Auxiliar na implementação de layouts responsivos (ConstraintLayout).',
+            'Apoiar na integração com APIs RESTful.',
+        ],
+    },
+    {
+        id: 11,
+        time: 'Há 3 semanas',
+        state: "finalized",
+        materia: 'Estruturas de Dados I',
+        professor: 'Dr. Oswaldo Cruz', // Professor repetido em matéria diferente (coerente)
+        description: 'Vaga para monitoria em Estruturas de Dados, com foco em Listas, Filas, Pilhas e Árvores (implementação em Java ou C++).',
+        responsibilities: [
+            'Realizar correção de listas de exercícios e códigos.',
+            'Explicar complexidade de tempo e espaço (notação Big O).',
+            'Apoiar na implementação de árvores binárias de busca.',
+        ],
+    },
+    {
+        id: 12,
+        time: 'Há 2 dias',
+        state: "open",
+        materia: 'Sistemas Operacionais',
+        professor: 'Maria Silva', // Professora repetida em matéria diferente (coerente)
+        description: 'Monitor(a) para apoio em conceitos de Gerenciamento de Processos, Memória e Sistemas de Arquivos.',
+        responsibilities: [
+            'Auxiliar com comandos básicos de Shell Script (Linux).',
+            'Explicar algoritmos de escalonamento de processos.',
+            'Tirar dúvidas sobre semáforos e *deadlocks*.',
+        ],
+    },
+    {
+        id: 13,
+        time: 'Há 4 horas',
+        state: "open",
+        materia: 'Desenvolvimento Web Back-End',
+        professor: 'Carlos Oliveira', // Professor repetido na área de Web (coerente)
+        description: 'Vaga de monitoria focada em Node.js, Express e integração com Banco de Dados (MongoDB/PostgreSQL).',
+        responsibilities: [
+            'Apoiar na criação de APIs RESTful.',
+            'Tirar dúvidas sobre autenticação (JWT) e segurança.',
+            'Auxiliar na implementação de testes unitários.',
+        ],
+    },
+    {
+        id: 14,
+        time: 'Há 1 mês',
+        state: "acepted",
+        materia: 'Lógica Matemática',
+        professor: 'Ana Beatriz', // Professora repetida em matéria diferente (coerente)
+        description: 'Monitor(a) para reforço em raciocínio lógico, tabelas verdade, provas por indução e cálculo de predicados.',
+        responsibilities: [
+            'Ajudar na construção de provas formais.',
+            'Corrigir exercícios de conjuntos e funções.',
+            'Promover aulas de revisão antes das avaliações.',
+        ],
+    },
 ];
 
 
