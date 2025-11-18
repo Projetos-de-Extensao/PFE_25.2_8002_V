@@ -18,11 +18,17 @@ main {
 .main__detalhes {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
     width: 90%;
     padding: 25px 19px;
 }
 
+@media (min-width: 763px) {
+  .main__detalhes{
+    width: 45%;
+    padding: 0px 19px;
+  }
+}
 .container__title {
     display: flex;
     flex-direction: column;
@@ -37,7 +43,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .container__requisitos {
@@ -57,4 +63,8 @@ ul {
     flex-direction: column;
     gap: 10px;
     margin-left: 5%;
+}
+
+ul li{
+    list-style-type: disc;
 }
