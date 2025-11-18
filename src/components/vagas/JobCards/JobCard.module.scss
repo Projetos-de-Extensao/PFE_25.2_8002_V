@@ -7,9 +7,12 @@
     border: 1px solid $border-color;
     border-radius: $border-radius-base;
     width: 22.3rem;
+    position: relative;
     cursor: pointer;
 
     &__state{
+        position: absolute;
+        right: 3.2rem;
         display: flex;
         justify-content: center;
         align-items: center;
