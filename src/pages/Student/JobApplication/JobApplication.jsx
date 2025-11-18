@@ -12,7 +12,7 @@ export default function JobApplication() {
         <>
             <PageHeader title={`${vaga.materia}`} />
 
-            <main>
+            <main className={Styles["main"]}>
                 <form className={Styles["main__dados"]}>
                     <div className={Styles["container"]}>
                         <h2>
