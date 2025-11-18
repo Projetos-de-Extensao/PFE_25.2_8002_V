@@ -46,6 +46,7 @@
 
     &__navItem {
         cursor: pointer;
+        list-style: none;
 
     }
 
@@ -57,7 +58,6 @@
             color: $text-color-danger;
         }
     }
-
 
     &__footer {
         display: flex;
