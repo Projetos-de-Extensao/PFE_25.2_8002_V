@@ -190,8 +190,6 @@ export default function CreateAccount() {
 
   return (
     <>
-      <PageHeader title="Cadastro" backTo="/login" />
-
       <main className={styles.cadastro}>
         <div className={styles.brand}>
           <img src="src/assets/imgs/Ibvagas.png" alt="IBvagas" className={styles.brand__img} />
