@@ -8,6 +8,7 @@ export default function Button({ children, onClick, type = 'button', variant = '
         ${styles[`btn--${variant}`]} 
         ${size === 'small' ? styles['btn--small'] : ''}
         ${size === 'medium' ? styles['btn--medium'] : ''}
+        ${size === 'profile' ? styles['btn--profile'] : ''}
     `;
 
     return (

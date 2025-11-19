@@ -43,7 +43,8 @@ function ProfilePage() {
                             
                     </div>
                     <div className={Styles['perfil__actions']}>
-                    <Button
+                    <Button 
+                        size='profile'
                         children="Solicitar alteração de senha"
                         onClick="" />
                     <a href="" className={Styles['perfil__sair']}>Sair</a>
