@@ -308,17 +308,6 @@ export default function CreateAccount() {
               <small className={styles.cadastro__error}>{errors.foto}</small>
             </div>
 
-            {/* Perfil detectado */}
-            <div className="input-box">
-              <label className="input-box__label">Perfil detectado</label>
-              <Input
-                className="input-box__input"
-                type="text"
-                value={perfilDetectado}
-                readOnly
-              />
-            </div>
-
             <div className={styles.cadastro__actions}>
               {/* Navigate apenas para fim de apresentação*/}
               <Button type="submit" variant="primary" onClick={() => navigate('/createaccountconfirmation')}>Criar conta</Button>
