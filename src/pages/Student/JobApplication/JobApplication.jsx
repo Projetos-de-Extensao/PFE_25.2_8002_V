@@ -55,6 +55,14 @@ export default function JobApplication() {
                         />
 
                         <Input
+                            label="Histórico da Faculdade / CR (PDF)"
+                            name="arquivoCR"
+                            type="file"
+                            accept="application/pdf" // Isso restringe a janela de seleção apenas para arquivos .pdf
+                            placeholder="Selecione o arquivo PDF"
+                        />
+
+                        <Input
                             label="Curso"
                             name="curso"
                             placeholder="Ex: Ciência da Computação"
@@ -66,7 +74,7 @@ export default function JobApplication() {
                             name="periodo"
                             placeholder="Digite o número do seu período"
                             type="text"
-                        />                        
+                        />
                     </div>
 
                     <div className={Styles["container"]}>

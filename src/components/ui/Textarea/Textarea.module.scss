@@ -17,6 +17,7 @@
             border-color: $cor-vermelha;
         }
     }
+    
 }
 
 .textarea__label {
@@ -26,7 +27,7 @@
 }
 
 .textarea__input {
-    width: 22.3rem; //deixar como min-width futuramente
+    min-width: 22.3rem; 
     padding: $padding-inputs;
     border-radius: $border-radius-base;
     border: 1px solid $border-color;
