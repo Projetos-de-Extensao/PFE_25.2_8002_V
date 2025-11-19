@@ -118,9 +118,8 @@ return (
                         professor={vaga.professor}
                         description={vaga.description}
                         responsibilities={vaga.responsibilities}
-                        onClick={() =>aplicar(vaga.id,vaga)}
                         detalhes={{id:vaga.id, vagaCompleta:vaga}}
-                        conteudoBotao={"Vsualizar"}
+                        conteudoBotao={"Visualizar"}
                         
 
                     />

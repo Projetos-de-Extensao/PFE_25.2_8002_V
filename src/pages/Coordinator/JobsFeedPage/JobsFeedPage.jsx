@@ -8,7 +8,7 @@ import Filter from "../../../components/ui/Filter/Filter.jsx";
 import FilterIcon from '../../../assets/imgs/filter-svgrepo-com.png'
 import { useNavigate } from 'react-router-dom';
 import add from '../../../assets/imgs/add-circle-svgrepo-com.svg'
-import lapis from '../../../assets/imgs/lapis.png'
+
 
 export default function JobsFeedPage() {
     const filters = ['professor', 'materia'];
@@ -20,7 +20,7 @@ export default function JobsFeedPage() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [showFilters, setShowFilters] = useState(false);
     const [filter, setFilter] = useState('');
-    const nome = 'João Gabriel';
+    const nome = 'Prof Clayton';
 
     const navigate = useNavigate();
 
