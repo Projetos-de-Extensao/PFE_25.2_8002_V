@@ -47,6 +47,7 @@ export default function JobsFeedPage() {
     const [showFilters, setShowFilters] = useState(false);
     const [jobList, setJobList] = useState(vagasDeExemplo);
     const navigate = useNavigate();
+    const nome = 'Juliana Paes';
     
     
 
@@ -95,7 +96,8 @@ return (
     <>
         <Sidebar isOpen={isSidebarOpen} />
         <Overlay isVisible={isSidebarOpen} onClick={closeSidebar} />
-        <MainHeader onMenuClick={toggleSidebar} />
+        <MainHeader onMenuClick={toggleSidebar}
+                    nome={nome} />
         <main className={styles.feedMain}>
             <section className={styles.feedMain__box}>
                 <div className={styles.feedMain__header}>
@@ -118,6 +120,9 @@ return (
                         responsibilities={vaga.responsibilities}
                         onClick={() =>aplicar(vaga.id,vaga)}
                         detalhes={{id:vaga.id, vagaCompleta:vaga}}
+                        conteudoBotao={"Vsualizar"}
+                        
+
                     />
                 ))}
             </section>

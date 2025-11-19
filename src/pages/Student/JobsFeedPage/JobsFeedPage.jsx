@@ -11,14 +11,15 @@ import { useNavigate } from 'react-router-dom';
 export default function JobsFeedPage() {
     const filters = ['professor', 'materia'];
 
-    const [jobList, setJobList] = useState([]); 
-    
+    const [jobList, setJobList] = useState([]);
+
     const [originalData, setOriginalData] = useState([]);
 
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [showFilters, setShowFilters] = useState(false);
-    const [filter, setFilter] = useState(''); 
-    
+    const [filter, setFilter] = useState('');
+    const nome = 'João Gabriel';
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -26,7 +27,7 @@ export default function JobsFeedPage() {
             try {
                 const response = await fetch("/db.json");
                 const data = await response.json();
-                
+
                 setJobList(data);
                 setOriginalData(data);
             } catch (error) {
@@ -44,7 +45,7 @@ export default function JobsFeedPage() {
     function filtrarPor(valores) {
         const vagasFiltradas = originalData.filter((vaga) => {
             return Object.entries(valores).every(([chave, valor]) => {
-                if (!valor) return true; 
+                if (!valor) return true;
                 const campo = String(vaga[chave] || '').toLowerCase();
                 return campo.includes(String(valor).toLowerCase());
             });
@@ -82,18 +83,19 @@ export default function JobsFeedPage() {
         <>
             <Sidebar isOpen={isSidebarOpen} />
             <Overlay isVisible={isSidebarOpen} onClick={closeSidebar} />
-            <MainHeader onMenuClick={toggleSidebar} />
+            <MainHeader onMenuClick={toggleSidebar}
+                nome={nome} />
             <main className={styles.feedMain}>
                 <section className={styles.feedMain__box}>
                     <div className={styles.feedMain__header}>
                         <h1 className={styles.feedMain__materia}>Vagas Recentes</h1>
                         <img src={FilterIcon} alt="icone de filtro" className={styles['img-filter']} onClick={mostrarFiltros} />
                     </div>
-                    
+
                     {/* Passamos o originalData para o componente Filter saber as opções, se necessário */}
                     <Filter
                         filtros={filters}
-                        json={originalData} 
+                        json={originalData}
                         mostrar={showFilters}
                         onSubmit={(valores) => filtrarPor(valores)}
                     />
@@ -101,6 +103,7 @@ export default function JobsFeedPage() {
                     {jobListOrdenada.length > 0 ? (
                         jobListOrdenada.map((vaga) => (
                             <JobCard
+            
                                 key={vaga.id}
                                 id={vaga.id}
                                 time={vaga.time}
@@ -109,9 +112,9 @@ export default function JobsFeedPage() {
                                 professor={vaga.professor}
                                 description={vaga.description}
                                 responsibilities={vaga.responsibilities}
-                                onClick={() => (vaga.state === 'open' ?  aplicar(vaga.id, vaga) : null )}
+                                onClick={() => (vaga.state === 'open' ? aplicar(vaga.id, vaga) : null)}
                                 detalhes={{ id: vaga.id, vagaCompleta: vaga }}
-                                conteudoBotao={vaga.state === 'open' ? "Me Candidatar!" : "Ver Detalhes"}
+                                conteudoBotao={vaga.state === 'open' ? "Me Candidatar!" : "Visualizar"}
                             />
                         ))
                     ) : (
