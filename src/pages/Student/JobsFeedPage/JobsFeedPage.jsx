@@ -115,7 +115,7 @@ export default function JobsFeedPage() {
                                 onClick={() => (vaga.state === 'open' ? aplicar(vaga.id, vaga) : null)}
                                 detalhes={{ id: vaga.id, vagaCompleta: vaga }}
                                 conteudoBotao={vaga.state === 'open' ? "Me Candidatar!" : "Visualizar"}
-                                onApply={() => aplicar(vaga.id, vaga)}
+                                onApply={() => (vaga.state === 'open' ? aplicar(vaga.id, vaga):null )}
                             />
                         ))
                     ) : (

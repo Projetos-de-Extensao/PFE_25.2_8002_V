@@ -16,7 +16,8 @@ export default function JobCard({
     onClick,
     detalhes,
     state,
-    onApply
+    onApply,
+    conteudoBotao
 }) {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -118,7 +119,7 @@ export default function JobCard({
                             }}
                             variant="primary"
                         >
-                            Me candidatar!
+                            {conteudoBotao}
                         </Button>
                     </div>
                 </div>

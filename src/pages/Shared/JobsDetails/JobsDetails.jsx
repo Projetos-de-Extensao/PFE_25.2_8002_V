@@ -1,12 +1,18 @@
 import PageHeader from "../../../components/Layout/PageHeader/PageHeader.jsx";
 import Button from "../../../components/ui/Button/Button.jsx";
 import Styles from "./JobsDetails.module.scss";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function JobsDetails() {
     const location = useLocation();
     // Acessa o objeto completo da vaga do state, com fallback seguro
-    const vaga = location.state?.vagaCompleta; 
+    const vaga = location.state?.vagaCompleta;
+    const navigate = useNavigate()
+
+    function aplicar(id, vaga) {
+        const path = `/aplication/${id}`
+        navigate(path, { state: { vagaCompleta: vaga } })
+    }
 
     if (!vaga) {
         return (
@@ -27,11 +33,11 @@ export default function JobsDetails() {
             <PageHeader title={`${vaga.materia}`} />
 
             <main>
-                
+
                 <section className={Styles["main__detalhes"]}>
                     <div className={Styles["container__title"]}>
                         <h2>
-                           {vaga.materia}
+                            {vaga.materia}
                         </h2>
                         <p>
                             {vaga.professor}
@@ -73,7 +79,8 @@ export default function JobsDetails() {
                         </div>
                     </div>
 
-                    <Button size="medium">
+                    <Button size="medium" onClick={() => aplicar(vaga.id, vaga)}
+                        >
                         Quero me candidatar!
                     </Button>
 

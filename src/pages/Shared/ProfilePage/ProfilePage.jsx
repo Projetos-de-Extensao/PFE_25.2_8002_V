@@ -5,8 +5,10 @@ import FotoPerfil from "../../../assets/imgs/group19.png"
 import Input from '../../../components/ui/Input/Input.jsx'
 import Button from '../../../components/ui/Button/Button'
 import Lapis from '../../../assets/imgs/pencil-solid-full.svg'
+import { useNavigate } from 'react-router-dom'
 
 function ProfilePage() {
+    const navigate = useNavigate()
     return (
         <>
             <PageHeader
@@ -46,7 +48,7 @@ function ProfilePage() {
                     <Button 
                         size='profile'
                         children="Solicitar alteração de senha"
-                        onClick="" />
+                        onClick={() => navigate("/reset")} />
                     <a href="" className={Styles['perfil__sair']}>Sair</a>
                     </div>
 
