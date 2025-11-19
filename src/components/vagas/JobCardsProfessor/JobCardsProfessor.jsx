@@ -44,19 +44,31 @@ export default function JobCard({ time, professor, title, description, materia, 
             {isExpanded && (
                 <div className={styles['job-card__details']}>
                     <p className={styles['job-card__description']}>{description}</p>
+
                     <div>
-                        <h4 className={styles['job-card__responsibilities-title']}>Responsabilidade</h4>
+                        <h4 className={styles['job-card__responsibilities-title']}>
+                            Responsabilidade
+                        </h4>
                         <ul className={styles['job-card__responsibilities']}>
-                            {/* o li está dentro do loop mpa, com o objetivo de criar um li para cada arrya no import */}
                             {responsibilities.map((item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
                         </ul>
                     </div>
-                    {/* futuramente será mudado para a tag link com o uso do react rounter dom */}
-                    <a href="#" className={styles['job-card__details-link']}>Ver mais detalhes</a>
+
+                    <Link
+                        to={`/details/${id}`}
+                        state={{ vagaCompleta: vagaCompleta }}
+                        onClick={handleLinkClick}
+                        className={styles['job-card__details-link']}
+                    >
+                        Ver mais detalhes
+                    </Link>
+
                     <div className={styles['job-card__actions']}>
-                        <Button variant="primary" onClick={handleButtonClick}>Mais detalhes</Button>
+                        <Button variant="primary" onClick={handleButtonClick}>
+                            {conteudoBotao}
+                        </Button>
                     </div>
                 </div>
             )}

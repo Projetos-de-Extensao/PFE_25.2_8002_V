@@ -24,7 +24,7 @@ export default function JobsDetails() {
 
     return (
         <>
-            <PageHeader title={`Vaga: ${vaga.materia}`} />
+            <PageHeader title={`${vaga.materia}`} />
 
             <main>
                 

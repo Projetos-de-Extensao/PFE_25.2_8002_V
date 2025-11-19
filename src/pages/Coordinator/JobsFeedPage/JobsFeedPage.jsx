@@ -91,8 +91,8 @@ export default function JobsFeedPage() {
                 <section className={styles.feedMain__box}>
                     <div className={styles.feedMain__header}>
                         <h1 className={styles.feedMain__materia}>Vagas Recentes</h1>
-                        <img src={FilterIcon} alt="icone de filtro" className={styles['img-filter']} onClick={mostrarFiltros} />
                         <img src={add} alt="icone de filtro" className={styles['img-add']} onClick={() => navigate('/create')} />
+                        <img src={FilterIcon} alt="icone de filtro" className={styles['img-filter']} onClick={mostrarFiltros} />
                     </div>
 
                     {/* Passamos o originalData para o componente Filter saber as opções, se necessário */}

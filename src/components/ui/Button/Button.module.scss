@@ -3,7 +3,6 @@
 .btn {
     padding: 0.8rem 6rem;
     min-width: 100%;
-    min-height: 2.5rem;
     border: none;
     border-radius: $border-radius-base;
     font-size: $font-size-body;
@@ -19,7 +18,7 @@
         &:hover {
             background-color: $button-primary-hover;
         }
-        
+
     }
 
     &--alternative {
@@ -52,27 +51,28 @@
 
 
 }
+
 @media (max-width: 480px) {
     .btn {
-    padding: 0.6rem 2rem;
-    min-width: 100%;
-    border: none;
-    border-radius: $border-radius-base;
-    font-size: $font-size-small;
-    font-weight: $font-weight-light;
-    cursor: pointer;
-    text-wrap: nowrap;
+        padding: 0.6rem 2rem;
+        min-width: 100%;
+        border: none;
+        border-radius: $border-radius-base;
+        font-size: $font-size-small;
+        font-weight: $font-weight-light;
+        cursor: pointer;
+        text-wrap: nowrap;
 
 
-    &--primary {
-        background-color: $button-primary-background;
-        color: $text-color-light;
+        &--primary {
+            background-color: $button-primary-background;
+            color: $text-color-light;
 
-        &:hover {
-            background-color: $button-primary-hover;
+            &:hover {
+                background-color: $button-primary-hover;
+            }
         }
-    }
 
-    
-}
+
+    }
 }

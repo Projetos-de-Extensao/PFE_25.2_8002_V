@@ -19,7 +19,7 @@
     }
 
     &__title {
-        font-size: $font-size-title-lg;
+        font-size: $font-size-title-md;
         color: $text-color-light;
         font-weight: $font-weight-medium;
         position: absolute;
@@ -28,4 +28,10 @@
 
     }
 
+}
+
+@media (min-width: 768px) {
+  .page-header__title{
+    font-size: 26px;
+  }
 }
