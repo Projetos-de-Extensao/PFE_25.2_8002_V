@@ -90,8 +90,11 @@ export default function JobsFeedPage() {
             <main className={styles.feedMain}>
                 <section className={styles.feedMain__box}>
                     <div className={styles.feedMain__header}>
-                        <h1 className={styles.feedMain__materia}>Vagas Recentes</h1>
-                        <img src={add} alt="icone de filtro" className={styles['img-add']} onClick={() => navigate('/create')} />
+                        <div>
+                            <h1 className={styles.feedMain__materia}>Vagas Recentes</h1>
+
+                            <img src={add} alt="icone de filtro" className={styles['img-add']} onClick={() => navigate('/create')} />
+                        </div>
                         <img src={FilterIcon} alt="icone de filtro" className={styles['img-filter']} onClick={mostrarFiltros} />
                     </div>
 
@@ -106,7 +109,7 @@ export default function JobsFeedPage() {
                     {jobListOrdenada.length > 0 ? (
                         jobListOrdenada.map((vaga) => (
                             <JobCard
-                                
+
                                 key={vaga.id}
                                 id={vaga.id}
                                 time={vaga.time}

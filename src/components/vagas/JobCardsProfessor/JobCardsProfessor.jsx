@@ -18,8 +18,8 @@ export default function JobCard({
     // Adicionei estas props que faltavam:
     id, 
     vagaCompleta,
-    conteudoBotao = "Editar", // Dei um valor padrão caso não venha
-    conteudo = "Apagar" // Dei um valor padrão caso não venha
+    conteudoBotao = "Editar", 
+    conteudo = "Apagar" 
 }) {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -87,7 +87,7 @@ export default function JobCard({
 
                     <div className={styles['job-card__actions']}>
                         <Button variant="primary" size="small" onClick={handleButtonClick}>
-                            {conteudoBotao} 
+                            Editar
                         </Button>
 
                         <Button variant="danger" size='small' onClick={handleButtonClick}>

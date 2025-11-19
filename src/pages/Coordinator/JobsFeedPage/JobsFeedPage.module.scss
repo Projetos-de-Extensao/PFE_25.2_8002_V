@@ -1,7 +1,7 @@
 @import '../../../styles/variables.scss';
 
 .feedMain {
-    
+
     display: flex;
     background-color: $background-color-page;
     flex-direction: column;
@@ -24,6 +24,7 @@
         width: 100%;
         text-align: start;
     }
+
     &__header {
         display: flex;
         width: 100%;
@@ -31,20 +32,29 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
     }
 
 }
+
 .img-filter {
     width: 24px;
     height: 24px;
     cursor: pointer;
-    
+
 }
-.img-add{
+
+.img-add {
     width: 34px;
+    cursor: pointer;
     height: 34px;
 }
+
 .hidden {
     display: none;
 }
