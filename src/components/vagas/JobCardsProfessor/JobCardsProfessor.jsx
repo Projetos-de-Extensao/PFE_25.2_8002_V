@@ -1,31 +1,47 @@
 import styles from './JobCardsProfessor.module.scss'
-import Button from '../../ui/Button/Button';
+import Button from '../../ui/Button/Button.jsx';
 import SetaBaixo from '../../../assets/imgs/setinha-card-baixo.png'
 import SetaAlta from '../../../assets/imgs/setinha-preta-cima.png'
 import { useState } from 'react';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
-import Lapis from '../../../assets/imgs/pencil-solid-full.svg'
+// import Lapis from ... (estava importado mas não usado no snippet)
 
-// Criar uma condicional para o card renderizar um ou mais botão dependendo do usuário
-
-export default function JobCard({ time, professor, title, description, materia, responsibilities = [], onClick }) {
+export default function JobCard({ 
+    time, 
+    professor, 
+    title, 
+    description, 
+    materia, 
+    responsibilities = [], 
+    onClick,
+    // Adicionei estas props que faltavam:
+    id, 
+    vagaCompleta,
+    conteudoBotao = "Editar", // Dei um valor padrão caso não venha
+    conteudo = "Apagar" // Dei um valor padrão caso não venha
+}) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const handleToggle = () => {
         setIsExpanded(prevState => !prevState);
     };
-    // Aqui eu baixei uma biblioteca recomendada para fazer de forma mais eficiente a expansão dos cards
+
     const cardClasses = cx(styles['job-card'], {
         [styles['job-card--expanded']]: isExpanded,
     });
 
+    // Botão genérico (Editar ou ação principal)
     const handleButtonClick = (e) => {
-        // Isso impede que o clique no botão ative a expansão do card pai
         e.stopPropagation();
         if (onClick) {
             onClick(e);
         }
+    };
+
+    // Função para o link de "Ver mais detalhes" (caso precise de lógica específica)
+    const handleLinkClick = (e) => {
+        e.stopPropagation(); // Importante para não fechar o card ao clicar no link
     };
 
     return (
@@ -36,11 +52,15 @@ export default function JobCard({ time, professor, title, description, materia, 
                     <h3 className={styles['job-card__title']}>{materia}</h3>
                     <p className={styles['job-card__professor']}>Por {professor}</p>
                 </div>
-                <Link onClick={handleButtonClick} to={`/edit/${materia}`}>
-                    <img className={styles['job-card__lapis']} src={Lapis} />
-                </Link>
-                <img className={styles['job-card__toggle-icon']} src={isExpanded ? SetaAlta : SetaBaixo} />
+                
+                <img 
+                    className={styles['job-card__toggle-icon']} 
+                    src={isExpanded ? SetaAlta : SetaBaixo} 
+                    alt="Expandir" 
+                />
             </div>
+            
+            {/* O erro acontecia aqui dentro, ao tentar renderizar variáveis inexistentes */}
             {isExpanded && (
                 <div className={styles['job-card__details']}>
                     <p className={styles['job-card__description']}>{description}</p>
@@ -57,17 +77,21 @@ export default function JobCard({ time, professor, title, description, materia, 
                     </div>
 
                     <Link
-                        to={`/details/${id}`}
-                        state={{ vagaCompleta: vagaCompleta }}
-                        onClick={handleLinkClick}
+                        to={`/details/${id}`} // Agora 'id' existe nas props
+                        state={{ vagaCompleta: vagaCompleta }} // Agora 'vagaCompleta' existe
+                        onClick={handleLinkClick} // Agora a função existe
                         className={styles['job-card__details-link']}
                     >
                         Ver mais detalhes
                     </Link>
 
                     <div className={styles['job-card__actions']}>
-                        <Button variant="primary" onClick={handleButtonClick}>
-                            {conteudoBotao}
+                        <Button variant="primary" size="small" onClick={handleButtonClick}>
+                            {conteudoBotao} 
+                        </Button>
+
+                        <Button variant="danger" size='small' onClick={handleButtonClick}>
+                            {conteudo} 
                         </Button>
                     </div>
                 </div>

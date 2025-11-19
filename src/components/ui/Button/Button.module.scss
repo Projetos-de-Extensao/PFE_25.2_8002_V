@@ -54,11 +54,10 @@
 
 @media (max-width: 480px) {
     .btn {
-        padding: 0.6rem 2rem;
         min-width: 100%;
         border: none;
         border-radius: $border-radius-base;
-        font-size: $font-size-small;
+        font-size: 1rem;
         font-weight: $font-weight-light;
         cursor: pointer;
         text-wrap: nowrap;
@@ -73,6 +72,25 @@
             }
         }
 
+        &--small {
+            // Reduza o padding lateral para economizar espaço
+            padding: 0.9rem 1rem;
 
+            // Reduza a largura mínima para que dois caibam lado a lado (8rem + 8rem = 16rem, sobra espaço)
+            min-width: 8rem;
+
+            // CRUCIAL: Sobrescreve o "min-width: 100%" da classe .btn principal
+            width: auto;
+
+            // DICA DE OURO: Isso faz os botões esticarem para preencher o espaço vazio igualmente
+            flex: 1;
+
+            // Garante centralização do texto se o botão esticar
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
+
+
 }

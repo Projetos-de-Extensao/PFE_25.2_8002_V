@@ -50,3 +50,8 @@
 
 
 }
+.job-card__actions{
+    display: flex;
+    //flex-direction: column;
+    gap: 0.4rem;
+}
