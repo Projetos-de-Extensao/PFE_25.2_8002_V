@@ -16,7 +16,7 @@ export default function JobCard({
     onClick,
     detalhes,
     state,
-    conteudoBotao
+    onApply
 }) {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -30,7 +30,7 @@ export default function JobCard({
         [styles['job-card--expanded']]: isExpanded,
     });
 
-    function estadoClasse(){
+    function estadoClasse() {
         switch (state) {
             case 'open':
                 return "aberta";
@@ -109,8 +109,16 @@ export default function JobCard({
                     </Link>
 
                     <div className={styles['job-card__actions']}>
-                        <Button variant="primary" onClick={handleButtonClick}>
-                            {conteudoBotao}
+                        {/* REMOVA O LINK. Use apenas o Button com o stopPropagation aqui */}
+
+                        <Button
+                            onClick={(e) => {
+                                e.stopPropagation(); // Isso impede o erro 404 (clique "atravessando" o card)
+                                onApply(); // Isso chama a navegação correta que está no JobsFeedPage
+                            }}
+                            variant="primary"
+                        >
+                            Me candidatar!
                         </Button>
                     </div>
                 </div>
