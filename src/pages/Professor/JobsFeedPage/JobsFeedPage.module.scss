@@ -3,7 +3,7 @@
 .feedMain {
     display: flex;
     background-color: $background-color-page;
-    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     padding: 25px 19px;
     margin-top: -1.5rem;
