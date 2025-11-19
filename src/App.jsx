@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider } fro
 import JobsFeedPageAluno from './pages/Student/JobsFeedPage/JobsFeedPage.jsx';
 import JobApplication from './pages/Student/JobApplication/JobApplication.jsx';
 import JobsFeedPageProfessor from './pages/Professor/JobsFeedPage/JobsFeedPage.jsx';
+import JobsFeedPageCoordenador from './pages/Coordinator/JobsFeedPage/JobsFeedPage.jsx';
 import Login from './pages/Shared/Login/Login.jsx';
 import ErrorPage from "./pages/App/ErrorPage.jsx";
 import PasswordReset from "./pages/Shared/PasswordReset/PasswordReset.jsx";
@@ -25,6 +26,10 @@ let router = createBrowserRouter([
   {
     path:"/feed/professor",
     element: <JobsFeedPageProfessor />,
+  },
+  {
+    path:"/feed/coordenador",
+    element: <JobsFeedPageCoordenador />,
   },
   {
     path:"/reset",
