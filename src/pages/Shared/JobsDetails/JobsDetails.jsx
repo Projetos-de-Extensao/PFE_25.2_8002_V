@@ -73,7 +73,7 @@ export default function JobsDetails() {
                         </div>
                     </div>
 
-                    <Button>
+                    <Button size="medium">
                         Quero me candidatar!
                     </Button>
 
